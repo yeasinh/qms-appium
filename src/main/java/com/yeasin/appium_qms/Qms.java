@@ -119,5 +119,10 @@ public class Qms {
         WebElement Orderokay = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"\"]"));
         Orderokay.click();
         Thread.sleep(10000);
+        
+        // Input data from Production Entry page
+        
+	    // Close the app
+        driver.quit();
 	}
 }
