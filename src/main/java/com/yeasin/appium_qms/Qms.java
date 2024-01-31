@@ -34,5 +34,15 @@ public class Qms {
 	    
 	    // Wait for the app to load
         Thread.sleep(5000);
+        
+        // Log in to QMS app with username = Test and password = test
+        WebElement email = driver.findElement(By.xpath("//android.widget.EditText[@text=\"Email\"]"));
+        email.sendKeys("Test");
+        WebElement password = driver.findElement(By.xpath("//android.widget.EditText[@text=\"Password\"]"));
+        password.sendKeys("test");
+        WebElement login = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Login\"]"));
+        login.click();
+        
+        Thread.sleep(10000);
 	}
 }
