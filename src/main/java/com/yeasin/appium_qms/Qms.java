@@ -44,5 +44,23 @@ public class Qms {
         login.click();
         
         Thread.sleep(10000);
+        
+        // Click on the side menu
+        WebElement menu = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"\"]"));
+        menu.click();
+        
+        Thread.sleep(5000);
+        
+        // Check the texts on menu container
+        WebElement userName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Text\"]"));
+        System.out.println(userName.getText());
+        WebElement userEmail = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Text@gmail.com\"]"));
+        System.out.println(userEmail.getText());
+        WebElement appVersion = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Version : v.2.0.2-ALPHA0\"]"));
+        System.out.println(appVersion.getText());
+        WebElement deviceID = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Device ID: 01a6ccc03cbb7a60\"]"));
+        System.out.println(deviceID.getText());
+        
+        Thread.sleep(2000);
 	}
 }
