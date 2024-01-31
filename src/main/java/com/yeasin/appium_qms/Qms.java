@@ -62,5 +62,12 @@ public class Qms {
         System.out.println(deviceID.getText());
         
         Thread.sleep(2000);
+        
+        // Sync web data
+        WebElement sync = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Sync\"]"));
+        sync.click();
+        System.out.println(sync.getText());
+        
+        Thread.sleep(10000);
 	}
 }
