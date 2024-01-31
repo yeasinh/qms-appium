@@ -91,5 +91,33 @@ public class Qms {
         WebElement next = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Next\"]"));
         next.click();
         Thread.sleep(10000);
+        
+        // Access Home module
+        WebElement home = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"End table check, (Sewing), \"]"));
+        home.click();
+        System.out.println(home.getText());
+        Thread.sleep(20000);
+        
+        // Access QC Lunch Pad
+        WebElement lunchPad = driver.findElement(By.xpath("//android.widget.TextView[@text=\"QC Lunch Pad\"]"));
+        System.out.println(lunchPad.getText());
+        WebElement endTable = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"End table check, (Sewing), \"]"));
+        System.out.println(endTable.getText());
+        endTable.click();
+        Thread.sleep(10000);
+        
+        // Select Buyer, Style, and Order
+        WebElement selectedBuyer = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"New york\"]"));
+        selectedBuyer.click();
+        Thread.sleep(10000);
+        WebElement selectedStyle = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"5670\"]"));
+        selectedStyle.click();
+        Thread.sleep(10000);
+        WebElement selectedOrder = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"CR Test order\"]"));
+        selectedOrder.click();
+        Thread.sleep(10000);
+        WebElement Orderokay = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"\"]"));
+        Orderokay.click();
+        Thread.sleep(10000);
 	}
 }
