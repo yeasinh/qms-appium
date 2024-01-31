@@ -42,13 +42,11 @@ public class Qms {
         password.sendKeys("test");
         WebElement login = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Login\"]"));
         login.click();
-        
         Thread.sleep(10000);
         
         // Click on the side menu
         WebElement menu = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"\"]"));
         menu.click();
-        
         Thread.sleep(5000);
         
         // Check the texts on menu container
@@ -60,14 +58,38 @@ public class Qms {
         System.out.println(appVersion.getText());
         WebElement deviceID = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Device ID: 01a6ccc03cbb7a60\"]"));
         System.out.println(deviceID.getText());
-        
         Thread.sleep(2000);
         
         // Sync web data
         WebElement sync = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Sync\"]"));
         sync.click();
         System.out.println(sync.getText());
+        Thread.sleep(10000);
         
+        // Access Settings module
+        WebElement settings = driver.findElement(By.xpath("//android.widget.Button[@content-desc=', Settings']"));
+        settings.click();
+        System.out.println(settings.getText());
+        Thread.sleep(10000);
+        
+        // Select Line
+        WebElement line = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\", Root\"]/android.view.ViewGroup"));
+        line.click();
+        Thread.sleep(10000);
+        WebElement selectedLine = driver.findElement(By.xpath("//android.widget.TextView[@text=\"App QC Test 1\"]"));
+        selectedLine.click();
+        
+        // Select Input Delay
+        WebElement delay = driver.findElement(By.xpath("(//android.view.ViewGroup[@content-desc=\"5 Seconds\"])[1]"));
+        delay.click();
+        Thread.sleep(10000);
+        WebElement selectedDelay = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[5]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]"));
+        selectedDelay.click();
+        Thread.sleep(10000);
+        
+        // Continue with selected Line and Input Delay
+        WebElement next = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Next\"]"));
+        next.click();
         Thread.sleep(10000);
 	}
 }
