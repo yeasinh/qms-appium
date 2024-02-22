@@ -14,7 +14,6 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 public class QmsTest extends BaseTest {
 	@Test
 	public void basic_test() throws MalformedURLException {
-		configure_appium();
-		close_appium();
+		
 	}
 }

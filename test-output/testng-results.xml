@@ -2,15 +2,23 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-22T10:33:59 BDT" name="Default suite" finished-at="2024-02-22T10:34:05 BDT" duration-ms="5754">
+  <suite started-at="2024-02-22T10:44:26 BDT" name="Default suite" finished-at="2024-02-22T10:44:33 BDT" duration-ms="6826">
     <groups>
     </groups>
-    <test started-at="2024-02-22T10:33:59 BDT" name="Default test" finished-at="2024-02-22T10:34:05 BDT" duration-ms="5754">
+    <test started-at="2024-02-22T10:44:26 BDT" name="Default test" finished-at="2024-02-22T10:44:33 BDT" duration-ms="6826">
       <class name="com.yeasin.appium_qms.QmsTest">
-        <test-method signature="basic_test()[pri:0, instance:com.yeasin.appium_qms.QmsTest@201a4587]" started-at="2024-02-22T10:33:59 BDT" name="basic_test" finished-at="2024-02-22T10:34:05 BDT" duration-ms="5710" status="PASS">
+        <test-method is-config="true" signature="configure_appium()[pri:0, instance:com.yeasin.appium_qms.QmsTest@593aaf41]" started-at="2024-02-22T10:44:26 BDT" name="configure_appium" finished-at="2024-02-22T10:44:32 BDT" duration-ms="6384" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configure_appium -->
+        <test-method signature="basic_test()[pri:0, instance:com.yeasin.appium_qms.QmsTest@593aaf41]" started-at="2024-02-22T10:44:32 BDT" name="basic_test" finished-at="2024-02-22T10:44:32 BDT" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- basic_test -->
+        <test-method is-config="true" signature="close_appium()[pri:0, instance:com.yeasin.appium_qms.QmsTest@593aaf41]" started-at="2024-02-22T10:44:32 BDT" name="close_appium" finished-at="2024-02-22T10:44:33 BDT" duration-ms="407" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close_appium -->
       </class> <!-- com.yeasin.appium_qms.QmsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
