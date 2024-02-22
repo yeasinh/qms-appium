@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-22T10:33:59 BDT" name="Default suite" finished-at="2024-02-22T10:34:05 BDT" duration-ms="5754">
+    <groups>
+    </groups>
+    <test started-at="2024-02-22T10:33:59 BDT" name="Default test" finished-at="2024-02-22T10:34:05 BDT" duration-ms="5754">
+      <class name="com.yeasin.appium_qms.QmsTest">
+        <test-method signature="basic_test()[pri:0, instance:com.yeasin.appium_qms.QmsTest@201a4587]" started-at="2024-02-22T10:33:59 BDT" name="basic_test" finished-at="2024-02-22T10:34:05 BDT" duration-ms="5710" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basic_test -->
+      </class> <!-- com.yeasin.appium_qms.QmsTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
