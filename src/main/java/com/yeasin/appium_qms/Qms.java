@@ -49,11 +49,25 @@ public class Qms {
         select_order();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         
-        pass();
+        for(int i = 0; i < 5; i++) {
+        	pass();
+        	Thread.sleep(3000);
+        }
+        
+        force_sync();
+        Thread.sleep(5000);
+        
+        alter();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         
-        // alter();
-        // reject();
+        force_sync();
+        Thread.sleep(5000);
+        
+        reject();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        
+        force_sync();
+        Thread.sleep(5000);
         
         close_app();
 	}
@@ -138,32 +152,50 @@ public class Qms {
 	
 	public static void pass() {
 		// input pass data from production entry page
-		WebElement pass = driver.findElement(By.xpath("//android.widget.FrameLayout[@bounds=\"[20,471][1516,978]\"]"));
+		WebElement pass = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Pass\"]"));
 		pass.click();
 	}
 	
 	public static void alter() {
 		// input alter data from production entry page
-		WebElement alter = driver.findElement(By.xpath("//android.widget.FrameLayout[@bounds=\"[20,1017][748,1483]\"]"));
+		WebElement alter = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Alter\"]"));
 		alter.click();
-		WebElement alterImage = driver.findElement(By.xpath("//android.widget.FrameLayout[@bounds=\"[557,311][669,685]\"]"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		
+		WebElement alterImage = driver.findElement(By.xpath("//com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView[3]"));
 		alterImage.click();
-		WebElement alterDefect = driver.findElement(By.xpath("//android.widget.FrameLayout[@bounds=\"[896,563][1326,713]\"]"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		
+		WebElement alterDefect = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Defect 1\"]"));
 		alterDefect.click();
-		WebElement alterOkay = driver.findElement(By.xpath("//android.widget.FrameLayout[@bounds=\"[2151,56][2254,146]\"]"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		
+		WebElement alterOkay = driver.findElement(By.xpath("//android.widget.TextView[@text=\"\"]"));
 		alterOkay.click();
 	}
 	
 	public static void reject() {
 		// input reject data from production entry page
-		WebElement reject = driver.findElement(By.id("//android.widget.FrameLayout[@bounds=\"[788,1017][1516,1483]\"]"));
+		WebElement reject = driver.findElement(By.id("//android.widget.TextView[@text=\"Reject\"]"));
 		reject.click();
-		WebElement rejectImage = driver.findElement(By.id("//android.widget.FrameLayout[@bounds=\"[557,311][669,685]\"]"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		
+		WebElement rejectImage = driver.findElement(By.xpath("//com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView[3]"));
 		rejectImage.click();
-		WebElement rejectDefect = driver.findElement(By.id("//android.widget.FrameLayout[@bounds=\"[1927,563][2356,713]\"]"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		
+		WebElement rejectDefect = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Defect 3\"]"));
 		rejectDefect.click();
-		WebElement rejectOkay = driver.findElement(By.id("//android.widget.FrameLayout[@bounds=\"[1927,563][2356,713]\"]"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		
+		WebElement rejectOkay = driver.findElement(By.xpath("//android.widget.TextView[@text=\"\"]"));
 		rejectOkay.click();
+	}
+	
+	public static void force_sync() {
+		// press force sync button
+		WebElement fsButton = driver.findElement(By.xpath("//android.widget.TextView[@text=\"\"]"));
+		fsButton.click();
 	}
 	
 	public static void close_app() {
