@@ -49,6 +49,9 @@ public class Qms {
         select_order();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         
+        choose_variance();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        
         for(int i = 0; i < 5; i++) {
         	pass();
         	Thread.sleep(3000);
@@ -111,13 +114,14 @@ public class Qms {
         settings.click();
         System.out.println(settings.getText());
     	
-        // select line
+        // select a line
         WebElement line = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\", Root\"]/android.view.ViewGroup"));
-        line.click(); 
-        WebElement selectedLine = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"App Test 101\"]/android.view.ViewGroup"));
+        line.click();
+        driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Appium Line\"));"));
+        WebElement selectedLine = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Appium Line\"]/android.view.ViewGroup"));
         selectedLine.click();
         
-        // select input delay
+        // select an input delay
         WebElement delay = driver.findElement(By.xpath("(//android.view.ViewGroup[@content-desc=\"5 Seconds\"])[1]"));
         delay.click();
         WebElement selectedDelay = driver.findElement(By.xpath("//android.widget.TextView[@text=\"1 Second\"]"));
@@ -139,15 +143,38 @@ public class Qms {
         System.out.println(endTable.getText());
         endTable.click();
         
-        // select buyer, style, and order
-        WebElement selectedBuyer = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"AWG\"]/android.view.ViewGroup"));
+        // select a buyer
+        driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Appium Buyer\"));"));
+        WebElement selectedBuyer = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Appium Buyer\"]/android.view.ViewGroup"));
         selectedBuyer.click();
-        WebElement selectedStyle = driver.findElement(By.xpath("(//android.widget.Button[@content-desc=\"158850\"])[1]"));
+        
+        // select a style
+        WebElement selectedStyle = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"Appium Style\"]"));
         selectedStyle.click();
-        WebElement selectedOrder = driver.findElement(By.xpath("(//android.widget.Button[@content-desc=\"158850\"])[2]"));
+        
+        // select an order
+        WebElement selectedOrder = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"Appium Order\"]"));
         selectedOrder.click();
+        
+        // continue with selected buyer, style, and order
         WebElement orderOkay = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"\"]"));
         orderOkay.click();
+	}
+	
+	public static void choose_variance() {
+		// select a color
+		WebElement color = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Choose a Color\"]"));
+		color.click();
+		WebElement selectedColor = driver.findElement(By.xpath("//android.widget.TextView[@text=\"BLACK\"]"));
+		selectedColor.click();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		
+		// select a size
+		WebElement size = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Choose a Size\"]"));
+		size.click();
+		WebElement selectedSize = driver.findElement(By.xpath("//android.widget.TextView[@text=\"L\"]"));
+		selectedSize.click();
 	}
 	
 	public static void pass() {
@@ -162,14 +189,17 @@ public class Qms {
 		alter.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
+		// select a position on the sketch
 		WebElement alterImage = driver.findElement(By.xpath("//com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView[3]"));
 		alterImage.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
+		// select a defect
 		WebElement alterDefect = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Defect 1\"]"));
 		alterDefect.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		
+		// continue with the selected position and defect
 		WebElement alterOkay = driver.findElement(By.xpath("//android.widget.TextView[@text=\"\"]"));
 		alterOkay.click();
 	}
@@ -180,14 +210,17 @@ public class Qms {
 		reject.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
+		// select a position on the sketch
 		WebElement rejectImage = driver.findElement(By.xpath("//com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView[3]"));
 		rejectImage.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
+		// select a defect
 		WebElement rejectDefect = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Defect 3\"]"));
 		rejectDefect.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		
+		// continue with the selected position and defect
 		WebElement rejectOkay = driver.findElement(By.xpath("//android.widget.TextView[@text=\"\"]"));
 		rejectOkay.click();
 	}
