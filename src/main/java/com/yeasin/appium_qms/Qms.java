@@ -29,49 +29,25 @@ public class Qms {
 
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
         setup();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        
         login();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(300));
-        
         side_menu();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        
         sync_web();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        
         set_line();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        
         side_menu();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        
         select_order();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        
         choose_variance();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        
+        /*
         for(int i = 0; i < 5; i++) {
         	pass();
         	Thread.sleep(3000);
         }
         
         force_sync();
-        Thread.sleep(5000);
-        
+        */
         alter();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        
         force_sync();
-        Thread.sleep(5000);
-        
         reject();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        
         force_sync();
-        Thread.sleep(5000);
-        
         close_app();
 	}
 	
@@ -83,6 +59,8 @@ public class Qms {
 			    
 		// set the driver
 		driver = new AndroidDriver(new URL("http://172.17.8.14:4723"), options);
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
 	public static void login() {
@@ -93,12 +71,16 @@ public class Qms {
 		password.sendKeys("test");
 		WebElement login = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Login\"]"));
 		login.click();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(300));
 	}
 	
 	public static void side_menu() {
 		// click on the side menu
         WebElement menu = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"\"]"));
         menu.click();
+        
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
 	public static void sync_web() {
@@ -106,6 +88,8 @@ public class Qms {
         WebElement sync = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Sync\"]"));
         sync.click();
         System.out.println(sync.getText());
+        
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	}
 	
 	public static void set_line() {
@@ -130,6 +114,8 @@ public class Qms {
         // continue with selected line and input delay
         WebElement next = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Next\"]"));
         next.click();
+        
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
 	public static void select_order() {
@@ -159,6 +145,8 @@ public class Qms {
         // continue with selected buyer, style, and order
         WebElement orderOkay = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"\"]"));
         orderOkay.click();
+        
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
 	public static void choose_variance() {
@@ -175,6 +163,8 @@ public class Qms {
 		size.click();
 		WebElement selectedSize = driver.findElement(By.xpath("//android.widget.TextView[@text=\"L\"]"));
 		selectedSize.click();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
 	public static void pass() {
@@ -183,56 +173,68 @@ public class Qms {
 		pass.click();
 	}
 	
-	public static void alter() {
+	public static void alter() throws InterruptedException {
 		// input alter data from production entry page
 		WebElement alter = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Alter\"]"));
 		alter.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
-		// select a position on the sketch
-		WebElement alterImage = driver.findElement(By.xpath("//com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView[3]"));
-		alterImage.click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		// select an operation
+		// make sure that only operation option is selected in QMS settings in Nidle web
+		WebElement operation = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"ATTACH FRONT STRAP TO UPPER CUP LINING\"]/android.view.ViewGroup"));
+		operation.click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		
+		List<WebElement> defects = driver.findElements(By.className("android.view.ViewGroup"));
+		System.out.println(defects.toArray()[10]);
 		
 		// select a defect
-		WebElement alterDefect = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Defect 1\"]"));
-		alterDefect.click();
+		WebElement defect = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.view.ViewGroup"));
+		defect.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		
 		// continue with the selected position and defect
-		WebElement alterOkay = driver.findElement(By.xpath("//android.widget.TextView[@text=\"\"]"));
-		alterOkay.click();
+		WebElement okay = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup"));
+		okay.click();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
-	public static void reject() {
+	public static void reject() throws InterruptedException {
 		// input reject data from production entry page
-		WebElement reject = driver.findElement(By.id("//android.widget.TextView[@text=\"Reject\"]"));
+		WebElement reject = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Reject\"]"));
 		reject.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
-		// select a position on the sketch
-		WebElement rejectImage = driver.findElement(By.xpath("//com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView[3]"));
-		rejectImage.click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		// select an operation
+		// make sure that only operation option is selected in QMS settings in Nidle web
+		WebElement operation = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"ATTACH FRONT STRAP TO UPPER CUP LINING\"]/android.view.ViewGroup"));
+		operation.click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		
 		// select a defect
-		WebElement rejectDefect = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Defect 3\"]"));
-		rejectDefect.click();
+		WebElement defect = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.view.ViewGroup"));
+		defect.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		
 		// continue with the selected position and defect
-		WebElement rejectOkay = driver.findElement(By.xpath("//android.widget.TextView[@text=\"\"]"));
-		rejectOkay.click();
+		WebElement okay = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup"));
+		okay.click();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
-	public static void force_sync() {
+	public static void force_sync() throws InterruptedException {
 		// press force sync button
 		WebElement fsButton = driver.findElement(By.xpath("//android.widget.TextView[@text=\"\"]"));
 		fsButton.click();
+		
+		Thread.sleep(5000);
 	}
 	
-	public static void close_app() {
+	public static void close_app() throws InterruptedException {
 		// close the app
         driver.quit();
+        Thread.sleep(5000);
 	}
 }
