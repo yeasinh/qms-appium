@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -19,6 +21,8 @@ import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.touch.TapOptions;
 import io.appium.java_client.touch.offset.ElementOption;
@@ -36,18 +40,21 @@ public class Qms {
         side_menu();
         select_order();
         choose_variance();
-        /*
+        
         for(int i = 0; i < 5; i++) {
         	pass();
-        	Thread.sleep(3000);
+        	Thread.sleep(2000);
         }
         
-        force_sync();
-        */
         alter();
-        force_sync();
         reject();
+        
         force_sync();
+        
+        driver.pressKey(new KeyEvent(AndroidKey.BACK));
+        
+        side_menu();
+        logout();
         close_app();
 	}
 	
@@ -87,7 +94,6 @@ public class Qms {
 		// sync web data
         WebElement sync = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Sync\"]"));
         sync.click();
-        System.out.println(sync.getText());
         
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	}
@@ -96,7 +102,6 @@ public class Qms {
 		// access settings module
         WebElement settings = driver.findElement(By.xpath("//android.widget.Button[@content-desc=', Settings']"));
         settings.click();
-        System.out.println(settings.getText());
     	
         // select a line
         WebElement line = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\", Root\"]/android.view.ViewGroup"));
@@ -122,11 +127,9 @@ public class Qms {
 		// access home module
         WebElement home = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\", Home\"]"));
         home.click();
-        System.out.println(home.getText());
         
         // access qc lunch pad
         WebElement endTable = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"End table check, (Sewing), \"]"));
-        System.out.println(endTable.getText());
         endTable.click();
         
         // select a buyer
@@ -179,19 +182,24 @@ public class Qms {
 		alter.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
+		// select a position on the sketch
+		WebElement sketch = driver.findElement(By.xpath("//com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView[3]"));
+		sketch.click();
+		Thread.sleep(5000);
+		
 		// select an operation
-		// make sure that only operation option is selected in QMS settings in Nidle web
+		WebElement opTab = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup"));
+		opTab.click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		WebElement operation = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"ATTACH FRONT STRAP TO UPPER CUP LINING\"]/android.view.ViewGroup"));
 		operation.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		
-		List<WebElement> defects = driver.findElements(By.className("android.view.ViewGroup"));
-		System.out.println(defects.toArray()[10]);
-		
 		// select a defect
-		WebElement defect = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.view.ViewGroup"));
+		WebElement defect = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]"));
 		defect.click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		
+		Thread.sleep(5000);
 		
 		// continue with the selected position and defect
 		WebElement okay = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup"));
@@ -206,16 +214,24 @@ public class Qms {
 		reject.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
+		// select a position on the sketch
+		WebElement sketch = driver.findElement(By.xpath("//com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView[3]"));
+		sketch.click();
+		Thread.sleep(5000);
+		
 		// select an operation
-		// make sure that only operation option is selected in QMS settings in Nidle web
+		WebElement opTab = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup"));
+		opTab.click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		WebElement operation = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"ATTACH FRONT STRAP TO UPPER CUP LINING\"]/android.view.ViewGroup"));
 		operation.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		
 		// select a defect
-		WebElement defect = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.view.ViewGroup"));
+		WebElement defect = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]"));
 		defect.click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		
+		Thread.sleep(5000);
 		
 		// continue with the selected position and defect
 		WebElement okay = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup"));
@@ -232,9 +248,17 @@ public class Qms {
 		Thread.sleep(5000);
 	}
 	
+	public static void logout() throws InterruptedException {
+		WebElement logout = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\", logout\"]"));
+		logout.click();
+		
+		Thread.sleep(5000);
+	}
+	
 	public static void close_app() throws InterruptedException {
 		// close the app
         driver.quit();
+        
         Thread.sleep(5000);
 	}
 }
