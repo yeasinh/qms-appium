@@ -5,7 +5,13 @@
     <classes>
       <class name="com.yeasin.appium_qms.QmsTest">
         <methods>
-          <include name="basic_test"/>
+          <include name="close_app"/>
+          <include name="pass"/>
+          <include name="choose_variance"/>
+          <include name="alter"/>
+          <include name="setup"/>
+          <include name="select_order"/>
+          <include name="reject"/>
         </methods>
       </class> <!-- com.yeasin.appium_qms.QmsTest -->
     </classes>
