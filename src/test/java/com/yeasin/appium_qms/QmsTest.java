@@ -16,7 +16,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -39,6 +41,7 @@ public class QmsTest {
 	public static AppiumDriverLocalService service;
 	public static AndroidDriver driver;
 	public static int inputDelay = 5;
+	public static int iteration = 1;
 	
 	@BeforeTest
 	public static void setup() throws MalformedURLException {
@@ -65,7 +68,7 @@ public class QmsTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
-	@Test(priority = 0)
+	@BeforeClass
 	public static void login() {
 		// log in to qms app with username = Test and password = test
 		WebElement username = driver.findElement(By.xpath("//android.widget.EditText[@text=\"Username\"]"));
@@ -81,9 +84,15 @@ public class QmsTest {
 	@Test(priority = 1)
 	public static void side_menu() {
 		// click on the side menu icon
-		WebElement menu = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup"));
-        menu.click();
-        
+		try {
+			WebElement menu = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"\"]"));
+			menu.click();
+			
+		} catch(Exception e) {
+			WebElement menu = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup"));
+	        menu.click();
+		}
+		
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
@@ -111,9 +120,9 @@ public class QmsTest {
             selectedLine.click();
             
             // select an input delay
-            WebElement delay = driver.findElement(By.xpath("(//android.view.ViewGroup[@content-desc=\"5 Seconds\"])[1]"));
+            WebElement delay = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"5 Seconds\"]"));
             delay.click();
-            WebElement selectedDelay = driver.findElement(By.xpath("//android.widget.TextView[@text=\"" + inputDelay + " Seconds\"]"));
+            WebElement selectedDelay = driver.findElement(By.xpath("(//android.widget.TextView[@text=\"5 Seconds\"])[3]"));
             selectedDelay.click();
             
             // continue with selected line and input delay
@@ -260,12 +269,76 @@ public class QmsTest {
 		okay.click();
 	}
 	
+	public static void force_sync() throws InterruptedException {
+		// press force sync button
+		WebElement fsButton = driver.findElement(By.xpath("//android.widget.TextView[@text=\"\"]"));
+		fsButton.click();
+		
+		Thread.sleep(5000);
+	}
+	
+	@Test(enabled = false)
+	public static void undo() throws InterruptedException {
+		// press undo button
+		WebElement undoButton = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup"));
+		undoButton.click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		
+		// confirm undo from pop-up message
+		WebElement undoConfirm = driver.findElements(AppiumBy.className("android.widget.Button")).get(1);
+		undoConfirm.click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+	}
+	
+	
+	@Test(enabled = false)
+	public static void production_entry() throws InterruptedException {
+		for(int i = 1; i <= iteration; i++) {
+        	pass();
+        	
+        	if(i % 1 == 0) {
+        		alter();
+                reject();
+                force_sync();
+        	}
+        }
+	}
+
+	@Test(priority = 9)
+	public static void entry_undo() throws InterruptedException {
+		inputDelay = 2;
+        for(int i = 1; i <= iteration; i++) {
+        	pass();
+        	undo();
+        	
+        	if(i % 1 == 0) {
+        		alter();
+        		undo();
+                reject();
+                undo();
+                force_sync();
+        	}
+        }
+	}
+	
+	@AfterClass
+	public static void logout() throws InterruptedException {
+		// click on logout menu
+		WebElement logout = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\", logout\"]"));
+		logout.click();
+		
+		Thread.sleep(5000);
+	}
+	
 	@AfterTest
 	public static void close_app() throws InterruptedException {
 		// close the app
+		driver.close();
+		
+		// close the driver
         driver.quit();
         
-        // close the server
+        // stop the server
         // service.stop();
         
         Thread.sleep(5000);

@@ -3,13 +3,24 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.yeasin.appium_qms.QmsTest">
+      <class name="com.yeasin.appium_qms.QmsRepair">
         <methods>
           <include name="close_app"/>
-          <include name="side_menu"/>
+          <include name="pass"/>
+          <include name="repair_mode_off"/>
+          <include name="sync_web"/>
+          <include name="alter"/>
           <include name="setup"/>
+          <include name="select_order"/>
+          <include name="logout"/>
+          <include name="entry_undo"/>
+          <include name="set_line"/>
+          <include name="reject"/>
+          <include name="basic_close"/>
+          <include name="basic_flow"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- com.yeasin.appium_qms.QmsTest -->
+      </class> <!-- com.yeasin.appium_qms.QmsRepair -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

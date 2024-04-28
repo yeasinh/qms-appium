@@ -46,33 +46,38 @@ public class Qms {
         side_menu();
         sync_web();
         set_line();
-        side_menu();
         select_order();
         choose_variance();
         /**/
-        for(int i = 1; i <= iteration; i++) {
-        	pass();
-        	
-        	if(i % 1 == 0) {
-        		alter();
-                reject();
-                force_sync();
-        	}
-        }
-        
+        // basic workflow
+        inputDelay = 5;
+        production_entry();
         inputDelay = 2;
-        for(int i = 1; i <= iteration; i++) {
-        	pass();
-        	undo();
-        	
-        	if(i % 1 == 0) {
-        		alter();
-        		undo();
-                reject();
-                undo();
-                force_sync();
-        	}
-        }
+        entry_undo();
+        
+        // repair mode
+        repair_mode_on();
+        inputDelay = 5;
+        production_entry();
+        inputDelay = 2;
+        entry_undo();
+        repair_mode_off();
+        
+        // offline mode
+        driver.toggleWifi();
+        Thread.sleep(5000);
+        inputDelay = 5;
+        production_entry();
+        inputDelay = 2;
+        entry_undo();
+        repair_mode_on();
+        inputDelay = 5;
+        production_entry();
+        inputDelay = 2;
+        entry_undo();
+        repair_mode_off();
+        driver.toggleWifi();
+        Thread.sleep(5000);
         
         side_menu();
         logout();
@@ -120,9 +125,15 @@ public class Qms {
 	// expand the side menu
 	public static void side_menu() {
 		// click on the side menu icon
-		WebElement menu = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup"));
-        menu.click();
-        
+		try {
+			WebElement menu = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"\"]"));
+			menu.click();
+			
+		} catch(Exception e) {
+			WebElement menu = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup"));
+	        menu.click();
+		}
+		
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
@@ -150,9 +161,9 @@ public class Qms {
             selectedLine.click();
             
             // select an input delay
-            WebElement delay = driver.findElement(By.xpath("(//android.view.ViewGroup[@content-desc=\"5 Seconds\"])[1]"));
+            WebElement delay = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"5 Seconds\"]"));
             delay.click();
-            WebElement selectedDelay = driver.findElement(By.xpath("//android.widget.TextView[@text=\"" + inputDelay + " Seconds\"]"));
+            WebElement selectedDelay = driver.findElement(By.xpath("(//android.widget.TextView[@text=\"5 Seconds\"])[3]"));
             selectedDelay.click();
             
             // continue with selected line and input delay
@@ -299,19 +310,6 @@ public class Qms {
 		okay.click();
 	}
 	
-	// perform undo after pass/alter/reject
-	public static void undo() throws InterruptedException {
-		// press undo button
-		WebElement undoButton = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup"));
-		undoButton.click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		
-		// confirm undo from pop-up message
-		WebElement undoConfirm = driver.findElements(AppiumBy.className("android.widget.Button")).get(1);
-		undoConfirm.click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-	}
-	
 	// sync pass/alter/reject entries to the web
 	public static void force_sync() throws InterruptedException {
 		// press force sync button
@@ -321,18 +319,59 @@ public class Qms {
 		Thread.sleep(5000);
 	}
 	
+	// perform undo after pass/alter/reject
+	public static void undo() throws InterruptedException {
+		// press undo button
+		WebElement undoButton = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup"));
+		undoButton.click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+			
+		// confirm undo from pop-up message
+		WebElement undoConfirm = driver.findElements(AppiumBy.className("android.widget.Button")).get(1);
+		undoConfirm.click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+	}
+
 	// turn on repair mode
 	public static void repair_mode_on() throws InterruptedException {
 		// toggle the repair button to turn on repair mode
 		WebElement repairOn = driver.findElement(By.xpath("//android.widget.Switch[@text=\"OFF\"]"));
 		repairOn.click();
 	}
-	
+		
 	// turn off repair mode
 	public static void repair_mode_off() throws InterruptedException {
 		// toggle the repair button to turn off repair
 		WebElement repairOff = driver.findElement(By.xpath("//android.widget.Switch[@text=\"ON\"]"));
 		repairOff.click();
+	}
+		
+	public static void production_entry() throws InterruptedException {
+		for(int i = 1; i <= iteration; i++) {
+        	pass();
+        	
+        	if(i % 1 == 0) {
+        		alter();
+                reject();
+                force_sync();
+        	}
+        }
+	}
+	
+	public static void entry_undo() throws InterruptedException {
+		inputDelay = 2;
+        for(int i = 1; i <= iteration; i++) {
+        	pass();
+        	undo();
+        	
+        	if(i % 1 == 0) {
+        		alter();
+        		undo();
+                reject();
+                undo();
+                force_sync();
+        	}
+        }
 	}
 	
 	// log out of the app
@@ -346,7 +385,10 @@ public class Qms {
 	
 	// close the driver and stop the server
 	public static void close_app() throws InterruptedException {
-		// close the app
+		// close the app and remove it from app history
+		driver.terminateApp("com.nidleqms");
+		
+		// close the driver
         driver.quit();
         
         // stop the server
