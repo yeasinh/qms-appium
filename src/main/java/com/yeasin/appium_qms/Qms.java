@@ -38,6 +38,7 @@ public class Qms {
 	public static AppiumDriverLocalService service;
 	public static AndroidDriver driver;
 	public static int inputDelay = 5;
+	public static int iteration = 1;
 
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
         setup();
@@ -48,8 +49,8 @@ public class Qms {
         side_menu();
         select_order();
         choose_variance();
-        /*
-        for(int i = 1; i <= 1; i++) {
+        /**/
+        for(int i = 1; i <= iteration; i++) {
         	pass();
         	
         	if(i % 1 == 0) {
@@ -59,20 +60,26 @@ public class Qms {
         	}
         }
         
-        delay = 2;
-        pass();
-        undo();
-        alter();
-        undo();
-        reject();
-        undo();
-        force_sync();
-        */
+        inputDelay = 2;
+        for(int i = 1; i <= iteration; i++) {
+        	pass();
+        	undo();
+        	
+        	if(i % 1 == 0) {
+        		alter();
+        		undo();
+                reject();
+                undo();
+                force_sync();
+        	}
+        }
+        
         side_menu();
         logout();
         close_app();
 	}
 	
+	// set up the server, driver, and app
 	public static void setup() throws MalformedURLException {
 		// build and start the server
 		// service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\1600000205\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js")).withIPAddress("172.17.8.14").usingPort(4723).build();
@@ -97,6 +104,7 @@ public class Qms {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
+	// log in to the app
 	public static void login() {
 		// log in to qms app with username = Test and password = test
 		WebElement username = driver.findElement(By.xpath("//android.widget.EditText[@text=\"Username\"]"));
@@ -109,6 +117,7 @@ public class Qms {
 		driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(5));
 	}
 	
+	// expand the side menu
 	public static void side_menu() {
 		// click on the side menu icon
 		WebElement menu = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup"));
@@ -117,6 +126,7 @@ public class Qms {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
+	// sync web data for the latest master data and settings
 	public static void sync_web() {
 		// click on the sync button
         WebElement sync = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Sync\"]"));
@@ -125,6 +135,7 @@ public class Qms {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	}
 	
+	// set the line and input delay
 	public static void set_line() {
 		// access settings module
         WebElement settings = driver.findElement(By.xpath("//android.widget.Button[@content-desc=', Settings']"));
@@ -157,6 +168,7 @@ public class Qms {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
+	// select the buyer, style, and order
 	public static void select_order() {
         try {
         	// continue with previously selected buyer, style, and order
@@ -197,6 +209,7 @@ public class Qms {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
+	// choose color and size
 	public static void choose_variance() throws InterruptedException {
 		try {
 			// select a color
@@ -220,6 +233,7 @@ public class Qms {
 		Thread.sleep(2000);
 	}
 	
+	// provide pass entries
 	public static void pass() throws InterruptedException {
 		// input pass data from production entry page
 		WebElement pass = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Pass\"]"));
@@ -228,6 +242,7 @@ public class Qms {
 		Thread.sleep((inputDelay+2)*1000);
 	}
 	
+	// provide alter entries
 	public static void alter() throws InterruptedException {
 		// input alter data from production entry page
 		WebElement alter = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Alter\"]"));
@@ -239,6 +254,7 @@ public class Qms {
 		Thread.sleep((inputDelay+2)*1000);
 	}
 	
+	// provide reject entries
 	public static void reject() throws InterruptedException {
 		// input reject data from production entry page
 		WebElement reject = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Reject\"]"));
@@ -250,6 +266,7 @@ public class Qms {
 		Thread.sleep((inputDelay+2)*1000);
 	}
 	
+	// select positon, operation, and defect for alter/reject
 	public static void enter_defect() throws InterruptedException {
 		try {
 			// select a position on the sketch
@@ -282,6 +299,7 @@ public class Qms {
 		okay.click();
 	}
 	
+	// perform undo after pass/alter/reject
 	public static void undo() throws InterruptedException {
 		// press undo button
 		WebElement undoButton = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup"));
@@ -294,6 +312,7 @@ public class Qms {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
+	// sync pass/alter/reject entries to the web
 	public static void force_sync() throws InterruptedException {
 		// press force sync button
 		WebElement fsButton = driver.findElement(By.xpath("//android.widget.TextView[@text=\"\"]"));
@@ -302,20 +321,21 @@ public class Qms {
 		Thread.sleep(5000);
 	}
 	
-	public static void repair_mode() throws InterruptedException {
+	// turn on repair mode
+	public static void repair_mode_on() throws InterruptedException {
 		// toggle the repair button to turn on repair mode
 		WebElement repairOn = driver.findElement(By.xpath("//android.widget.Switch[@text=\"OFF\"]"));
 		repairOn.click();
-		
-		pass();
-        alter();
-        reject();
-		
+	}
+	
+	// turn off repair mode
+	public static void repair_mode_off() throws InterruptedException {
 		// toggle the repair button to turn off repair
 		WebElement repairOff = driver.findElement(By.xpath("//android.widget.Switch[@text=\"ON\"]"));
 		repairOff.click();
 	}
 	
+	// log out of the app
 	public static void logout() throws InterruptedException {
 		// click on logout menu
 		WebElement logout = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\", logout\"]"));
@@ -324,11 +344,12 @@ public class Qms {
 		Thread.sleep(5000);
 	}
 	
+	// close the driver and stop the server
 	public static void close_app() throws InterruptedException {
 		// close the app
         driver.quit();
         
-        // close the server
+        // stop the server
         // service.stop();
         
         Thread.sleep(5000);
