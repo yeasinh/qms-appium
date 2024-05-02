@@ -52,6 +52,7 @@ public class QmsRepair extends QmsTest {
 		// access settings module
         WebElement settings = driver.findElement(By.xpath("//android.widget.Button[@content-desc=', Settings']"));
         settings.click();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     	
         try {
         	// select a line
@@ -86,11 +87,13 @@ public class QmsRepair extends QmsTest {
         	// continue with previously selected buyer, style, and order
         	WebElement prevOrderComfirm = driver.findElement(By.xpath("//android.widget.Button[@resource-id=\"android:id/button1\"]"));
         	prevOrderComfirm.click();
+        	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         	
         } catch(Exception e) {
         	// access home module
             WebElement home = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\", Home\"]"));
             home.click();
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
             
             // access qc lunch pad
             WebElement endTable = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"End table check, (Sewing), \"]"));

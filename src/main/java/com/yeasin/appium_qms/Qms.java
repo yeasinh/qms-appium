@@ -147,10 +147,11 @@ public class Qms {
 	}
 	
 	// set the line and input delay
-	public static void set_line() {
+	public static void set_line() throws InterruptedException {
 		// access settings module
         WebElement settings = driver.findElement(By.xpath("//android.widget.Button[@content-desc=', Settings']"));
         settings.click();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     	
         try {
         	// select a line
@@ -159,38 +160,46 @@ public class Qms {
             driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Appium Line\"));"));
             WebElement selectedLine = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Appium Line\"]/android.view.ViewGroup"));
             selectedLine.click();
+            Thread.sleep(1000);
             
             // select an input delay
             WebElement delay = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"5 Seconds\"]"));
             delay.click();
             WebElement selectedDelay = driver.findElement(By.xpath("(//android.widget.TextView[@text=\"5 Seconds\"])[3]"));
             selectedDelay.click();
+            Thread.sleep(1000);
             
             // continue with selected line and input delay
             WebElement next = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Next\"]"));
             next.click();
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
             
         } catch (Exception e) {
         	// continue with previously selected line and input delay
         	WebElement next = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Next\"]"));
             next.click();
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         }
-        
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
 	// select the buyer, style, and order
 	public static void select_order() {
+		try {
+			// access home module
+            WebElement home = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\", Home\"]"));
+            home.click();
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+            
+		} catch(Exception e) {
+			// home module already entered
+		}
+		
         try {
         	// continue with previously selected buyer, style, and order
         	WebElement prevOrderComfirm = driver.findElement(By.xpath("//android.widget.Button[@resource-id=\"android:id/button1\"]"));
         	prevOrderComfirm.click();
         	
         } catch(Exception e) {
-        	// access home module
-            WebElement home = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\", Home\"]"));
-            home.click();
-            
             // access qc lunch pad
             WebElement endTable = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"End table check, (Sewing), \"]"));
             endTable.click();
@@ -215,9 +224,8 @@ public class Qms {
             // continue with selected buyer, style, and order
             WebElement orderOkay = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"\"]"));
             orderOkay.click();
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         }
-        
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
 	// choose color and size
@@ -228,20 +236,18 @@ public class Qms {
 			color.click();
 			WebElement selectedColor = driver.findElement(By.xpath("//android.widget.TextView[@text=\"BLACK\"]"));
 			selectedColor.click();
-			
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+			Thread.sleep(2000);
 			
 			// select a size
 			WebElement size = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Choose a Size\"]"));
 			size.click();
 			WebElement selectedSize = driver.findElement(By.xpath("//android.widget.TextView[@text=\"L\"]"));
 			selectedSize.click();
+			Thread.sleep(2000);
 		
 		} catch (Exception e) {
 			// continue with already selected color and size
 		}
-		
-		Thread.sleep(2000);
 	}
 	
 	// provide pass entries
@@ -301,13 +307,14 @@ public class Qms {
 		}
 		
 		// select a defect
-		WebElement defect = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.view.ViewGroup"));
+		WebElement defect = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup"));
 		defect.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 				
 		// continue with the selected position and defect
 		WebElement okay = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup"));
 		okay.click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
 	// sync pass/alter/reject entries to the web
@@ -327,7 +334,7 @@ public class Qms {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 			
 		// confirm undo from pop-up message
-		WebElement undoConfirm = driver.findElements(AppiumBy.className("android.widget.Button")).get(1);
+		WebElement undoConfirm = driver.findElement(By.xpath("//android.widget.Button[@resource-id=\"android:id/button1\"]"));
 		undoConfirm.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
@@ -337,6 +344,7 @@ public class Qms {
 		// toggle the repair button to turn on repair mode
 		WebElement repairOn = driver.findElement(By.xpath("//android.widget.Switch[@text=\"OFF\"]"));
 		repairOn.click();
+		Thread.sleep(2000);
 	}
 		
 	// turn off repair mode
@@ -344,18 +352,21 @@ public class Qms {
 		// toggle the repair button to turn off repair
 		WebElement repairOff = driver.findElement(By.xpath("//android.widget.Switch[@text=\"ON\"]"));
 		repairOff.click();
+		Thread.sleep(2000);
 	}
 		
 	public static void production_entry() throws InterruptedException {
+		inputDelay = 5;
 		for(int i = 1; i <= iteration; i++) {
         	pass();
         	
         	if(i % 1 == 0) {
         		alter();
                 reject();
-                force_sync();
         	}
         }
+		
+        force_sync();
 	}
 	
 	public static void entry_undo() throws InterruptedException {
@@ -369,9 +380,10 @@ public class Qms {
         		undo();
                 reject();
                 undo();
-                force_sync();
         	}
         }
+        
+        force_sync();
 	}
 	
 	// log out of the app
