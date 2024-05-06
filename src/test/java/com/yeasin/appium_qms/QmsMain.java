@@ -2,39 +2,15 @@ package com.yeasin.appium_qms;
 
 import java.net.URL;
 import java.time.Duration;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.nativekey.AndroidKey;
-import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
-import io.appium.java_client.service.local.AppiumServiceBuilder;
-import io.appium.java_client.touch.TapOptions;
-import io.appium.java_client.touch.offset.ElementOption;
-import io.appium.java_client.touch.offset.PointOption;
 
-public class Qms {
+public class QmsMain {
 	public static AppiumDriverLocalService service;
 	public static AndroidDriver driver;
 	public static int inputDelay = 5;
@@ -52,15 +28,15 @@ public class Qms {
         // basic workflow
         inputDelay = 5;
         production_entry();
-        inputDelay = 2;
-        entry_undo();
+        inputDelay = 1;
+        perform_undo();
         
         // repair mode
         repair_mode_on();
         inputDelay = 5;
         production_entry();
-        inputDelay = 2;
-        entry_undo();
+        inputDelay = 1;
+        perform_undo();
         repair_mode_off();
         
         // offline mode
@@ -68,13 +44,13 @@ public class Qms {
         Thread.sleep(5000);
         inputDelay = 5;
         production_entry();
-        inputDelay = 2;
-        entry_undo();
+        inputDelay = 1;
+        perform_undo();
         repair_mode_on();
         inputDelay = 5;
         production_entry();
-        inputDelay = 2;
-        entry_undo();
+        inputDelay = 1;
+        perform_undo();
         repair_mode_off();
         driver.toggleWifi();
         Thread.sleep(5000);
@@ -103,7 +79,7 @@ public class Qms {
 
 		} catch(Exception e) {
 			// set the app
-			options.setApp("D:\\APK\\qms-24.03.11.apk");
+			options.setApp("D:\\APK\\qms-24.04.30.apk");
 		}
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -336,7 +312,7 @@ public class Qms {
 		// confirm undo from pop-up message
 		WebElement undoConfirm = driver.findElement(By.xpath("//android.widget.Button[@resource-id=\"android:id/button1\"]"));
 		undoConfirm.click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		Thread.sleep(2000);
 	}
 
 	// turn on repair mode
@@ -369,7 +345,7 @@ public class Qms {
         force_sync();
 	}
 	
-	public static void entry_undo() throws InterruptedException {
+	public static void perform_undo() throws InterruptedException {
 		inputDelay = 2;
         for(int i = 1; i <= iteration; i++) {
         	pass();
