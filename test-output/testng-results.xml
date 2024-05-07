@@ -1,65 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
+<testng-results ignored="0" total="28" passed="28" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-06T12:28:55 BDT" name="Default suite" finished-at="2024-05-06T12:30:52 BDT" duration-ms="117479">
+  <suite started-at="2024-05-07T17:54:34 BDT" name="QMS Automation Suite" finished-at="2024-05-07T17:58:28 BDT" duration-ms="233721">
     <groups>
     </groups>
-    <test started-at="2024-05-06T12:28:55 BDT" name="Default test" finished-at="2024-05-06T12:30:52 BDT" duration-ms="117479">
+    <test started-at="2024-05-07T17:54:34 BDT" name="QMS Basic Test Online" finished-at="2024-05-07T17:56:30 BDT" duration-ms="115982">
       <class name="com.yeasin.appium_qms.QmsOnlineNormal">
-        <test-method signature="setup_call()[pri:1, instance:com.yeasin.appium_qms.QmsOnlineNormal@323e8306]" started-at="2024-05-06T12:28:55 BDT" name="setup_call" finished-at="2024-05-06T12:29:02 BDT" duration-ms="6988" status="PASS">
+        <test-method signature="setup_call()[pri:1, instance:com.yeasin.appium_qms.QmsOnlineNormal@49c66ade]" started-at="2024-05-07T17:54:34 BDT" name="setup_call" finished-at="2024-05-07T17:54:40 BDT" duration-ms="5586" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup_call -->
-        <test-method signature="login_call()[pri:2, instance:com.yeasin.appium_qms.QmsOnlineNormal@323e8306]" started-at="2024-05-06T12:29:02 BDT" name="login_call" finished-at="2024-05-06T12:29:06 BDT" duration-ms="3706" status="PASS">
+        <test-method signature="login_call()[pri:2, instance:com.yeasin.appium_qms.QmsOnlineNormal@49c66ade]" started-at="2024-05-07T17:54:40 BDT" name="login_call" finished-at="2024-05-07T17:54:46 BDT" duration-ms="5970" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login_call -->
-        <test-method signature="side_menu_call()[pri:3, instance:com.yeasin.appium_qms.QmsOnlineNormal@323e8306]" started-at="2024-05-06T12:29:06 BDT" name="side_menu_call" finished-at="2024-05-06T12:29:11 BDT" duration-ms="5694" status="PASS">
+        <test-method signature="side_menu_call()[pri:3, instance:com.yeasin.appium_qms.QmsOnlineNormal@49c66ade]" started-at="2024-05-07T17:54:46 BDT" name="side_menu_call" finished-at="2024-05-07T17:54:53 BDT" duration-ms="7167" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- side_menu_call -->
-        <test-method signature="sync_web_call()[pri:4, instance:com.yeasin.appium_qms.QmsOnlineNormal@323e8306]" started-at="2024-05-06T12:29:11 BDT" name="sync_web_call" finished-at="2024-05-06T12:29:13 BDT" duration-ms="1683" status="PASS">
+        <test-method signature="sync_web_call()[pri:4, instance:com.yeasin.appium_qms.QmsOnlineNormal@49c66ade]" started-at="2024-05-07T17:54:53 BDT" name="sync_web_call" finished-at="2024-05-07T17:54:55 BDT" duration-ms="1818" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sync_web_call -->
-        <test-method signature="set_line_call()[pri:5, instance:com.yeasin.appium_qms.QmsOnlineNormal@323e8306]" started-at="2024-05-06T12:29:13 BDT" name="set_line_call" finished-at="2024-05-06T12:29:26 BDT" duration-ms="12659" status="PASS">
+        <test-method signature="set_line_call()[pri:5, instance:com.yeasin.appium_qms.QmsOnlineNormal@49c66ade]" started-at="2024-05-07T17:54:55 BDT" name="set_line_call" finished-at="2024-05-07T17:55:09 BDT" duration-ms="14372" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- set_line_call -->
-        <test-method signature="select_order_call()[pri:6, instance:com.yeasin.appium_qms.QmsOnlineNormal@323e8306]" started-at="2024-05-06T12:29:26 BDT" name="select_order_call" finished-at="2024-05-06T12:29:31 BDT" duration-ms="5142" status="PASS">
+        <test-method signature="select_order_call()[pri:6, instance:com.yeasin.appium_qms.QmsOnlineNormal@49c66ade]" started-at="2024-05-07T17:55:09 BDT" name="select_order_call" finished-at="2024-05-07T17:55:14 BDT" duration-ms="5198" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- select_order_call -->
-        <test-method signature="choose_variance_call()[pri:7, instance:com.yeasin.appium_qms.QmsOnlineNormal@323e8306]" started-at="2024-05-06T12:29:31 BDT" name="choose_variance_call" finished-at="2024-05-06T12:29:41 BDT" duration-ms="9900" status="PASS">
+        <test-method signature="choose_variance_call()[pri:7, instance:com.yeasin.appium_qms.QmsOnlineNormal@49c66ade]" started-at="2024-05-07T17:55:14 BDT" name="choose_variance_call" finished-at="2024-05-07T17:55:19 BDT" duration-ms="5135" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- choose_variance_call -->
-        <test-method signature="pass_call()[pri:8, instance:com.yeasin.appium_qms.QmsOnlineNormal@323e8306]" started-at="2024-05-06T12:29:41 BDT" name="pass_call" finished-at="2024-05-06T12:29:48 BDT" duration-ms="7766" status="PASS">
+        <test-method signature="pass_call()[pri:8, instance:com.yeasin.appium_qms.QmsOnlineNormal@49c66ade]" started-at="2024-05-07T17:55:19 BDT" name="pass_call" finished-at="2024-05-07T17:55:27 BDT" duration-ms="7199" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pass_call -->
-        <test-method signature="alter_call()[pri:9, instance:com.yeasin.appium_qms.QmsOnlineNormal@323e8306]" started-at="2024-05-06T12:29:49 BDT" name="alter_call" finished-at="2024-05-06T12:30:08 BDT" duration-ms="19974" status="PASS">
+        <test-method signature="alter_call()[pri:9, instance:com.yeasin.appium_qms.QmsOnlineNormal@49c66ade]" started-at="2024-05-07T17:55:27 BDT" name="alter_call" finished-at="2024-05-07T17:55:48 BDT" duration-ms="20909" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- alter_call -->
-        <test-method signature="reject_call()[pri:10, instance:com.yeasin.appium_qms.QmsOnlineNormal@323e8306]" started-at="2024-05-06T12:30:08 BDT" name="reject_call" finished-at="2024-05-06T12:30:29 BDT" duration-ms="20437" status="PASS">
+        <test-method signature="reject_call()[pri:10, instance:com.yeasin.appium_qms.QmsOnlineNormal@49c66ade]" started-at="2024-05-07T17:55:48 BDT" name="reject_call" finished-at="2024-05-07T17:56:07 BDT" duration-ms="19179" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reject_call -->
-        <test-method signature="force_sync_call()[pri:11, instance:com.yeasin.appium_qms.QmsOnlineNormal@323e8306]" started-at="2024-05-06T12:30:29 BDT" name="force_sync_call" finished-at="2024-05-06T12:30:35 BDT" duration-ms="5652" status="PASS">
+        <test-method signature="force_sync_call()[pri:11, instance:com.yeasin.appium_qms.QmsOnlineNormal@49c66ade]" started-at="2024-05-07T17:56:07 BDT" name="force_sync_call" finished-at="2024-05-07T17:56:12 BDT" duration-ms="5677" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- force_sync_call -->
-        <test-method signature="logout_call()[pri:12, instance:com.yeasin.appium_qms.QmsOnlineNormal@323e8306]" started-at="2024-05-06T12:30:35 BDT" name="logout_call" finished-at="2024-05-06T12:30:47 BDT" duration-ms="11953" status="PASS">
+        <test-method signature="logout_call()[pri:12, instance:com.yeasin.appium_qms.QmsOnlineNormal@49c66ade]" started-at="2024-05-07T17:56:12 BDT" name="logout_call" finished-at="2024-05-07T17:56:24 BDT" duration-ms="11925" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout_call -->
-        <test-method signature="close_app_call()[pri:13, instance:com.yeasin.appium_qms.QmsOnlineNormal@323e8306]" started-at="2024-05-06T12:30:47 BDT" name="close_app_call" finished-at="2024-05-06T12:30:52 BDT" duration-ms="5846" status="PASS">
+        <test-method signature="close_app_call()[pri:13, instance:com.yeasin.appium_qms.QmsOnlineNormal@49c66ade]" started-at="2024-05-07T17:56:24 BDT" name="close_app_call" finished-at="2024-05-07T17:56:30 BDT" duration-ms="5801" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close_app_call -->
       </class> <!-- com.yeasin.appium_qms.QmsOnlineNormal -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- QMS Basic Test Online -->
+    <test started-at="2024-05-07T17:56:30 BDT" name="QMS Repair Test Online" finished-at="2024-05-07T17:58:28 BDT" duration-ms="117487">
+      <class name="com.yeasin.appium_qms.QmsOnlineRepair">
+        <test-method signature="setup_call()[pri:1, instance:com.yeasin.appium_qms.QmsOnlineRepair@58326051]" started-at="2024-05-07T17:56:30 BDT" name="setup_call" finished-at="2024-05-07T17:56:35 BDT" duration-ms="5004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup_call -->
+        <test-method signature="login_call()[pri:2, instance:com.yeasin.appium_qms.QmsOnlineRepair@58326051]" started-at="2024-05-07T17:56:35 BDT" name="login_call" finished-at="2024-05-07T17:56:40 BDT" duration-ms="4709" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_call -->
+        <test-method signature="side_menu_call()[pri:3, instance:com.yeasin.appium_qms.QmsOnlineRepair@58326051]" started-at="2024-05-07T17:56:40 BDT" name="side_menu_call" finished-at="2024-05-07T17:56:47 BDT" duration-ms="6758" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- side_menu_call -->
+        <test-method signature="sync_web_call()[pri:4, instance:com.yeasin.appium_qms.QmsOnlineRepair@58326051]" started-at="2024-05-07T17:56:47 BDT" name="sync_web_call" finished-at="2024-05-07T17:56:49 BDT" duration-ms="1648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sync_web_call -->
+        <test-method signature="set_line_call()[pri:5, instance:com.yeasin.appium_qms.QmsOnlineRepair@58326051]" started-at="2024-05-07T17:56:49 BDT" name="set_line_call" finished-at="2024-05-07T17:57:02 BDT" duration-ms="13220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- set_line_call -->
+        <test-method signature="select_order_call()[pri:6, instance:com.yeasin.appium_qms.QmsOnlineRepair@58326051]" started-at="2024-05-07T17:57:02 BDT" name="select_order_call" finished-at="2024-05-07T17:57:07 BDT" duration-ms="5169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- select_order_call -->
+        <test-method signature="choose_variance_call()[pri:7, instance:com.yeasin.appium_qms.QmsOnlineRepair@58326051]" started-at="2024-05-07T17:57:07 BDT" name="choose_variance_call" finished-at="2024-05-07T17:57:12 BDT" duration-ms="5158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- choose_variance_call -->
+        <test-method signature="repair_mode_on_call()[pri:8, instance:com.yeasin.appium_qms.QmsOnlineRepair@58326051]" started-at="2024-05-07T17:57:12 BDT" name="repair_mode_on_call" finished-at="2024-05-07T17:57:14 BDT" duration-ms="2216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- repair_mode_on_call -->
+        <test-method signature="pass_call()[pri:9, instance:com.yeasin.appium_qms.QmsOnlineRepair@58326051]" started-at="2024-05-07T17:57:14 BDT" name="pass_call" finished-at="2024-05-07T17:57:22 BDT" duration-ms="7779" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pass_call -->
+        <test-method signature="alter_call()[pri:10, instance:com.yeasin.appium_qms.QmsOnlineRepair@58326051]" started-at="2024-05-07T17:57:22 BDT" name="alter_call" finished-at="2024-05-07T17:57:43 BDT" duration-ms="20533" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- alter_call -->
+        <test-method signature="reject_call()[pri:11, instance:com.yeasin.appium_qms.QmsOnlineRepair@58326051]" started-at="2024-05-07T17:57:43 BDT" name="reject_call" finished-at="2024-05-07T17:58:02 BDT" duration-ms="19627" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reject_call -->
+        <test-method signature="repair_mode_off_call()[pri:12, instance:com.yeasin.appium_qms.QmsOnlineRepair@58326051]" started-at="2024-05-07T17:58:02 BDT" name="repair_mode_off_call" finished-at="2024-05-07T17:58:04 BDT" duration-ms="2167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- repair_mode_off_call -->
+        <test-method signature="force_sync_call()[pri:13, instance:com.yeasin.appium_qms.QmsOnlineRepair@58326051]" started-at="2024-05-07T17:58:04 BDT" name="force_sync_call" finished-at="2024-05-07T17:58:10 BDT" duration-ms="5693" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- force_sync_call -->
+        <test-method signature="logout_call()[pri:14, instance:com.yeasin.appium_qms.QmsOnlineRepair@58326051]" started-at="2024-05-07T17:58:10 BDT" name="logout_call" finished-at="2024-05-07T17:58:22 BDT" duration-ms="12083" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout_call -->
+        <test-method signature="close_app_call()[pri:15, instance:com.yeasin.appium_qms.QmsOnlineRepair@58326051]" started-at="2024-05-07T17:58:22 BDT" name="close_app_call" finished-at="2024-05-07T17:58:28 BDT" duration-ms="5712" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close_app_call -->
+      </class> <!-- com.yeasin.appium_qms.QmsOnlineRepair -->
+    </test> <!-- QMS Repair Test Online -->
+  </suite> <!-- QMS Automation Suite -->
 </testng-results>

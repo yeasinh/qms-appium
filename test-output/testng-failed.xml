@@ -5,7 +5,10 @@
     <classes>
       <class name="com.yeasin.appium_qms.QmsOnlineNormal">
         <methods>
+          <include name="alter_call"/>
           <include name="logout_call"/>
+          <include name="force_sync_call"/>
+          <include name="reject_call"/>
         </methods>
       </class> <!-- com.yeasin.appium_qms.QmsOnlineNormal -->
     </classes>

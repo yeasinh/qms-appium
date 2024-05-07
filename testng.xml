@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="QMS Automation Suite">
+  <listeners>
+	<listener class-name="com.yeasin.appium_qms.Listeners"/>
+  </listeners>
+  
+  <test thread-count="5" name="QMS Basic Test Online">
+    <classes>
+      <class name="com.yeasin.appium_qms.QmsOnlineNormal"/>
+    </classes>
+  </test> <!-- QMS Appium Test -->
+  
+  <test thread-count="5" name="QMS Repair Test Online">
+    <classes>
+      <class name="com.yeasin.appium_qms.QmsOnlineRepair"/>
+    </classes>
+  </test> <!-- QMS Appium Test -->
+  
+</suite> <!-- QMS Automation Suite -->
