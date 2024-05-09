@@ -11,57 +11,60 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 
 public class QmsMain {
-	public static AppiumDriverLocalService service;
-	public static AndroidDriver driver;
-	public static int inputDelay = 5;
-	public static int iteration = 1;
+	static AppiumDriverLocalService service;
+	static AndroidDriver driver;
+	static int inputDelay = 5;
+	static int iteration = 1;
 
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
-        set_up();
-        log_in();
-        expand_side_menu();
-        sync_web();
-        set_line();
-        select_order();
-        choose_variance();
+		
+		QmsMain qmsMain = new QmsMain();
+		
+		qmsMain.set_up();
+		qmsMain.log_in();
+		qmsMain.expand_side_menu();
+		qmsMain.sync_web();
+		qmsMain.set_line();
+		qmsMain.select_order();
+		qmsMain.choose_variance();
         /**/
         // basic workflow
         inputDelay = 5;
-        production_entry();
+        qmsMain.production_entry();
         inputDelay = 1;
-        perform_undo();
+        qmsMain.perform_undo();
         
         // repair mode
-        repair_mode_on();
+        qmsMain.repair_mode_on();
         inputDelay = 5;
-        production_entry();
+        qmsMain.production_entry();
         inputDelay = 1;
-        perform_undo();
-        repair_mode_off();
+        qmsMain.perform_undo();
+        qmsMain.repair_mode_off();
         
         // offline mode
         driver.toggleWifi();
         Thread.sleep(5000);
         inputDelay = 5;
-        production_entry();
+        qmsMain.production_entry();
         inputDelay = 1;
-        perform_undo();
-        repair_mode_on();
+        qmsMain.perform_undo();
+        qmsMain.repair_mode_on();
         inputDelay = 5;
-        production_entry();
+        qmsMain.production_entry();
         inputDelay = 1;
-        perform_undo();
-        repair_mode_off();
+        qmsMain.perform_undo();
+        qmsMain.repair_mode_off();
         driver.toggleWifi();
         Thread.sleep(5000);
         
-        expand_side_menu();
-        log_out();
-        close_down();
+        qmsMain.expand_side_menu();
+        qmsMain.log_out();
+        qmsMain.close_down();
 	}
 	
 	// set up the server, driver, and app
-	public static void set_up() throws MalformedURLException {
+	public void set_up() throws MalformedURLException {
 		// build and start the server
 		// service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\1600000205\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js")).withIPAddress("172.17.8.14").usingPort(4723).build();
 		// service.start();
@@ -86,7 +89,7 @@ public class QmsMain {
 	}
 	
 	// log in to the app
-	public static void log_in() {
+	public void log_in() {
 		// log in to qms app with username = Test and password = test
 		WebElement username = driver.findElement(By.xpath("//android.widget.EditText[@text=\"Username\"]"));
 		username.sendKeys("Test");
@@ -99,7 +102,7 @@ public class QmsMain {
 	}
 	
 	// expand the side menu
-	public static void expand_side_menu() {
+	public void expand_side_menu() {
 		// click on the side menu icon
 		try {
 			WebElement menu = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"\"]"));
@@ -114,7 +117,7 @@ public class QmsMain {
 	}
 	
 	// sync web data for the latest master data and settings
-	public static void sync_web() {
+	public void sync_web() {
 		// click on the sync button
         WebElement sync = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Sync\"]"));
         sync.click();
@@ -123,7 +126,7 @@ public class QmsMain {
 	}
 	
 	// set the line and input delay
-	public static void set_line() throws InterruptedException {
+	public void set_line() throws InterruptedException {
 		// access settings module
         WebElement settings = driver.findElement(By.xpath("//android.widget.Button[@content-desc=', Settings']"));
         settings.click();
@@ -159,7 +162,7 @@ public class QmsMain {
 	}
 	
 	// select the buyer, style, and order
-	public static void select_order() {
+	public void select_order() {
 		try {
 			// access home module
             WebElement home = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\", Home\"]"));
@@ -205,7 +208,7 @@ public class QmsMain {
 	}
 	
 	// choose color and size
-	public static void choose_variance() throws InterruptedException {
+	public void choose_variance() throws InterruptedException {
 		try {
 			// select a color
 			WebElement color = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Choose a Color\"]"));
@@ -227,7 +230,7 @@ public class QmsMain {
 	}
 	
 	// provide pass entries
-	public static void pass_action() throws InterruptedException {
+	public void pass_action() throws InterruptedException {
 		// input pass data from production entry page
 		WebElement pass = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Pass\"]"));
 		pass.click();
@@ -236,7 +239,7 @@ public class QmsMain {
 	}
 	
 	// provide alter entries
-	public static void alter_action() throws InterruptedException {
+	public void alter_action() throws InterruptedException {
 		// input alter data from production entry page
 		WebElement alter = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Alter\"]"));
 		alter.click();
@@ -248,7 +251,7 @@ public class QmsMain {
 	}
 	
 	// provide reject entries
-	public static void reject_action() throws InterruptedException {
+	public void reject_action() throws InterruptedException {
 		// input reject data from production entry page
 		WebElement reject = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Reject\"]"));
 		reject.click();
@@ -260,7 +263,7 @@ public class QmsMain {
 	}
 	
 	// select positon, operation, and defect for alter/reject
-	public static void enter_defect() throws InterruptedException {
+	public void enter_defect() throws InterruptedException {
 		try {
 			// select a position on the sketch
 			WebElement sketch = driver.findElement(By.xpath("//com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView[3]"));
@@ -294,7 +297,7 @@ public class QmsMain {
 	}
 	
 	// sync pass/alter/reject entries to the web
-	public static void force_sync() throws InterruptedException {
+	public void force_sync() throws InterruptedException {
 		// press force sync button
 		WebElement fsButton = driver.findElement(By.xpath("//android.widget.TextView[@text=\"\"]"));
 		fsButton.click();
@@ -303,7 +306,7 @@ public class QmsMain {
 	}
 	
 	// perform undo after pass/alter/reject
-	public static void undo_action() throws InterruptedException {
+	public void undo_action() throws InterruptedException {
 		// press undo button
 		WebElement undoButton = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup"));
 		undoButton.click();
@@ -316,7 +319,7 @@ public class QmsMain {
 	}
 
 	// turn on repair mode
-	public static void repair_mode_on() throws InterruptedException {
+	public void repair_mode_on() throws InterruptedException {
 		// toggle the repair button to turn on repair mode
 		WebElement repairOn = driver.findElement(By.xpath("//android.widget.Switch[@text=\"OFF\"]"));
 		repairOn.click();
@@ -324,14 +327,14 @@ public class QmsMain {
 	}
 		
 	// turn off repair mode
-	public static void repair_mode_off() throws InterruptedException {
+	public void repair_mode_off() throws InterruptedException {
 		// toggle the repair button to turn off repair
 		WebElement repairOff = driver.findElement(By.xpath("//android.widget.Switch[@text=\"ON\"]"));
 		repairOff.click();
 		Thread.sleep(2000);
 	}
 		
-	public static void production_entry() throws InterruptedException {
+	public void production_entry() throws InterruptedException {
 		inputDelay = 5;
 		for(int i = 1; i <= iteration; i++) {
         	pass_action();
@@ -345,7 +348,7 @@ public class QmsMain {
         force_sync();
 	}
 	
-	public static void perform_undo() throws InterruptedException {
+	public void perform_undo() throws InterruptedException {
 		inputDelay = 2;
         for(int i = 1; i <= iteration; i++) {
         	pass_action();
@@ -363,7 +366,7 @@ public class QmsMain {
 	}
 	
 	// log out of the app
-	public static void log_out() throws InterruptedException {
+	public void log_out() throws InterruptedException {
 		// click on logout menu
 		WebElement logout = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\", logout\"]"));
 		logout.click();
@@ -372,7 +375,7 @@ public class QmsMain {
 	}
 	
 	// close the driver and stop the server
-	public static void close_down() throws InterruptedException {
+	public void close_down() throws InterruptedException {
 		// close the app and remove it from app history
 		driver.terminateApp("com.nidleqms");
 		

@@ -5,79 +5,81 @@ import java.net.MalformedURLException;
 import org.testng.annotations.Test;
 
 public class QmsOnlineRepair extends QmsMain {
+	static QmsMain onRep = new QmsMain();
+	
 	@Test(priority = 1)
-	public static void set_up_test() throws MalformedURLException {
-		set_up();
+	public void set_up_test() throws MalformedURLException {
+		onRep.set_up();
 	}
 	
 	@Test(priority = 2)
-	public static void login_test() throws MalformedURLException {
-		log_in();
+	public void login_test() throws MalformedURLException {
+		onRep.log_in();
 	}
 	
 	@Test(priority = 3)
-	public static void expand_side_menu_test() {
-		expand_side_menu();
+	public void expand_side_menu_test() {
+		onRep.expand_side_menu();
 	}
 	
 	@Test(priority = 4)
-	public static void sync_web_test() {
-		sync_web();
+	public void sync_web_test() {
+		onRep.sync_web();
 	}
 	
 	@Test(priority = 5)
-	public static void set_line_test() throws InterruptedException {
-		set_line();
+	public void set_line_test() throws InterruptedException {
+		onRep.set_line();
 	}
 	
 	@Test(priority = 6)
-	public static void select_order_test() {
-		select_order();
+	public void select_order_test() {
+		onRep.select_order();
 	}
 	
 	@Test(priority = 7)
-	public static void choose_variance_test() throws InterruptedException {
-		choose_variance();
+	public void choose_variance_test() throws InterruptedException {
+		onRep.choose_variance();
 	}
 	
 	@Test(priority = 8)
-	public static void repair_mode_on_test() throws InterruptedException {
-		repair_mode_on();
+	public void repair_mode_on_test() throws InterruptedException {
+		onRep.repair_mode_on();
 	}
 	
 	@Test(priority = 9)
-	public static void pass_action_test() throws InterruptedException {
-		pass_action();
+	public void pass_action_test() throws InterruptedException {
+		onRep.pass_action();
 	}
 	
 	@Test(priority = 10)
-	public static void alter_action_test() throws InterruptedException {
-		alter_action();
+	public void alter_action_test() throws InterruptedException {
+		onRep.alter_action();
 	}
 	
 	@Test(priority = 11)
-	public static void reject_action_test() throws InterruptedException {
-		reject_action();
+	public void reject_action_test() throws InterruptedException {
+		onRep.reject_action();
 	}
 	
 	@Test(priority = 12)
-	public static void repair_mode_off_test() throws InterruptedException {
-		repair_mode_off();
+	public void repair_mode_off_test() throws InterruptedException {
+		onRep.repair_mode_off();
 	}
 	
 	@Test(priority = 13)
-	public static void force_sync_test() throws InterruptedException {
-		force_sync();
+	public void force_sync_test() throws InterruptedException {
+		onRep.force_sync();
 	}
 	
 	@Test(priority = 14)
-	public static void log_out_test() throws InterruptedException {
-		expand_side_menu();
-		log_out();
+	public void log_out_test() throws InterruptedException {
+		onRep.expand_side_menu();
+		onRep.log_out();
 	}
 	
 	@Test(priority = 15)
-	public static void close_down_test() throws InterruptedException {
-		close_down();
+	public void close_down_test() throws InterruptedException {
+		onRep.close_down();
 	}
 }
