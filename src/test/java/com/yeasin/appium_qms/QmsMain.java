@@ -17,9 +17,9 @@ public class QmsMain {
 	public static int iteration = 1;
 
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
-        setup();
-        login();
-        side_menu();
+        set_up();
+        log_in();
+        expand_side_menu();
         sync_web();
         set_line();
         select_order();
@@ -55,13 +55,13 @@ public class QmsMain {
         driver.toggleWifi();
         Thread.sleep(5000);
         
-        side_menu();
-        logout();
-        close_app();
+        expand_side_menu();
+        log_out();
+        close_down();
 	}
 	
 	// set up the server, driver, and app
-	public static void setup() throws MalformedURLException {
+	public static void set_up() throws MalformedURLException {
 		// build and start the server
 		// service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\1600000205\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js")).withIPAddress("172.17.8.14").usingPort(4723).build();
 		// service.start();
@@ -86,7 +86,7 @@ public class QmsMain {
 	}
 	
 	// log in to the app
-	public static void login() {
+	public static void log_in() {
 		// log in to qms app with username = Test and password = test
 		WebElement username = driver.findElement(By.xpath("//android.widget.EditText[@text=\"Username\"]"));
 		username.sendKeys("Test");
@@ -99,7 +99,7 @@ public class QmsMain {
 	}
 	
 	// expand the side menu
-	public static void side_menu() {
+	public static void expand_side_menu() {
 		// click on the side menu icon
 		try {
 			WebElement menu = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"\"]"));
@@ -227,7 +227,7 @@ public class QmsMain {
 	}
 	
 	// provide pass entries
-	public static void pass() throws InterruptedException {
+	public static void pass_action() throws InterruptedException {
 		// input pass data from production entry page
 		WebElement pass = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Pass\"]"));
 		pass.click();
@@ -236,7 +236,7 @@ public class QmsMain {
 	}
 	
 	// provide alter entries
-	public static void alter() throws InterruptedException {
+	public static void alter_action() throws InterruptedException {
 		// input alter data from production entry page
 		WebElement alter = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Alter\"]"));
 		alter.click();
@@ -248,7 +248,7 @@ public class QmsMain {
 	}
 	
 	// provide reject entries
-	public static void reject() throws InterruptedException {
+	public static void reject_action() throws InterruptedException {
 		// input reject data from production entry page
 		WebElement reject = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Reject\"]"));
 		reject.click();
@@ -303,7 +303,7 @@ public class QmsMain {
 	}
 	
 	// perform undo after pass/alter/reject
-	public static void undo() throws InterruptedException {
+	public static void undo_action() throws InterruptedException {
 		// press undo button
 		WebElement undoButton = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup"));
 		undoButton.click();
@@ -334,11 +334,11 @@ public class QmsMain {
 	public static void production_entry() throws InterruptedException {
 		inputDelay = 5;
 		for(int i = 1; i <= iteration; i++) {
-        	pass();
+        	pass_action();
         	
         	if(i % 1 == 0) {
-        		alter();
-                reject();
+        		alter_action();
+                reject_action();
         	}
         }
 		
@@ -348,14 +348,14 @@ public class QmsMain {
 	public static void perform_undo() throws InterruptedException {
 		inputDelay = 2;
         for(int i = 1; i <= iteration; i++) {
-        	pass();
-        	undo();
+        	pass_action();
+        	undo_action();
         	
         	if(i % 1 == 0) {
-        		alter();
-        		undo();
-                reject();
-                undo();
+        		alter_action();
+        		undo_action();
+                reject_action();
+                undo_action();
         	}
         }
         
@@ -363,7 +363,7 @@ public class QmsMain {
 	}
 	
 	// log out of the app
-	public static void logout() throws InterruptedException {
+	public static void log_out() throws InterruptedException {
 		// click on logout menu
 		WebElement logout = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\", logout\"]"));
 		logout.click();
@@ -372,7 +372,7 @@ public class QmsMain {
 	}
 	
 	// close the driver and stop the server
-	public static void close_app() throws InterruptedException {
+	public static void close_down() throws InterruptedException {
 		// close the app and remove it from app history
 		driver.terminateApp("com.nidleqms");
 		
