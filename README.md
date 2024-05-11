@@ -8,6 +8,10 @@ The automation framework is written with the ``Appium`` automation tool in ``Jav
 The test suites are executed via the ``TestNG`` framework and the test reports are generated utilizing the ``ExtentReports`` library.
 
 The framework to test the QMS app is developed by 
+
 *Muhammad Yeasin Hossain*
+
 *Trainee Software Engineer*
+
 *Intellier Limited*
+
