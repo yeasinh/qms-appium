@@ -4,6 +4,8 @@ import java.net.MalformedURLException;
 
 import org.testng.annotations.Test;
 
+import com.yeasin.appium_qms.utilities.QmsMain;
+
 public class QmsOfflineNormal extends QmsMain {
 	static QmsMain offNor = new QmsMain();
 	
