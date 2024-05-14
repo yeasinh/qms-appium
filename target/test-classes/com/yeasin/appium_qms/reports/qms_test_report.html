@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">QMS Automation Results</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">May 14, 2024 11:42:32 AM</span></a>
+<a href="#"><span class="badge badge-primary">May 14, 2024 05:05:43 PM</span></a>
 </li>
 </ul>
 </div>
@@ -45,11 +45,6 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
-</a>
-</li>
-<li class="nav-item dropdown" onclick="toggleView('exception-view')">
-<a id="nav-exception" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -72,7 +67,6 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -85,9 +79,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">set_up_test</p>
+            <p class="name">Listeners.set_up_test</p>
             <p class="text-sm">
-              <span>11:42:32 AM</span> / <span>00:00:09:171</span>
+              <span>17:05:43 PM</span> / <span>00:00:04:320</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -95,10 +89,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">set_up_test</h5>
-<span class='badge badge-success'>05.14.2024 11:42:32</span>
-<span class='badge badge-danger'>05.14.2024 11:42:42</span>
-<span class='badge badge-default'>00:00:09:171</span>
+<h5 class="test-status text-pass">Listeners.set_up_test</h5>
+<span class='badge badge-success'>05.14.2024 17:05:43</span>
+<span class='badge badge-danger'>05.14.2024 17:05:48</span>
+<span class='badge badge-default'>00:00:04:320</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 </div>
@@ -107,8 +101,15 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:05:48 PM</td>
+        <td>
+          Opening already installed app
+        </td>
+      </tr>
+      <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:42:42 AM</td>
+        <td>5:05:48 PM</td>
         <td>
           set_up_test Test Passed
         </td>
@@ -123,9 +124,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">login_test</p>
+            <p class="name">Listeners.log_in_test</p>
             <p class="text-sm">
-              <span>11:42:42 AM</span> / <span>00:00:04:946</span>
+              <span>17:05:48 PM</span> / <span>00:00:04:939</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -133,10 +134,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">login_test</h5>
-<span class='badge badge-success'>05.14.2024 11:42:42</span>
-<span class='badge badge-danger'>05.14.2024 11:42:47</span>
-<span class='badge badge-default'>00:00:04:946</span>
+<h5 class="test-status text-pass">Listeners.log_in_test</h5>
+<span class='badge badge-success'>05.14.2024 17:05:48</span>
+<span class='badge badge-danger'>05.14.2024 17:05:53</span>
+<span class='badge badge-default'>00:00:04:939</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 </div>
 </div>
@@ -145,10 +146,17 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:42:47 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:05:53 PM</td>
         <td>
-          login_test Test Passed
+          Logging in to app with username and password
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:05:53 PM</td>
+        <td>
+          log_in_test Test Passed
         </td>
       </tr>
   </tbody>
@@ -156,25 +164,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="3"
+        <li class="test-item"  status="pass" test-id="3"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">expand_side_menu_test</p>
+            <p class="name">Listeners.expand_side_menu_test</p>
             <p class="text-sm">
-              <span>11:42:47 AM</span> / <span>00:10:00:164</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:05:53 PM</span> / <span>00:00:05:849</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">expand_side_menu_test</h5>
-<span class='badge badge-success'>05.14.2024 11:42:47</span>
-<span class='badge badge-danger'>05.14.2024 11:52:47</span>
-<span class='badge badge-default'>00:10:00:164</span>
+<h5 class="test-status text-pass">Listeners.expand_side_menu_test</h5>
+<span class='badge badge-success'>05.14.2024 17:05:53</span>
+<span class='badge badge-danger'>05.14.2024 17:05:59</span>
+<span class='badge badge-default'>00:00:05:849</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 </div>
 </div>
@@ -183,64 +191,17 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:52:47 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:05:58 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [97cce59c-3667-4e5b-9f61-7b199a13491e, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup}]
-Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.expand_side_menu(QmsMain.java:111)
-	at com.yeasin.appium_qms.QmsOnlineNormal.expand_side_menu_test(QmsOnlineNormal.java:24)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+          Expanding side menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:05:59 PM</td>
+        <td>
+          expand_side_menu_test Test Passed
         </td>
       </tr>
   </tbody>
@@ -253,9 +214,9 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">sync_web_test</p>
+            <p class="name">Listeners.sync_web_test</p>
             <p class="text-sm">
-              <span>11:52:47 AM</span> / <span>00:00:08:691</span>
+              <span>17:05:59 PM</span> / <span>00:00:01:840</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -263,10 +224,10 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">sync_web_test</h5>
-<span class='badge badge-success'>05.14.2024 11:52:47</span>
-<span class='badge badge-danger'>05.14.2024 11:52:55</span>
-<span class='badge badge-default'>00:00:08:691</span>
+<h5 class="test-status text-pass">Listeners.sync_web_test</h5>
+<span class='badge badge-success'>05.14.2024 17:05:59</span>
+<span class='badge badge-danger'>05.14.2024 17:06:00</span>
+<span class='badge badge-default'>00:00:01:840</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 </div>
 </div>
@@ -275,8 +236,15 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:06:00 PM</td>
+        <td>
+          Syncing web data
+        </td>
+      </tr>
+      <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:52:55 AM</td>
+        <td>5:06:00 PM</td>
         <td>
           sync_web_test Test Passed
         </td>
@@ -286,25 +254,25 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="5"
+        <li class="test-item"  status="pass" test-id="5"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">set_line_test</p>
+            <p class="name">Listeners.set_line_test</p>
             <p class="text-sm">
-              <span>11:52:55 AM</span> / <span>00:00:10:221</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:06:00 PM</span> / <span>00:00:12:857</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">set_line_test</h5>
-<span class='badge badge-success'>05.14.2024 11:52:55</span>
-<span class='badge badge-danger'>05.14.2024 11:53:06</span>
-<span class='badge badge-default'>00:00:10:221</span>
+<h5 class="test-status text-pass">Listeners.set_line_test</h5>
+<span class='badge badge-success'>05.14.2024 17:06:00</span>
+<span class='badge badge-danger'>05.14.2024 17:06:13</span>
+<span class='badge badge-default'>00:00:12:857</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 </div>
 </div>
@@ -313,64 +281,24 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:53:06 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:06:01 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [97cce59c-3667-4e5b-9f61-7b199a13491e, findElement {using=xpath, value=//android.view.ViewGroup[@content-desc="Next"]}]
-Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.set_line(QmsMain.java:157)
-	at com.yeasin.appium_qms.QmsOnlineNormal.set_line_test(QmsOnlineNormal.java:34)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+          Entering Setting module
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:06:13 PM</td>
+        <td>
+          Continuing with selected Line and Input Delay
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:06:13 PM</td>
+        <td>
+          set_line_test Test Passed
         </td>
       </tr>
   </tbody>
@@ -378,25 +306,25 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="6"
+        <li class="test-item"  status="pass" test-id="6"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">select_order_test</p>
+            <p class="name">Listeners.select_order_test</p>
             <p class="text-sm">
-              <span>11:53:06 AM</span> / <span>00:00:15:171</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:06:13 PM</span> / <span>00:00:07:084</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">select_order_test</h5>
-<span class='badge badge-success'>05.14.2024 11:53:06</span>
-<span class='badge badge-danger'>05.14.2024 11:53:21</span>
-<span class='badge badge-default'>00:00:15:171</span>
+<h5 class="test-status text-pass">Listeners.select_order_test</h5>
+<span class='badge badge-success'>05.14.2024 17:06:13</span>
+<span class='badge badge-danger'>05.14.2024 17:06:20</span>
+<span class='badge badge-default'>00:00:07:084</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 </div>
 </div>
@@ -405,64 +333,24 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:53:21 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:06:18 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [97cce59c-3667-4e5b-9f61-7b199a13491e, findElement {using=xpath, value=//android.view.ViewGroup[@content-desc="End table check, (Sewing), "]}]
-Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.select_order(QmsMain.java:182)
-	at com.yeasin.appium_qms.QmsOnlineNormal.select_order_test(QmsOnlineNormal.java:39)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+          Entered Home module before
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:06:20 PM</td>
+        <td>
+          Continuing with selected Buyer, Style, and Order
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:06:20 PM</td>
+        <td>
+          select_order_test Test Passed
         </td>
       </tr>
   </tbody>
@@ -475,9 +363,9 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">choose_variance_test</p>
+            <p class="name">Listeners.choose_variance_test</p>
             <p class="text-sm">
-              <span>11:53:21 AM</span> / <span>00:00:05:058</span>
+              <span>17:06:20 PM</span> / <span>00:00:05:113</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -485,10 +373,10 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">choose_variance_test</h5>
-<span class='badge badge-success'>05.14.2024 11:53:21</span>
-<span class='badge badge-danger'>05.14.2024 11:53:26</span>
-<span class='badge badge-default'>00:00:05:058</span>
+<h5 class="test-status text-pass">Listeners.choose_variance_test</h5>
+<span class='badge badge-success'>05.14.2024 17:06:20</span>
+<span class='badge badge-danger'>05.14.2024 17:06:25</span>
+<span class='badge badge-default'>00:00:05:113</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 </div>
 </div>
@@ -497,8 +385,15 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:06:25 PM</td>
+        <td>
+          Continuing with selected Color and Size
+        </td>
+      </tr>
+      <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:53:26 AM</td>
+        <td>5:06:25 PM</td>
         <td>
           choose_variance_test Test Passed
         </td>
@@ -508,25 +403,25 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="8"
+        <li class="test-item"  status="pass" test-id="8"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">pass_action_test</p>
+            <p class="name">Listeners.pass_action_test</p>
             <p class="text-sm">
-              <span>11:53:26 AM</span> / <span>00:00:05:064</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:06:25 PM</span> / <span>00:00:07:760</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">pass_action_test</h5>
-<span class='badge badge-success'>05.14.2024 11:53:26</span>
-<span class='badge badge-danger'>05.14.2024 11:53:31</span>
-<span class='badge badge-default'>00:00:05:064</span>
+<h5 class="test-status text-pass">Listeners.pass_action_test</h5>
+<span class='badge badge-success'>05.14.2024 17:06:25</span>
+<span class='badge badge-danger'>05.14.2024 17:06:33</span>
+<span class='badge badge-default'>00:00:07:760</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
 </div>
 </div>
@@ -535,64 +430,17 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:53:31 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:06:33 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [97cce59c-3667-4e5b-9f61-7b199a13491e, findElement {using=xpath, value=//android.widget.TextView[@text="Pass"]}]
-Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.pass_action(QmsMain.java:234)
-	at com.yeasin.appium_qms.QmsOnlineNormal.pass_action_test(QmsOnlineNormal.java:49)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+          Pass
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:06:33 PM</td>
+        <td>
+          pass_action_test Test Passed
         </td>
       </tr>
   </tbody>
@@ -600,25 +448,25 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="9"
+        <li class="test-item"  status="pass" test-id="9"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">alter_action_test</p>
+            <p class="name">Listeners.alter_action_test</p>
             <p class="text-sm">
-              <span>11:53:31 AM</span> / <span>00:00:05:049</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:06:33 PM</span> / <span>00:00:18:437</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">alter_action_test</h5>
-<span class='badge badge-success'>05.14.2024 11:53:31</span>
-<span class='badge badge-danger'>05.14.2024 11:53:36</span>
-<span class='badge badge-default'>00:00:05:049</span>
+<h5 class="test-status text-pass">Listeners.alter_action_test</h5>
+<span class='badge badge-success'>05.14.2024 17:06:33</span>
+<span class='badge badge-danger'>05.14.2024 17:06:52</span>
+<span class='badge badge-default'>00:00:18:437</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
 </div>
 </div>
@@ -627,64 +475,31 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:53:36 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:06:42 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [97cce59c-3667-4e5b-9f61-7b199a13491e, findElement {using=xpath, value=//android.widget.TextView[@text="Alter"]}]
-Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.alter_action(QmsMain.java:243)
-	at com.yeasin.appium_qms.QmsOnlineNormal.alter_action_test(QmsOnlineNormal.java:54)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+          Selected Operation without Position
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:06:45 PM</td>
+        <td>
+          Selected Defect
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:06:52 PM</td>
+        <td>
+          Alter
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:06:52 PM</td>
+        <td>
+          alter_action_test Test Passed
         </td>
       </tr>
   </tbody>
@@ -692,25 +507,25 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="10"
+        <li class="test-item"  status="pass" test-id="10"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">reject_action_test</p>
+            <p class="name">Listeners.reject_action_test</p>
             <p class="text-sm">
-              <span>11:53:36 AM</span> / <span>00:00:05:055</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:06:52 PM</span> / <span>00:00:19:851</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">reject_action_test</h5>
-<span class='badge badge-success'>05.14.2024 11:53:36</span>
-<span class='badge badge-danger'>05.14.2024 11:53:41</span>
-<span class='badge badge-default'>00:00:05:055</span>
+<h5 class="test-status text-pass">Listeners.reject_action_test</h5>
+<span class='badge badge-success'>05.14.2024 17:06:52</span>
+<span class='badge badge-danger'>05.14.2024 17:07:11</span>
+<span class='badge badge-default'>00:00:19:851</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
 </div>
 </div>
@@ -719,64 +534,31 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:53:41 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:07:01 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [97cce59c-3667-4e5b-9f61-7b199a13491e, findElement {using=xpath, value=//android.widget.TextView[@text="Reject"]}]
-Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.reject_action(QmsMain.java:255)
-	at com.yeasin.appium_qms.QmsOnlineNormal.reject_action_test(QmsOnlineNormal.java:59)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+          Selected Operation without Position
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:07:04 PM</td>
+        <td>
+          Selected Defect
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:07:11 PM</td>
+        <td>
+          Reject
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:07:11 PM</td>
+        <td>
+          reject_action_test Test Passed
         </td>
       </tr>
   </tbody>
@@ -784,25 +566,25 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="11"
+        <li class="test-item"  status="pass" test-id="11"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">force_sync_test</p>
+            <p class="name">Listeners.force_sync_test</p>
             <p class="text-sm">
-              <span>11:53:41 AM</span> / <span>00:00:05:067</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:07:11 PM</span> / <span>00:00:05:649</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">force_sync_test</h5>
-<span class='badge badge-success'>05.14.2024 11:53:41</span>
-<span class='badge badge-danger'>05.14.2024 11:53:46</span>
-<span class='badge badge-default'>00:00:05:067</span>
+<h5 class="test-status text-pass">Listeners.force_sync_test</h5>
+<span class='badge badge-success'>05.14.2024 17:07:11</span>
+<span class='badge badge-danger'>05.14.2024 17:07:17</span>
+<span class='badge badge-default'>00:00:05:649</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
 </div>
 </div>
@@ -811,64 +593,17 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:53:46 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:07:17 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [97cce59c-3667-4e5b-9f61-7b199a13491e, findElement {using=xpath, value=//android.widget.TextView[@text=""]}]
-Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.force_sync(QmsMain.java:301)
-	at com.yeasin.appium_qms.QmsOnlineNormal.force_sync_test(QmsOnlineNormal.java:64)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+          Syncing data to web
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:07:17 PM</td>
+        <td>
+          force_sync_test Test Passed
         </td>
       </tr>
   </tbody>
@@ -876,25 +611,25 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="12"
+        <li class="test-item"  status="pass" test-id="12"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">log_out_test</p>
+            <p class="name">Listeners.log_out_test</p>
             <p class="text-sm">
-              <span>11:53:46 AM</span> / <span>00:00:10:097</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:07:17 PM</span> / <span>00:00:11:899</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">log_out_test</h5>
-<span class='badge badge-success'>05.14.2024 11:53:46</span>
-<span class='badge badge-danger'>05.14.2024 11:53:56</span>
-<span class='badge badge-default'>00:00:10:097</span>
+<h5 class="test-status text-pass">Listeners.log_out_test</h5>
+<span class='badge badge-success'>05.14.2024 17:07:17</span>
+<span class='badge badge-danger'>05.14.2024 17:07:29</span>
+<span class='badge badge-default'>00:00:11:899</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
 </div>
 </div>
@@ -903,64 +638,24 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:53:56 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:07:22 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [97cce59c-3667-4e5b-9f61-7b199a13491e, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup}]
-Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.expand_side_menu(QmsMain.java:111)
-	at com.yeasin.appium_qms.QmsOnlineNormal.log_out_test(QmsOnlineNormal.java:69)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+          Expanding side menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:07:29 PM</td>
+        <td>
+          Logging out of app
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:07:29 PM</td>
+        <td>
+          log_out_test Test Passed
         </td>
       </tr>
   </tbody>
@@ -973,9 +668,9 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">close_down_test</p>
+            <p class="name">Listeners.close_down_test</p>
             <p class="text-sm">
-              <span>11:53:56 AM</span> / <span>00:00:05:748</span>
+              <span>17:07:29 PM</span> / <span>00:00:05:734</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -983,10 +678,10 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">close_down_test</h5>
-<span class='badge badge-success'>05.14.2024 11:53:56</span>
-<span class='badge badge-danger'>05.14.2024 11:54:02</span>
-<span class='badge badge-default'>00:00:05:748</span>
+<h5 class="test-status text-pass">Listeners.close_down_test</h5>
+<span class='badge badge-success'>05.14.2024 17:07:29</span>
+<span class='badge badge-danger'>05.14.2024 17:07:35</span>
+<span class='badge badge-default'>00:00:05:734</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
 </div>
 </div>
@@ -995,8 +690,15 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:07:35 PM</td>
+        <td>
+          Closed app
+        </td>
+      </tr>
+      <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:54:02 AM</td>
+        <td>5:07:35 PM</td>
         <td>
           close_down_test Test Passed
         </td>
@@ -1011,9 +713,9 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">set_up_test</p>
+            <p class="name">Listeners.set_up_test</p>
             <p class="text-sm">
-              <span>11:54:02 AM</span> / <span>00:00:04:966</span>
+              <span>17:07:35 PM</span> / <span>00:00:04:981</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1021,10 +723,10 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">set_up_test</h5>
-<span class='badge badge-success'>05.14.2024 11:54:02</span>
-<span class='badge badge-danger'>05.14.2024 11:54:07</span>
-<span class='badge badge-default'>00:00:04:966</span>
+<h5 class="test-status text-pass">Listeners.set_up_test</h5>
+<span class='badge badge-success'>05.14.2024 17:07:35</span>
+<span class='badge badge-danger'>05.14.2024 17:07:40</span>
+<span class='badge badge-default'>00:00:04:981</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
 </div>
 </div>
@@ -1033,8 +735,15 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:07:40 PM</td>
+        <td>
+          Opening already installed app
+        </td>
+      </tr>
+      <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:54:07 AM</td>
+        <td>5:07:40 PM</td>
         <td>
           set_up_test Test Passed
         </td>
@@ -1044,25 +753,25 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="15"
+        <li class="test-item"  status="pass" test-id="15"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">login_test</p>
+            <p class="name">Listeners.log_in_test</p>
             <p class="text-sm">
-              <span>11:54:07 AM</span> / <span>00:00:05:138</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:07:40 PM</span> / <span>00:00:04:291</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">login_test</h5>
-<span class='badge badge-success'>05.14.2024 11:54:07</span>
-<span class='badge badge-danger'>05.14.2024 11:54:12</span>
-<span class='badge badge-default'>00:00:05:138</span>
+<h5 class="test-status text-pass">Listeners.log_in_test</h5>
+<span class='badge badge-success'>05.14.2024 17:07:40</span>
+<span class='badge badge-danger'>05.14.2024 17:07:44</span>
+<span class='badge badge-default'>00:00:04:291</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
 </div>
 </div>
@@ -1071,64 +780,17 @@ Session ID: 97cce59c-3667-4e5b-9f61-7b199a13491e
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:54:12 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:07:44 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [23305ccc-053c-40af-a4d7-7287b7a646a7, findElement {using=xpath, value=//android.widget.EditText[@text="Username"]}]
-Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.log_in(QmsMain.java:93)
-	at com.yeasin.appium_qms.QmsOnlineRepair.login_test(QmsOnlineRepair.java:19)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+          Logging in to app with username and password
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:07:44 PM</td>
+        <td>
+          log_in_test Test Passed
         </td>
       </tr>
   </tbody>
@@ -1141,9 +803,9 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">expand_side_menu_test</p>
+            <p class="name">Listeners.expand_side_menu_test</p>
             <p class="text-sm">
-              <span>11:54:12 AM</span> / <span>00:00:00:207</span>
+              <span>17:07:44 PM</span> / <span>00:00:05:942</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1151,10 +813,10 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">expand_side_menu_test</h5>
-<span class='badge badge-success'>05.14.2024 11:54:12</span>
-<span class='badge badge-danger'>05.14.2024 11:54:13</span>
-<span class='badge badge-default'>00:00:00:207</span>
+<h5 class="test-status text-pass">Listeners.expand_side_menu_test</h5>
+<span class='badge badge-success'>05.14.2024 17:07:44</span>
+<span class='badge badge-danger'>05.14.2024 17:07:50</span>
+<span class='badge badge-default'>00:00:05:942</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
 </div>
 </div>
@@ -1163,8 +825,15 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:07:50 PM</td>
+        <td>
+          Expanding side menu
+        </td>
+      </tr>
+      <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:54:13 AM</td>
+        <td>5:07:50 PM</td>
         <td>
           expand_side_menu_test Test Passed
         </td>
@@ -1179,9 +848,9 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">sync_web_test</p>
+            <p class="name">Listeners.sync_web_test</p>
             <p class="text-sm">
-              <span>11:54:13 AM</span> / <span>00:00:01:632</span>
+              <span>17:07:50 PM</span> / <span>00:00:01:617</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1189,10 +858,10 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">sync_web_test</h5>
-<span class='badge badge-success'>05.14.2024 11:54:13</span>
-<span class='badge badge-danger'>05.14.2024 11:54:14</span>
-<span class='badge badge-default'>00:00:01:632</span>
+<h5 class="test-status text-pass">Listeners.sync_web_test</h5>
+<span class='badge badge-success'>05.14.2024 17:07:50</span>
+<span class='badge badge-danger'>05.14.2024 17:07:52</span>
+<span class='badge badge-default'>00:00:01:617</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
 </div>
 </div>
@@ -1201,8 +870,15 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:07:52 PM</td>
+        <td>
+          Syncing web data
+        </td>
+      </tr>
+      <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:54:14 AM</td>
+        <td>5:07:52 PM</td>
         <td>
           sync_web_test Test Passed
         </td>
@@ -1212,25 +888,25 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="18"
+        <li class="test-item"  status="pass" test-id="18"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">set_line_test</p>
+            <p class="name">Listeners.set_line_test</p>
             <p class="text-sm">
-              <span>11:54:14 AM</span> / <span>00:00:10:237</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:07:52 PM</span> / <span>00:00:11:979</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">set_line_test</h5>
-<span class='badge badge-success'>05.14.2024 11:54:14</span>
-<span class='badge badge-danger'>05.14.2024 11:54:25</span>
-<span class='badge badge-default'>00:00:10:237</span>
+<h5 class="test-status text-pass">Listeners.set_line_test</h5>
+<span class='badge badge-success'>05.14.2024 17:07:52</span>
+<span class='badge badge-danger'>05.14.2024 17:08:04</span>
+<span class='badge badge-default'>00:00:11:979</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
 </div>
 </div>
@@ -1239,63 +915,24 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:54:25 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:07:52 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [23305ccc-053c-40af-a4d7-7287b7a646a7, findElement {using=xpath, value=//android.view.ViewGroup[@content-desc="Next"]}]
-Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
-	at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.set_line(QmsMain.java:157)
-	at com.yeasin.appium_qms.QmsOnlineRepair.set_line_test(QmsOnlineRepair.java:34)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+          Entering Setting module
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:08:04 PM</td>
+        <td>
+          Continuing with selected Line and Input Delay
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:08:04 PM</td>
+        <td>
+          set_line_test Test Passed
         </td>
       </tr>
   </tbody>
@@ -1303,25 +940,25 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="19"
+        <li class="test-item"  status="pass" test-id="19"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">select_order_test</p>
+            <p class="name">Listeners.select_order_test</p>
             <p class="text-sm">
-              <span>11:54:25 AM</span> / <span>00:00:15:243</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:08:04 PM</span> / <span>00:00:07:120</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">select_order_test</h5>
-<span class='badge badge-success'>05.14.2024 11:54:25</span>
-<span class='badge badge-danger'>05.14.2024 11:54:40</span>
-<span class='badge badge-default'>00:00:15:243</span>
+<h5 class="test-status text-pass">Listeners.select_order_test</h5>
+<span class='badge badge-success'>05.14.2024 17:08:04</span>
+<span class='badge badge-danger'>05.14.2024 17:08:11</span>
+<span class='badge badge-default'>00:00:07:120</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
 </div>
 </div>
@@ -1330,63 +967,24 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:54:40 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:08:09 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [23305ccc-053c-40af-a4d7-7287b7a646a7, findElement {using=xpath, value=//android.view.ViewGroup[@content-desc="End table check, (Sewing), "]}]
-Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
-	at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.select_order(QmsMain.java:182)
-	at com.yeasin.appium_qms.QmsOnlineRepair.select_order_test(QmsOnlineRepair.java:39)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+          Entered Home module before
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:08:11 PM</td>
+        <td>
+          Continuing with selected Buyer, Style, and Order
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:08:11 PM</td>
+        <td>
+          select_order_test Test Passed
         </td>
       </tr>
   </tbody>
@@ -1399,9 +997,9 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">choose_variance_test</p>
+            <p class="name">Listeners.choose_variance_test</p>
             <p class="text-sm">
-              <span>11:54:40 AM</span> / <span>00:00:05:078</span>
+              <span>17:08:11 PM</span> / <span>00:00:05:129</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1409,10 +1007,10 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">choose_variance_test</h5>
-<span class='badge badge-success'>05.14.2024 11:54:40</span>
-<span class='badge badge-danger'>05.14.2024 11:54:45</span>
-<span class='badge badge-default'>00:00:05:078</span>
+<h5 class="test-status text-pass">Listeners.choose_variance_test</h5>
+<span class='badge badge-success'>05.14.2024 17:08:11</span>
+<span class='badge badge-danger'>05.14.2024 17:08:16</span>
+<span class='badge badge-default'>00:00:05:129</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
 </div>
 </div>
@@ -1421,8 +1019,15 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:08:16 PM</td>
+        <td>
+          Continuing with selected Color and Size
+        </td>
+      </tr>
+      <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:54:45 AM</td>
+        <td>5:08:16 PM</td>
         <td>
           choose_variance_test Test Passed
         </td>
@@ -1432,25 +1037,25 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="21"
+        <li class="test-item"  status="pass" test-id="21"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">repair_mode_on_test</p>
+            <p class="name">Listeners.repair_mode_on_test</p>
             <p class="text-sm">
-              <span>11:54:45 AM</span> / <span>00:00:05:062</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:08:16 PM</span> / <span>00:00:02:172</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">repair_mode_on_test</h5>
-<span class='badge badge-success'>05.14.2024 11:54:45</span>
-<span class='badge badge-danger'>05.14.2024 11:54:50</span>
-<span class='badge badge-default'>00:00:05:062</span>
+<h5 class="test-status text-pass">Listeners.repair_mode_on_test</h5>
+<span class='badge badge-success'>05.14.2024 17:08:16</span>
+<span class='badge badge-danger'>05.14.2024 17:08:18</span>
+<span class='badge badge-default'>00:00:02:172</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
 </div>
 </div>
@@ -1459,63 +1064,17 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:54:50 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:08:18 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [23305ccc-053c-40af-a4d7-7287b7a646a7, findElement {using=xpath, value=//android.widget.Switch[@text="OFF"]}]
-Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
-	at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.repair_mode_on(QmsMain.java:323)
-	at com.yeasin.appium_qms.QmsOnlineRepair.repair_mode_on_test(QmsOnlineRepair.java:49)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+          Turned on repair mode
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:08:18 PM</td>
+        <td>
+          repair_mode_on_test Test Passed
         </td>
       </tr>
   </tbody>
@@ -1523,25 +1082,25 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="22"
+        <li class="test-item"  status="pass" test-id="22"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">pass_action_test</p>
+            <p class="name">Listeners.pass_action_test</p>
             <p class="text-sm">
-              <span>11:54:50 AM</span> / <span>00:00:05:087</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:08:18 PM</span> / <span>00:00:07:735</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">pass_action_test</h5>
-<span class='badge badge-success'>05.14.2024 11:54:50</span>
-<span class='badge badge-danger'>05.14.2024 11:54:55</span>
-<span class='badge badge-default'>00:00:05:087</span>
+<h5 class="test-status text-pass">Listeners.pass_action_test</h5>
+<span class='badge badge-success'>05.14.2024 17:08:18</span>
+<span class='badge badge-danger'>05.14.2024 17:08:26</span>
+<span class='badge badge-default'>00:00:07:735</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
 </div>
 </div>
@@ -1550,63 +1109,17 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:54:55 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:08:26 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [23305ccc-053c-40af-a4d7-7287b7a646a7, findElement {using=xpath, value=//android.widget.TextView[@text="Pass"]}]
-Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
-	at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.pass_action(QmsMain.java:234)
-	at com.yeasin.appium_qms.QmsOnlineRepair.pass_action_test(QmsOnlineRepair.java:54)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+          Pass
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:08:26 PM</td>
+        <td>
+          pass_action_test Test Passed
         </td>
       </tr>
   </tbody>
@@ -1614,25 +1127,25 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="23"
+        <li class="test-item"  status="pass" test-id="23"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">alter_action_test</p>
+            <p class="name">Listeners.alter_action_test</p>
             <p class="text-sm">
-              <span>11:54:55 AM</span> / <span>00:00:05:246</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:08:26 PM</span> / <span>00:00:19:513</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">alter_action_test</h5>
-<span class='badge badge-success'>05.14.2024 11:54:55</span>
-<span class='badge badge-danger'>05.14.2024 11:55:00</span>
-<span class='badge badge-default'>00:00:05:246</span>
+<h5 class="test-status text-pass">Listeners.alter_action_test</h5>
+<span class='badge badge-success'>05.14.2024 17:08:26</span>
+<span class='badge badge-danger'>05.14.2024 17:08:46</span>
+<span class='badge badge-default'>00:00:19:513</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
 </div>
 </div>
@@ -1641,63 +1154,31 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:55:00 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:08:35 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [23305ccc-053c-40af-a4d7-7287b7a646a7, findElement {using=xpath, value=//android.widget.TextView[@text="Alter"]}]
-Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
-	at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.alter_action(QmsMain.java:243)
-	at com.yeasin.appium_qms.QmsOnlineRepair.alter_action_test(QmsOnlineRepair.java:59)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+          Selected Operation without Position
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:08:39 PM</td>
+        <td>
+          Selected Defect
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:08:46 PM</td>
+        <td>
+          Alter
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:08:46 PM</td>
+        <td>
+          alter_action_test Test Passed
         </td>
       </tr>
   </tbody>
@@ -1705,25 +1186,25 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="24"
+        <li class="test-item"  status="pass" test-id="24"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">reject_action_test</p>
+            <p class="name">Listeners.reject_action_test</p>
             <p class="text-sm">
-              <span>11:55:00 AM</span> / <span>00:00:05:072</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:08:46 PM</span> / <span>00:00:20:336</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">reject_action_test</h5>
-<span class='badge badge-success'>05.14.2024 11:55:00</span>
-<span class='badge badge-danger'>05.14.2024 11:55:05</span>
-<span class='badge badge-default'>00:00:05:072</span>
+<h5 class="test-status text-pass">Listeners.reject_action_test</h5>
+<span class='badge badge-success'>05.14.2024 17:08:46</span>
+<span class='badge badge-danger'>05.14.2024 17:09:06</span>
+<span class='badge badge-default'>00:00:20:336</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
 </div>
 </div>
@@ -1732,63 +1213,31 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:55:05 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:08:55 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [23305ccc-053c-40af-a4d7-7287b7a646a7, findElement {using=xpath, value=//android.widget.TextView[@text="Reject"]}]
-Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
-	at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.reject_action(QmsMain.java:255)
-	at com.yeasin.appium_qms.QmsOnlineRepair.reject_action_test(QmsOnlineRepair.java:64)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+          Selected Operation without Position
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:08:59 PM</td>
+        <td>
+          Selected Defect
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:09:06 PM</td>
+        <td>
+          Reject
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:09:06 PM</td>
+        <td>
+          reject_action_test Test Passed
         </td>
       </tr>
   </tbody>
@@ -1796,25 +1245,25 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="25"
+        <li class="test-item"  status="pass" test-id="25"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">repair_mode_off_test</p>
+            <p class="name">Listeners.repair_mode_off_test</p>
             <p class="text-sm">
-              <span>11:55:05 AM</span> / <span>00:00:08:798</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:09:06 PM</span> / <span>00:00:02:138</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">repair_mode_off_test</h5>
-<span class='badge badge-success'>05.14.2024 11:55:05</span>
-<span class='badge badge-danger'>05.14.2024 11:55:14</span>
-<span class='badge badge-default'>00:00:08:798</span>
+<h5 class="test-status text-pass">Listeners.repair_mode_off_test</h5>
+<span class='badge badge-success'>05.14.2024 17:09:06</span>
+<span class='badge badge-danger'>05.14.2024 17:09:08</span>
+<span class='badge badge-default'>00:00:02:138</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
 </div>
 </div>
@@ -1823,63 +1272,17 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:55:14 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:09:08 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [23305ccc-053c-40af-a4d7-7287b7a646a7, findElement {using=xpath, value=//android.widget.Switch[@text="ON"]}]
-Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
-	at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.repair_mode_off(QmsMain.java:331)
-	at com.yeasin.appium_qms.QmsOnlineRepair.repair_mode_off_test(QmsOnlineRepair.java:69)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+          Turned off repair mode
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:09:08 PM</td>
+        <td>
+          repair_mode_off_test Test Passed
         </td>
       </tr>
   </tbody>
@@ -1887,25 +1290,25 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="26"
+        <li class="test-item"  status="pass" test-id="26"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">force_sync_test</p>
+            <p class="name">Listeners.force_sync_test</p>
             <p class="text-sm">
-              <span>11:55:14 AM</span> / <span>00:00:05:053</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:09:08 PM</span> / <span>00:00:05:655</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">force_sync_test</h5>
-<span class='badge badge-success'>05.14.2024 11:55:14</span>
-<span class='badge badge-danger'>05.14.2024 11:55:19</span>
-<span class='badge badge-default'>00:00:05:053</span>
+<h5 class="test-status text-pass">Listeners.force_sync_test</h5>
+<span class='badge badge-success'>05.14.2024 17:09:08</span>
+<span class='badge badge-danger'>05.14.2024 17:09:14</span>
+<span class='badge badge-default'>00:00:05:655</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
 </div>
 </div>
@@ -1914,63 +1317,17 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:55:19 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:09:14 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [23305ccc-053c-40af-a4d7-7287b7a646a7, findElement {using=xpath, value=//android.widget.TextView[@text=""]}]
-Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
-	at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.force_sync(QmsMain.java:301)
-	at com.yeasin.appium_qms.QmsOnlineRepair.force_sync_test(QmsOnlineRepair.java:74)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+          Syncing data to web
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:09:14 PM</td>
+        <td>
+          force_sync_test Test Passed
         </td>
       </tr>
   </tbody>
@@ -1978,25 +1335,25 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="27"
+        <li class="test-item"  status="pass" test-id="27"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">log_out_test</p>
+            <p class="name">Listeners.log_out_test</p>
             <p class="text-sm">
-              <span>11:55:19 AM</span> / <span>00:00:10:124</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:09:14 PM</span> / <span>00:00:11:902</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">log_out_test</h5>
-<span class='badge badge-success'>05.14.2024 11:55:19</span>
-<span class='badge badge-danger'>05.14.2024 11:55:29</span>
-<span class='badge badge-default'>00:00:10:124</span>
+<h5 class="test-status text-pass">Listeners.log_out_test</h5>
+<span class='badge badge-success'>05.14.2024 17:09:14</span>
+<span class='badge badge-danger'>05.14.2024 17:09:26</span>
+<span class='badge badge-default'>00:00:11:902</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
 </div>
 </div>
@@ -2005,63 +1362,24 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:55:29 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:09:19 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [23305ccc-053c-40af-a4d7-7287b7a646a7, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup}]
-Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
-	at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.expand_side_menu(QmsMain.java:111)
-	at com.yeasin.appium_qms.QmsOnlineRepair.log_out_test(QmsOnlineRepair.java:79)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+          Expanding side menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:09:26 PM</td>
+        <td>
+          Logging out of app
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:09:26 PM</td>
+        <td>
+          log_out_test Test Passed
         </td>
       </tr>
   </tbody>
@@ -2074,9 +1392,9 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">close_down_test</p>
+            <p class="name">Listeners.close_down_test</p>
             <p class="text-sm">
-              <span>11:55:29 AM</span> / <span>00:00:05:737</span>
+              <span>17:09:26 PM</span> / <span>00:00:05:805</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2084,10 +1402,10 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">close_down_test</h5>
-<span class='badge badge-success'>05.14.2024 11:55:29</span>
-<span class='badge badge-danger'>05.14.2024 11:55:35</span>
-<span class='badge badge-default'>00:00:05:737</span>
+<h5 class="test-status text-pass">Listeners.close_down_test</h5>
+<span class='badge badge-success'>05.14.2024 17:09:26</span>
+<span class='badge badge-danger'>05.14.2024 17:09:31</span>
+<span class='badge badge-default'>00:00:05:805</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=28</span>
 </div>
 </div>
@@ -2096,8 +1414,15 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:09:31 PM</td>
+        <td>
+          Closed app
+        </td>
+      </tr>
+      <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:55:35 AM</td>
+        <td>5:09:31 PM</td>
         <td>
           close_down_test Test Passed
         </td>
@@ -2116,198 +1441,30 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="test-wrapper row view exception-view attributes-view">
-<div class="test-list">
-<div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
-</div>
-<div class="test-list-wrapper scrollable">
-<ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">org.openqa.selenium.NoSuchElementException</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>org.openqa.selenium.NoSuchElementException</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:42:47 AM</td>
-<td>
-<a href="#" class="linked" test-id='3' id='3'>expand_side_menu_test</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:52:55 AM</td>
-<td>
-<a href="#" class="linked" test-id='5' id='5'>set_line_test</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:53:06 AM</td>
-<td>
-<a href="#" class="linked" test-id='6' id='6'>select_order_test</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:53:26 AM</td>
-<td>
-<a href="#" class="linked" test-id='8' id='8'>pass_action_test</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:53:31 AM</td>
-<td>
-<a href="#" class="linked" test-id='9' id='9'>alter_action_test</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:53:36 AM</td>
-<td>
-<a href="#" class="linked" test-id='10' id='10'>reject_action_test</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:53:41 AM</td>
-<td>
-<a href="#" class="linked" test-id='11' id='11'>force_sync_test</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:53:46 AM</td>
-<td>
-<a href="#" class="linked" test-id='12' id='12'>log_out_test</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:54:07 AM</td>
-<td>
-<a href="#" class="linked" test-id='15' id='15'>login_test</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:54:14 AM</td>
-<td>
-<a href="#" class="linked" test-id='18' id='18'>set_line_test</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:54:25 AM</td>
-<td>
-<a href="#" class="linked" test-id='19' id='19'>select_order_test</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:54:45 AM</td>
-<td>
-<a href="#" class="linked" test-id='21' id='21'>repair_mode_on_test</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:54:50 AM</td>
-<td>
-<a href="#" class="linked" test-id='22' id='22'>pass_action_test</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:54:55 AM</td>
-<td>
-<a href="#" class="linked" test-id='23' id='23'>alter_action_test</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:55:00 AM</td>
-<td>
-<a href="#" class="linked" test-id='24' id='24'>reject_action_test</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:55:05 AM</td>
-<td>
-<a href="#" class="linked" test-id='25' id='25'>repair_mode_off_test</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:55:14 AM</td>
-<td>
-<a href="#" class="linked" test-id='26' id='26'>force_sync_test</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>11:55:19 AM</td>
-<td>
-<a href="#" class="linked" test-id='27' id='27'>log_out_test</a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="test-content scrollable">
-<div class="test-content-detail">
-<div class="detail-body"></div>
-</div>
-</div>
-</div><div class="container-fluid p-4 view dashboard-view">
+<div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>May 14, 2024 11:42:32 AM</h3>
+<h3>May 14, 2024 05:05:43 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>May 14, 2024 11:55:35 AM</h3>
+<h3>May 14, 2024 05:09:31 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>10</h3>
+<h3>28</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>18</h3>
+<h3>0</h3>
 </div></div>
 </div>
 </div>
@@ -2323,12 +1480,12 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='35%'>
-<b>10</b> tests passed
+<div><small data-tooltip='100%'>
+<b>28</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='64%'><b>18</b> tests failed,
+<small data-tooltip='0%'><b>0</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -2346,10 +1503,10 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='35%'><b>10</b> events passed</small></div>
+<div><small data-tooltip='40%'><b>28</b> events passed</small></div>
 <div>
-<small data-tooltip='64%'><b>18</b> events failed,
-<b data-tooltip='%'>0</b> others
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>42</b> others
 </small>
 </div>
 </div>
@@ -2365,7 +1522,7 @@ Session ID: 23305ccc-053c-40af-a4d7-7287b7a646a7
 </div></div>
 <script>
 var timeline = {
-"set_up_test":9.171,"login_test":4.946,"expand_side_menu_test":600.164,"sync_web_test":8.691,"set_line_test":10.221,"select_order_test":15.171,"choose_variance_test":5.058,"pass_action_test":5.064,"alter_action_test":5.049,"reject_action_test":5.055,"force_sync_test":5.067,"log_out_test":10.097,"close_down_test":5.748,"set_up_test":4.966,"login_test":5.138,"expand_side_menu_test":0.207,"sync_web_test":1.632,"set_line_test":10.237,"select_order_test":15.243,"choose_variance_test":5.078,"repair_mode_on_test":5.062,"pass_action_test":5.087,"alter_action_test":5.246,"reject_action_test":5.072,"repair_mode_off_test":8.798,"force_sync_test":5.053,"log_out_test":10.124,"close_down_test":5.737
+"Listeners.set_up_test":4.32,"Listeners.log_in_test":4.939,"Listeners.expand_side_menu_test":5.849,"Listeners.sync_web_test":1.84,"Listeners.set_line_test":12.857,"Listeners.select_order_test":7.084,"Listeners.choose_variance_test":5.113,"Listeners.pass_action_test":7.76,"Listeners.alter_action_test":18.437,"Listeners.reject_action_test":19.851,"Listeners.force_sync_test":5.649,"Listeners.log_out_test":11.899,"Listeners.close_down_test":5.734,"Listeners.set_up_test":4.981,"Listeners.log_in_test":4.291,"Listeners.expand_side_menu_test":5.942,"Listeners.sync_web_test":1.617,"Listeners.set_line_test":11.979,"Listeners.select_order_test":7.12,"Listeners.choose_variance_test":5.129,"Listeners.repair_mode_on_test":2.172,"Listeners.pass_action_test":7.735,"Listeners.alter_action_test":19.513,"Listeners.reject_action_test":20.336,"Listeners.repair_mode_off_test":2.138,"Listeners.force_sync_test":5.655,"Listeners.log_out_test":11.902,"Listeners.close_down_test":5.805
 };
 </script>
 <div class="row">
@@ -2388,8 +1545,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 10,
-failParent: 18,
+passParent: 28,
+failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -2405,11 +1562,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 10,
-failEvents: 18,
+passEvents: 28,
+failEvents: 0,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 0
+infoEvents: 42
 };
 </script>        </div>
       </div>

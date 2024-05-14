@@ -3,14 +3,13 @@ package com.yeasin.appium_qms.utilities;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 public class Listeners implements ITestListener {
 	ExtentReports extent = Reporter.getReporter();
-	ExtentTest test;
+	static ExtentTest test;
 	
 	@Override
 	public void onTestStart(ITestResult result) {
@@ -19,7 +18,7 @@ public class Listeners implements ITestListener {
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		test.log(Status.PASS, result.getName() + " Test Passed");
+		test.log(Status.PASS, result.getName() + " Passed");
 		
 	}
 

@@ -1,7 +1,9 @@
 package com.yeasin.appium_qms;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 
+import org.json.simple.parser.ParseException;
 import org.testng.annotations.Test;
 
 import com.yeasin.appium_qms.utilities.QmsMain;
@@ -15,7 +17,7 @@ public class QmsOfflineRepair extends QmsMain {
 	}
 	
 	@Test(priority = 2)
-	public void login_test() throws MalformedURLException {
+	public void log_in_test() throws IOException, ParseException {
 		offRep.log_in();
 	}
 	

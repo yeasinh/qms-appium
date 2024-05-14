@@ -2,11 +2,13 @@ package com.yeasin.appium_qms.utilities;
 
 import java.net.URL;
 import java.time.Duration;
+import java.io.IOException;
 import java.net.MalformedURLException;
+
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 import io.appium.java_client.AppiumBy;
@@ -14,14 +16,13 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 
-public class QmsMain {
+public class QmsMain extends Listeners {
 	static AppiumDriverLocalService service;
 	protected static AndroidDriver driver;
-	ExtentTest test;
 	static int inputDelay = 5;
 	static int iteration = 1;
 
-	public static void main(String[] args) throws MalformedURLException, InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException, ParseException {
 		QmsMain qmsMain = new QmsMain();
 		
 		qmsMain.set_up();
@@ -95,12 +96,12 @@ public class QmsMain {
 	}
 	
 	// log in to the app
-	public void log_in() {
+	public void log_in() throws IOException, ParseException {
 		// log in to qms app with username = Test and password = test
 		WebElement username = driver.findElement(By.xpath("//android.widget.EditText[@text=\"Username\"]"));
-		username.sendKeys("Test");
+		username.sendKeys(DataReader.getTestData("username"));
 		WebElement password = driver.findElement(By.xpath("//android.widget.EditText[@text=\"Password\"]"));
-		password.sendKeys("test");
+		password.sendKeys(DataReader.getTestData("password"));
 		WebElement login = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Login\"]"));
 		login.click();
 		test.log(Status.INFO, "Logging in to app with username and password");
@@ -141,7 +142,6 @@ public class QmsMain {
         WebElement settings = driver.findElement(By.xpath("//android.widget.Button[@content-desc=', Settings']"));
         settings.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        
         test.log(Status.INFO, "Entering Setting module");
     	
         try {
@@ -184,7 +184,6 @@ public class QmsMain {
             WebElement home = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\", Home\"]"));
             home.click();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-            
             test.log(Status.INFO, "Entering Home module");
             
 		} catch(Exception e) {
@@ -196,7 +195,6 @@ public class QmsMain {
         	// continue with previously selected buyer, style, and order
         	WebElement prevOrderComfirm = driver.findElement(By.xpath("//android.widget.Button[@resource-id=\"android:id/button1\"]"));
         	prevOrderComfirm.click();
-        	
         	test.log(Status.INFO, "Continuing with selected Buyer, Style, and Order");
         	
         } catch(Exception e) {
@@ -262,7 +260,6 @@ public class QmsMain {
 		pass.click();
 		
 		Thread.sleep((inputDelay+2)*1000);
-		
 		test.log(Status.INFO, "Pass");
 	}
 	
@@ -276,7 +273,6 @@ public class QmsMain {
 		enter_defect();
 		
 		Thread.sleep((inputDelay+2)*1000);
-		
 		test.log(Status.INFO, "Alter");
 	}
 	
@@ -290,7 +286,6 @@ public class QmsMain {
 		enter_defect();
 		
 		Thread.sleep((inputDelay+2)*1000);
-		
 		test.log(Status.INFO, "Reject");
 	}
 	
@@ -317,7 +312,6 @@ public class QmsMain {
 			WebElement selectedOperation = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"APPIUM OPERATION\"]/android.view.ViewGroup"));
 			selectedOperation.click();
 			Thread.sleep(2000);
-			
 			test.log(Status.INFO, "Selected Operation without Position");
 		}
 		
@@ -330,7 +324,6 @@ public class QmsMain {
 		WebElement okay = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup"));
 		okay.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		
 		test.log(Status.INFO, "Selected Defect");
 	}
 	
@@ -341,7 +334,6 @@ public class QmsMain {
 		fsButton.click();
 		
 		Thread.sleep(5000);
-		
 		test.log(Status.INFO, "Syncing data to web");
 	}
 	
@@ -366,7 +358,6 @@ public class QmsMain {
 		WebElement repairOn = driver.findElement(By.xpath("//android.widget.Switch[@text=\"OFF\"]"));
 		repairOn.click();
 		Thread.sleep(2000);
-		
 		test.log(Status.INFO, "Turned on repair mode");
 	}
 		
@@ -376,7 +367,6 @@ public class QmsMain {
 		WebElement repairOff = driver.findElement(By.xpath("//android.widget.Switch[@text=\"ON\"]"));
 		repairOff.click();
 		Thread.sleep(2000);
-		
 		test.log(Status.INFO, "Turned off repair mode");
 	}
 		
@@ -437,5 +427,6 @@ public class QmsMain {
         // service.stop();
         
         Thread.sleep(5000);
+        test.log(Status.INFO, "Closed app");
 	}
 }
