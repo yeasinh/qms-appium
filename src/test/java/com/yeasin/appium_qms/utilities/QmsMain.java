@@ -5,6 +5,10 @@ import java.time.Duration;
 import java.net.MalformedURLException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
@@ -13,6 +17,7 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 public class QmsMain {
 	static AppiumDriverLocalService service;
 	protected static AndroidDriver driver;
+	ExtentTest test;
 	static int inputDelay = 5;
 	static int iteration = 1;
 
@@ -78,10 +83,12 @@ public class QmsMain {
 		try {
 			// if the app is already installed, just open it without reinstalling
 			driver.activateApp("com.nidleqms");
+			test.log(Status.INFO, "Opening already installed app");
 
 		} catch(Exception e) {
 			// set the app
 			options.setApp(System.getProperty("user.dir") + "\\src\\test\\java\\com\\yeasin\\appium_qms\\resources\\qms-24.04.30.apk");
+			test.log(Status.INFO, "Installing app");
 		}
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -96,6 +103,7 @@ public class QmsMain {
 		password.sendKeys("test");
 		WebElement login = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Login\"]"));
 		login.click();
+		test.log(Status.INFO, "Logging in to app with username and password");
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(5));
 	}
@@ -106,10 +114,12 @@ public class QmsMain {
 		try {
 			WebElement menu = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"\"]"));
 			menu.click();
+			test.log(Status.INFO, "Expanding side menu");
 			
 		} catch(Exception e) {
 			WebElement menu = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup"));
 	        menu.click();
+	        test.log(Status.INFO, "Expanding side menu");
 		}
 		
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -120,6 +130,7 @@ public class QmsMain {
 		// click on the sync button
         WebElement sync = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Sync\"]"));
         sync.click();
+        test.log(Status.INFO, "Syncing web data");
         
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	}
@@ -130,6 +141,8 @@ public class QmsMain {
         WebElement settings = driver.findElement(By.xpath("//android.widget.Button[@content-desc=', Settings']"));
         settings.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        
+        test.log(Status.INFO, "Entering Setting module");
     	
         try {
         	// select a line
@@ -152,11 +165,15 @@ public class QmsMain {
             next.click();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
             
+            test.log(Status.INFO, "Selected Line and Input Delay");
+            
         } catch (Exception e) {
         	// continue with previously selected line and input delay
         	WebElement next = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Next\"]"));
             next.click();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+            
+            test.log(Status.INFO, "Continuing with selected Line and Input Delay");
         }
 	}
 	
@@ -168,14 +185,19 @@ public class QmsMain {
             home.click();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
             
+            test.log(Status.INFO, "Entering Home module");
+            
 		} catch(Exception e) {
 			// home module already entered
+			test.log(Status.INFO, "Entered Home module before");
 		}
 		
         try {
         	// continue with previously selected buyer, style, and order
         	WebElement prevOrderComfirm = driver.findElement(By.xpath("//android.widget.Button[@resource-id=\"android:id/button1\"]"));
         	prevOrderComfirm.click();
+        	
+        	test.log(Status.INFO, "Continuing with selected Buyer, Style, and Order");
         	
         } catch(Exception e) {
             // access qc lunch pad
@@ -203,6 +225,8 @@ public class QmsMain {
             WebElement orderOkay = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"\"]"));
             orderOkay.click();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+            
+            test.log(Status.INFO, "Selected Buyer, Style, and Order");
         }
 	}
 	
@@ -222,9 +246,12 @@ public class QmsMain {
 			WebElement selectedSize = driver.findElement(By.xpath("//android.widget.TextView[@text=\"L\"]"));
 			selectedSize.click();
 			Thread.sleep(2000);
+			
+			test.log(Status.INFO, "Chose Color and Size");
 		
 		} catch (Exception e) {
 			// continue with already selected color and size
+			test.log(Status.INFO, "Continuing with selected Color and Size");
 		}
 	}
 	
@@ -235,6 +262,8 @@ public class QmsMain {
 		pass.click();
 		
 		Thread.sleep((inputDelay+2)*1000);
+		
+		test.log(Status.INFO, "Pass");
 	}
 	
 	// provide alter entries
@@ -247,6 +276,8 @@ public class QmsMain {
 		enter_defect();
 		
 		Thread.sleep((inputDelay+2)*1000);
+		
+		test.log(Status.INFO, "Alter");
 	}
 	
 	// provide reject entries
@@ -259,6 +290,8 @@ public class QmsMain {
 		enter_defect();
 		
 		Thread.sleep((inputDelay+2)*1000);
+		
+		test.log(Status.INFO, "Reject");
 	}
 	
 	// select positon, operation, and defect for alter/reject
@@ -277,11 +310,15 @@ public class QmsMain {
 			selectedOperation.click();
 			Thread.sleep(2000);
 			
+			test.log(Status.INFO, "Selected Position and Operation");
+			
 		} catch(Exception e) {
 			// select an operation and continue
 			WebElement selectedOperation = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"APPIUM OPERATION\"]/android.view.ViewGroup"));
 			selectedOperation.click();
 			Thread.sleep(2000);
+			
+			test.log(Status.INFO, "Selected Operation without Position");
 		}
 		
 		// select a defect
@@ -293,6 +330,8 @@ public class QmsMain {
 		WebElement okay = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup"));
 		okay.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		
+		test.log(Status.INFO, "Selected Defect");
 	}
 	
 	// sync pass/alter/reject entries to the web
@@ -302,6 +341,8 @@ public class QmsMain {
 		fsButton.click();
 		
 		Thread.sleep(5000);
+		
+		test.log(Status.INFO, "Syncing data to web");
 	}
 	
 	// perform undo after pass/alter/reject
@@ -315,6 +356,8 @@ public class QmsMain {
 		WebElement undoConfirm = driver.findElement(By.xpath("//android.widget.Button[@resource-id=\"android:id/button1\"]"));
 		undoConfirm.click();
 		Thread.sleep(2000);
+		
+		test.log(Status.INFO, "Undoing latest input");
 	}
 
 	// turn on repair mode
@@ -323,6 +366,8 @@ public class QmsMain {
 		WebElement repairOn = driver.findElement(By.xpath("//android.widget.Switch[@text=\"OFF\"]"));
 		repairOn.click();
 		Thread.sleep(2000);
+		
+		test.log(Status.INFO, "Turned on repair mode");
 	}
 		
 	// turn off repair mode
@@ -331,9 +376,13 @@ public class QmsMain {
 		WebElement repairOff = driver.findElement(By.xpath("//android.widget.Switch[@text=\"ON\"]"));
 		repairOff.click();
 		Thread.sleep(2000);
+		
+		test.log(Status.INFO, "Turned off repair mode");
 	}
 		
 	public void production_entry() throws InterruptedException {
+		test.log(Status.INFO, "Performing Production entry");
+		
 		inputDelay = 5;
 		for(int i = 1; i <= iteration; i++) {
         	pass_action();
@@ -348,6 +397,8 @@ public class QmsMain {
 	}
 	
 	public void perform_undo() throws InterruptedException {
+		test.log(Status.INFO, "Performing Undo operation");
+		
 		inputDelay = 2;
         for(int i = 1; i <= iteration; i++) {
         	pass_action();
@@ -371,6 +422,7 @@ public class QmsMain {
 		logout.click();
 		
 		Thread.sleep(5000);
+		test.log(Status.INFO, "Logging out of app");
 	}
 	
 	// close the driver and stop the server
