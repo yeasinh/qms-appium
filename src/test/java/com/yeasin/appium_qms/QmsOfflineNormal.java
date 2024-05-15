@@ -48,18 +48,45 @@ public class QmsOfflineNormal extends QmsMain {
 	}
 	
 	@Test(priority = 8)
-	public void pass_action_test() throws InterruptedException {
-		offNor.pass_action();
+	public static void pass_action_test() throws InterruptedException {
+		for(int i = 0; i < iteration; i++) {
+			offNor.pass_action();
+		}
 	}
 	
 	@Test(priority = 9)
 	public void alter_action_test() throws InterruptedException {
-		offNor.alter_action();
+		for(int i = 0; i < iteration; i++) {
+			offNor.alter_action();
+		}
 	}
 	
 	@Test(priority = 10)
 	public void reject_action_test() throws InterruptedException {
-		offNor.reject_action();
+		for(int i = 0; i < iteration; i++) {
+			offNor.reject_action();
+		}
+	}
+	
+	@Test(priority = 8)
+	public static void pass_undo_test() throws InterruptedException {
+		for(int i = 0; i < iteration; i++) {
+			offNor.pass_undo();
+		}
+	}
+	
+	@Test(priority = 9)
+	public static void alter_undo_test() throws InterruptedException {
+		for(int i = 0; i < iteration; i++) {
+			offNor.alter_undo();
+		}
+	}
+	
+	@Test(priority = 10)
+	public static void reject_undo_test() throws InterruptedException {
+		for(int i = 0; i < iteration; i++) {
+			offNor.reject_undo();
+		}
 	}
 	
 	@Test(priority = 11)

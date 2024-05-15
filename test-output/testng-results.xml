@@ -1,129 +1,705 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="28" passed="28" failed="0" skipped="0">
+<testng-results ignored="0" total="68" passed="62" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-14T17:05:43 BDT" name="QMS Automation Suite" finished-at="2024-05-14T17:09:31 BDT" duration-ms="228045">
+  <suite started-at="2024-05-15T15:34:33 BDT" name="QMS Automation Suite" finished-at="2024-05-15T15:52:29 BDT" duration-ms="1076826">
     <groups>
     </groups>
-    <test started-at="2024-05-14T17:05:43 BDT" name="QMS Basic Test Online" finished-at="2024-05-14T17:07:35 BDT" duration-ms="111379">
+    <test started-at="2024-05-15T15:34:33 BDT" name="QMS Online Basic Test" finished-at="2024-05-15T15:37:07 BDT" duration-ms="154477">
       <class name="com.yeasin.appium_qms.QmsOnlineNormal">
-        <test-method signature="set_up_test()[pri:1, instance:com.yeasin.appium_qms.QmsOnlineNormal@56673b2c]" started-at="2024-05-14T17:05:43 BDT" name="set_up_test" finished-at="2024-05-14T17:05:48 BDT" duration-ms="4321" status="PASS">
+        <test-method signature="set_up_test()[pri:1, instance:com.yeasin.appium_qms.QmsOnlineNormal@70f02c32]" started-at="2024-05-15T15:34:33 BDT" name="set_up_test" finished-at="2024-05-15T15:34:37 BDT" duration-ms="4331" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- set_up_test -->
-        <test-method signature="log_in_test()[pri:2, instance:com.yeasin.appium_qms.QmsOnlineNormal@56673b2c]" started-at="2024-05-14T17:05:48 BDT" name="log_in_test" finished-at="2024-05-14T17:05:53 BDT" duration-ms="4939" status="PASS">
+        <test-method signature="log_in_test()[pri:2, instance:com.yeasin.appium_qms.QmsOnlineNormal@70f02c32]" started-at="2024-05-15T15:34:37 BDT" name="log_in_test" finished-at="2024-05-15T15:34:40 BDT" duration-ms="3321" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- log_in_test -->
-        <test-method signature="expand_side_menu_test()[pri:3, instance:com.yeasin.appium_qms.QmsOnlineNormal@56673b2c]" started-at="2024-05-14T17:05:53 BDT" name="expand_side_menu_test" finished-at="2024-05-14T17:05:59 BDT" duration-ms="5849" status="PASS">
+        <test-method signature="expand_side_menu_test()[pri:3, instance:com.yeasin.appium_qms.QmsOnlineNormal@70f02c32]" started-at="2024-05-15T15:34:40 BDT" name="expand_side_menu_test" finished-at="2024-05-15T15:34:46 BDT" duration-ms="5702" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- expand_side_menu_test -->
-        <test-method signature="sync_web_test()[pri:4, instance:com.yeasin.appium_qms.QmsOnlineNormal@56673b2c]" started-at="2024-05-14T17:05:59 BDT" name="sync_web_test" finished-at="2024-05-14T17:06:00 BDT" duration-ms="1840" status="PASS">
+        <test-method signature="sync_web_test()[pri:4, instance:com.yeasin.appium_qms.QmsOnlineNormal@70f02c32]" started-at="2024-05-15T15:34:46 BDT" name="sync_web_test" finished-at="2024-05-15T15:34:48 BDT" duration-ms="1709" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sync_web_test -->
-        <test-method signature="set_line_test()[pri:5, instance:com.yeasin.appium_qms.QmsOnlineNormal@56673b2c]" started-at="2024-05-14T17:06:00 BDT" name="set_line_test" finished-at="2024-05-14T17:06:13 BDT" duration-ms="12857" status="PASS">
+        <test-method signature="set_line_test()[pri:5, instance:com.yeasin.appium_qms.QmsOnlineNormal@70f02c32]" started-at="2024-05-15T15:34:48 BDT" name="set_line_test" finished-at="2024-05-15T15:34:58 BDT" duration-ms="10173" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- set_line_test -->
-        <test-method signature="select_order_test()[pri:6, instance:com.yeasin.appium_qms.QmsOnlineNormal@56673b2c]" started-at="2024-05-14T17:06:13 BDT" name="select_order_test" finished-at="2024-05-14T17:06:20 BDT" duration-ms="7085" status="PASS">
+        <test-method signature="select_order_test()[pri:6, instance:com.yeasin.appium_qms.QmsOnlineNormal@70f02c32]" started-at="2024-05-15T15:34:58 BDT" name="select_order_test" finished-at="2024-05-15T15:35:03 BDT" duration-ms="5152" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- select_order_test -->
-        <test-method signature="choose_variance_test()[pri:7, instance:com.yeasin.appium_qms.QmsOnlineNormal@56673b2c]" started-at="2024-05-14T17:06:20 BDT" name="choose_variance_test" finished-at="2024-05-14T17:06:25 BDT" duration-ms="5115" status="PASS">
+        <test-method signature="choose_variance_test()[pri:7, instance:com.yeasin.appium_qms.QmsOnlineNormal@70f02c32]" started-at="2024-05-15T15:35:03 BDT" name="choose_variance_test" finished-at="2024-05-15T15:35:08 BDT" duration-ms="5122" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- choose_variance_test -->
-        <test-method signature="pass_action_test()[pri:8, instance:com.yeasin.appium_qms.QmsOnlineNormal@56673b2c]" started-at="2024-05-14T17:06:25 BDT" name="pass_action_test" finished-at="2024-05-14T17:06:33 BDT" duration-ms="7761" status="PASS">
+        <test-method signature="pass_action_test()[pri:8, instance:com.yeasin.appium_qms.QmsOnlineNormal@70f02c32]" started-at="2024-05-15T15:35:08 BDT" name="pass_action_test" finished-at="2024-05-15T15:35:16 BDT" duration-ms="7762" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pass_action_test -->
-        <test-method signature="alter_action_test()[pri:9, instance:com.yeasin.appium_qms.QmsOnlineNormal@56673b2c]" started-at="2024-05-14T17:06:33 BDT" name="alter_action_test" finished-at="2024-05-14T17:06:52 BDT" duration-ms="18437" status="PASS">
+        <test-method signature="pass_undo_test()[pri:8, instance:com.yeasin.appium_qms.QmsOnlineNormal@70f02c32]" started-at="2024-05-15T15:35:16 BDT" name="pass_undo_test" finished-at="2024-05-15T15:35:24 BDT" duration-ms="7676" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pass_undo_test -->
+        <test-method signature="alter_action_test()[pri:9, instance:com.yeasin.appium_qms.QmsOnlineNormal@70f02c32]" started-at="2024-05-15T15:35:24 BDT" name="alter_action_test" finished-at="2024-05-15T15:35:43 BDT" duration-ms="19529" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- alter_action_test -->
-        <test-method signature="reject_action_test()[pri:10, instance:com.yeasin.appium_qms.QmsOnlineNormal@56673b2c]" started-at="2024-05-14T17:06:52 BDT" name="reject_action_test" finished-at="2024-05-14T17:07:11 BDT" duration-ms="19851" status="PASS">
+        <test-method signature="alter_undo_test()[pri:9, instance:com.yeasin.appium_qms.QmsOnlineNormal@70f02c32]" started-at="2024-05-15T15:35:43 BDT" name="alter_undo_test" finished-at="2024-05-15T15:36:04 BDT" duration-ms="21027" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- alter_undo_test -->
+        <test-method signature="reject_action_test()[pri:10, instance:com.yeasin.appium_qms.QmsOnlineNormal@70f02c32]" started-at="2024-05-15T15:36:04 BDT" name="reject_action_test" finished-at="2024-05-15T15:36:24 BDT" duration-ms="19361" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reject_action_test -->
-        <test-method signature="force_sync_test()[pri:11, instance:com.yeasin.appium_qms.QmsOnlineNormal@56673b2c]" started-at="2024-05-14T17:07:11 BDT" name="force_sync_test" finished-at="2024-05-14T17:07:17 BDT" duration-ms="5649" status="PASS">
+        <test-method signature="reject_undo_test()[pri:10, instance:com.yeasin.appium_qms.QmsOnlineNormal@70f02c32]" started-at="2024-05-15T15:36:24 BDT" name="reject_undo_test" finished-at="2024-05-15T15:36:44 BDT" duration-ms="20221" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reject_undo_test -->
+        <test-method signature="force_sync_test()[pri:11, instance:com.yeasin.appium_qms.QmsOnlineNormal@70f02c32]" started-at="2024-05-15T15:36:44 BDT" name="force_sync_test" finished-at="2024-05-15T15:36:49 BDT" duration-ms="5656" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- force_sync_test -->
-        <test-method signature="log_out_test()[pri:12, instance:com.yeasin.appium_qms.QmsOnlineNormal@56673b2c]" started-at="2024-05-14T17:07:17 BDT" name="log_out_test" finished-at="2024-05-14T17:07:29 BDT" duration-ms="11899" status="PASS">
+        <test-method signature="log_out_test()[pri:12, instance:com.yeasin.appium_qms.QmsOnlineNormal@70f02c32]" started-at="2024-05-15T15:36:49 BDT" name="log_out_test" finished-at="2024-05-15T15:37:01 BDT" duration-ms="11914" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- log_out_test -->
-        <test-method signature="close_down_test()[pri:13, instance:com.yeasin.appium_qms.QmsOnlineNormal@56673b2c]" started-at="2024-05-14T17:07:29 BDT" name="close_down_test" finished-at="2024-05-14T17:07:35 BDT" duration-ms="5733" status="PASS">
+        <test-method signature="close_down_test()[pri:13, instance:com.yeasin.appium_qms.QmsOnlineNormal@70f02c32]" started-at="2024-05-15T15:37:01 BDT" name="close_down_test" finished-at="2024-05-15T15:37:07 BDT" duration-ms="5780" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close_down_test -->
       </class> <!-- com.yeasin.appium_qms.QmsOnlineNormal -->
-    </test> <!-- QMS Basic Test Online -->
-    <test started-at="2024-05-14T17:07:35 BDT" name="QMS Repair Test Online" finished-at="2024-05-14T17:09:31 BDT" duration-ms="116330">
+    </test> <!-- QMS Online Basic Test -->
+    <test started-at="2024-05-15T15:37:07 BDT" name="QMS Online Repair Test" finished-at="2024-05-15T15:39:47 BDT" duration-ms="159129">
       <class name="com.yeasin.appium_qms.QmsOnlineRepair">
-        <test-method signature="set_up_test()[pri:1, instance:com.yeasin.appium_qms.QmsOnlineRepair@34c01041]" started-at="2024-05-14T17:07:35 BDT" name="set_up_test" finished-at="2024-05-14T17:07:40 BDT" duration-ms="4981" status="PASS">
+        <test-method signature="set_up_test()[pri:1, instance:com.yeasin.appium_qms.QmsOnlineRepair@41e68d87]" started-at="2024-05-15T15:37:07 BDT" name="set_up_test" finished-at="2024-05-15T15:37:12 BDT" duration-ms="4975" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- set_up_test -->
-        <test-method signature="log_in_test()[pri:2, instance:com.yeasin.appium_qms.QmsOnlineRepair@34c01041]" started-at="2024-05-14T17:07:40 BDT" name="log_in_test" finished-at="2024-05-14T17:07:44 BDT" duration-ms="4290" status="PASS">
+        <test-method signature="log_in_test()[pri:2, instance:com.yeasin.appium_qms.QmsOnlineRepair@41e68d87]" started-at="2024-05-15T15:37:12 BDT" name="log_in_test" finished-at="2024-05-15T15:37:17 BDT" duration-ms="4393" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- log_in_test -->
-        <test-method signature="expand_side_menu_test()[pri:3, instance:com.yeasin.appium_qms.QmsOnlineRepair@34c01041]" started-at="2024-05-14T17:07:44 BDT" name="expand_side_menu_test" finished-at="2024-05-14T17:07:50 BDT" duration-ms="5943" status="PASS">
+        <test-method signature="expand_side_menu_test()[pri:3, instance:com.yeasin.appium_qms.QmsOnlineRepair@41e68d87]" started-at="2024-05-15T15:37:17 BDT" name="expand_side_menu_test" finished-at="2024-05-15T15:37:23 BDT" duration-ms="5765" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- expand_side_menu_test -->
-        <test-method signature="sync_web_test()[pri:4, instance:com.yeasin.appium_qms.QmsOnlineRepair@34c01041]" started-at="2024-05-14T17:07:50 BDT" name="sync_web_test" finished-at="2024-05-14T17:07:52 BDT" duration-ms="1617" status="PASS">
+        <test-method signature="sync_web_test()[pri:4, instance:com.yeasin.appium_qms.QmsOnlineRepair@41e68d87]" started-at="2024-05-15T15:37:23 BDT" name="sync_web_test" finished-at="2024-05-15T15:37:24 BDT" duration-ms="1586" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sync_web_test -->
-        <test-method signature="set_line_test()[pri:5, instance:com.yeasin.appium_qms.QmsOnlineRepair@34c01041]" started-at="2024-05-14T17:07:52 BDT" name="set_line_test" finished-at="2024-05-14T17:08:04 BDT" duration-ms="11980" status="PASS">
+        <test-method signature="set_line_test()[pri:5, instance:com.yeasin.appium_qms.QmsOnlineRepair@41e68d87]" started-at="2024-05-15T15:37:24 BDT" name="set_line_test" finished-at="2024-05-15T15:37:34 BDT" duration-ms="10195" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- set_line_test -->
-        <test-method signature="select_order_test()[pri:6, instance:com.yeasin.appium_qms.QmsOnlineRepair@34c01041]" started-at="2024-05-14T17:08:04 BDT" name="select_order_test" finished-at="2024-05-14T17:08:11 BDT" duration-ms="7120" status="PASS">
+        <test-method signature="select_order_test()[pri:6, instance:com.yeasin.appium_qms.QmsOnlineRepair@41e68d87]" started-at="2024-05-15T15:37:34 BDT" name="select_order_test" finished-at="2024-05-15T15:37:39 BDT" duration-ms="5151" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- select_order_test -->
-        <test-method signature="choose_variance_test()[pri:7, instance:com.yeasin.appium_qms.QmsOnlineRepair@34c01041]" started-at="2024-05-14T17:08:11 BDT" name="choose_variance_test" finished-at="2024-05-14T17:08:16 BDT" duration-ms="5129" status="PASS">
+        <test-method signature="choose_variance_test()[pri:7, instance:com.yeasin.appium_qms.QmsOnlineRepair@41e68d87]" started-at="2024-05-15T15:37:39 BDT" name="choose_variance_test" finished-at="2024-05-15T15:37:45 BDT" duration-ms="5128" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- choose_variance_test -->
-        <test-method signature="repair_mode_on_test()[pri:8, instance:com.yeasin.appium_qms.QmsOnlineRepair@34c01041]" started-at="2024-05-14T17:08:16 BDT" name="repair_mode_on_test" finished-at="2024-05-14T17:08:18 BDT" duration-ms="2173" status="PASS">
+        <test-method signature="repair_mode_on_test()[pri:8, instance:com.yeasin.appium_qms.QmsOnlineRepair@41e68d87]" started-at="2024-05-15T15:37:45 BDT" name="repair_mode_on_test" finished-at="2024-05-15T15:37:47 BDT" duration-ms="2160" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- repair_mode_on_test -->
-        <test-method signature="pass_action_test()[pri:9, instance:com.yeasin.appium_qms.QmsOnlineRepair@34c01041]" started-at="2024-05-14T17:08:18 BDT" name="pass_action_test" finished-at="2024-05-14T17:08:26 BDT" duration-ms="7735" status="PASS">
+        <test-method signature="pass_action_test()[pri:9, instance:com.yeasin.appium_qms.QmsOnlineRepair@41e68d87]" started-at="2024-05-15T15:37:47 BDT" name="pass_action_test" finished-at="2024-05-15T15:37:54 BDT" duration-ms="7744" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pass_action_test -->
-        <test-method signature="alter_action_test()[pri:10, instance:com.yeasin.appium_qms.QmsOnlineRepair@34c01041]" started-at="2024-05-14T17:08:26 BDT" name="alter_action_test" finished-at="2024-05-14T17:08:46 BDT" duration-ms="19514" status="PASS">
+        <test-method signature="pass_undo_test()[pri:9, instance:com.yeasin.appium_qms.QmsOnlineRepair@41e68d87]" started-at="2024-05-15T15:37:54 BDT" name="pass_undo_test" finished-at="2024-05-15T15:38:02 BDT" duration-ms="7632" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pass_undo_test -->
+        <test-method signature="alter_action_test()[pri:10, instance:com.yeasin.appium_qms.QmsOnlineRepair@41e68d87]" started-at="2024-05-15T15:38:02 BDT" name="alter_action_test" finished-at="2024-05-15T15:38:22 BDT" duration-ms="19790" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- alter_action_test -->
-        <test-method signature="reject_action_test()[pri:11, instance:com.yeasin.appium_qms.QmsOnlineRepair@34c01041]" started-at="2024-05-14T17:08:46 BDT" name="reject_action_test" finished-at="2024-05-14T17:09:06 BDT" duration-ms="20336" status="PASS">
+        <test-method signature="alter_undo_test()[pri:10, instance:com.yeasin.appium_qms.QmsOnlineRepair@41e68d87]" started-at="2024-05-15T15:38:22 BDT" name="alter_undo_test" finished-at="2024-05-15T15:38:42 BDT" duration-ms="20274" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- alter_undo_test -->
+        <test-method signature="reject_action_test()[pri:11, instance:com.yeasin.appium_qms.QmsOnlineRepair@41e68d87]" started-at="2024-05-15T15:38:42 BDT" name="reject_action_test" finished-at="2024-05-15T15:39:01 BDT" duration-ms="18349" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reject_action_test -->
-        <test-method signature="repair_mode_off_test()[pri:12, instance:com.yeasin.appium_qms.QmsOnlineRepair@34c01041]" started-at="2024-05-14T17:09:06 BDT" name="repair_mode_off_test" finished-at="2024-05-14T17:09:08 BDT" duration-ms="2138" status="PASS">
+        <test-method signature="reject_undo_test()[pri:11, instance:com.yeasin.appium_qms.QmsOnlineRepair@41e68d87]" started-at="2024-05-15T15:39:01 BDT" name="reject_undo_test" finished-at="2024-05-15T15:39:21 BDT" duration-ms="20469" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reject_undo_test -->
+        <test-method signature="repair_mode_off_test()[pri:12, instance:com.yeasin.appium_qms.QmsOnlineRepair@41e68d87]" started-at="2024-05-15T15:39:21 BDT" name="repair_mode_off_test" finished-at="2024-05-15T15:39:23 BDT" duration-ms="2154" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- repair_mode_off_test -->
-        <test-method signature="force_sync_test()[pri:13, instance:com.yeasin.appium_qms.QmsOnlineRepair@34c01041]" started-at="2024-05-14T17:09:08 BDT" name="force_sync_test" finished-at="2024-05-14T17:09:14 BDT" duration-ms="5655" status="PASS">
+        <test-method signature="force_sync_test()[pri:13, instance:com.yeasin.appium_qms.QmsOnlineRepair@41e68d87]" started-at="2024-05-15T15:39:23 BDT" name="force_sync_test" finished-at="2024-05-15T15:39:29 BDT" duration-ms="5701" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- force_sync_test -->
-        <test-method signature="log_out_test()[pri:14, instance:com.yeasin.appium_qms.QmsOnlineRepair@34c01041]" started-at="2024-05-14T17:09:14 BDT" name="log_out_test" finished-at="2024-05-14T17:09:26 BDT" duration-ms="11902" status="PASS">
+        <test-method signature="log_out_test()[pri:14, instance:com.yeasin.appium_qms.QmsOnlineRepair@41e68d87]" started-at="2024-05-15T15:39:29 BDT" name="log_out_test" finished-at="2024-05-15T15:39:41 BDT" duration-ms="11928" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- log_out_test -->
-        <test-method signature="close_down_test()[pri:15, instance:com.yeasin.appium_qms.QmsOnlineRepair@34c01041]" started-at="2024-05-14T17:09:26 BDT" name="close_down_test" finished-at="2024-05-14T17:09:31 BDT" duration-ms="5805" status="PASS">
+        <test-method signature="close_down_test()[pri:15, instance:com.yeasin.appium_qms.QmsOnlineRepair@41e68d87]" started-at="2024-05-15T15:39:41 BDT" name="close_down_test" finished-at="2024-05-15T15:39:47 BDT" duration-ms="5726" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close_down_test -->
       </class> <!-- com.yeasin.appium_qms.QmsOnlineRepair -->
-    </test> <!-- QMS Repair Test Online -->
+    </test> <!-- QMS Online Repair Test -->
+    <test started-at="2024-05-15T15:39:47 BDT" name="QMS Offline Basic Test" finished-at="2024-05-15T15:45:27 BDT" duration-ms="340818">
+      <class name="com.yeasin.appium_qms.QmsOfflineNormal">
+        <test-method signature="set_up_test()[pri:1, instance:com.yeasin.appium_qms.QmsOfflineNormal@7fb95505]" started-at="2024-05-15T15:39:47 BDT" name="set_up_test" finished-at="2024-05-15T15:39:50 BDT" duration-ms="3891" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- set_up_test -->
+        <test-method signature="log_in_test()[pri:2, instance:com.yeasin.appium_qms.QmsOfflineNormal@7fb95505]" started-at="2024-05-15T15:39:50 BDT" name="log_in_test" finished-at="2024-05-15T15:39:55 BDT" duration-ms="4757" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- log_in_test -->
+        <test-method signature="expand_side_menu_test()[pri:3, instance:com.yeasin.appium_qms.QmsOfflineNormal@7fb95505]" started-at="2024-05-15T15:39:55 BDT" name="expand_side_menu_test" finished-at="2024-05-15T15:40:01 BDT" duration-ms="6060" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expand_side_menu_test -->
+        <test-method signature="sync_web_test()[pri:4, instance:com.yeasin.appium_qms.QmsOfflineNormal@7fb95505]" started-at="2024-05-15T15:40:01 BDT" name="sync_web_test" finished-at="2024-05-15T15:40:03 BDT" duration-ms="1596" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sync_web_test -->
+        <test-method signature="set_line_test()[pri:5, instance:com.yeasin.appium_qms.QmsOfflineNormal@7fb95505]" started-at="2024-05-15T15:40:03 BDT" name="set_line_test" finished-at="2024-05-15T15:40:13 BDT" duration-ms="10121" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- set_line_test -->
+        <test-method signature="select_order_test()[pri:6, instance:com.yeasin.appium_qms.QmsOfflineNormal@7fb95505]" started-at="2024-05-15T15:40:13 BDT" name="select_order_test" finished-at="2024-05-15T15:40:18 BDT" duration-ms="5158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- select_order_test -->
+        <test-method signature="choose_variance_test()[pri:7, instance:com.yeasin.appium_qms.QmsOfflineNormal@7fb95505]" started-at="2024-05-15T15:40:18 BDT" name="choose_variance_test" finished-at="2024-05-15T15:40:24 BDT" duration-ms="5511" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- choose_variance_test -->
+        <test-method signature="pass_action_test()[pri:8, instance:com.yeasin.appium_qms.QmsOfflineNormal@7fb95505]" started-at="2024-05-15T15:40:24 BDT" name="pass_action_test" finished-at="2024-05-15T15:40:31 BDT" duration-ms="7624" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pass_action_test -->
+        <test-method signature="pass_undo_test()[pri:8, instance:com.yeasin.appium_qms.QmsOfflineNormal@7fb95505]" started-at="2024-05-15T15:40:31 BDT" name="pass_undo_test" finished-at="2024-05-15T15:41:26 BDT" duration-ms="54857" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [8bb9f937-f25e-4bff-8b81-a78113106f53, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 8bb9f937-f25e-4bff-8b81-a78113106f53]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [8bb9f937-f25e-4bff-8b81-a78113106f53, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 8bb9f937-f25e-4bff-8b81-a78113106f53
+at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+at com.yeasin.appium_qms.utilities.QmsMain.undo_action(QmsMain.java:351)
+at com.yeasin.appium_qms.utilities.QmsMain.pass_undo(QmsMain.java:368)
+at com.yeasin.appium_qms.QmsOfflineNormal.pass_undo_test(QmsOfflineNormal.java:74)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pass_undo_test -->
+        <test-method signature="alter_action_test()[pri:9, instance:com.yeasin.appium_qms.QmsOfflineNormal@7fb95505]" started-at="2024-05-15T15:41:26 BDT" name="alter_action_test" finished-at="2024-05-15T15:42:15 BDT" duration-ms="48373" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- alter_action_test -->
+        <test-method signature="alter_undo_test()[pri:9, instance:com.yeasin.appium_qms.QmsOfflineNormal@7fb95505]" started-at="2024-05-15T15:42:15 BDT" name="alter_undo_test" finished-at="2024-05-15T15:43:13 BDT" duration-ms="58222" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [8bb9f937-f25e-4bff-8b81-a78113106f53, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 8bb9f937-f25e-4bff-8b81-a78113106f53]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [8bb9f937-f25e-4bff-8b81-a78113106f53, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 8bb9f937-f25e-4bff-8b81-a78113106f53
+at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+at com.yeasin.appium_qms.utilities.QmsMain.undo_action(QmsMain.java:351)
+at com.yeasin.appium_qms.utilities.QmsMain.alter_undo(QmsMain.java:378)
+at com.yeasin.appium_qms.QmsOfflineNormal.alter_undo_test(QmsOfflineNormal.java:81)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- alter_undo_test -->
+        <test-method signature="reject_action_test()[pri:10, instance:com.yeasin.appium_qms.QmsOfflineNormal@7fb95505]" started-at="2024-05-15T15:43:13 BDT" name="reject_action_test" finished-at="2024-05-15T15:44:00 BDT" duration-ms="46746" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reject_action_test -->
+        <test-method signature="reject_undo_test()[pri:10, instance:com.yeasin.appium_qms.QmsOfflineNormal@7fb95505]" started-at="2024-05-15T15:44:00 BDT" name="reject_undo_test" finished-at="2024-05-15T15:44:58 BDT" duration-ms="58670" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [8bb9f937-f25e-4bff-8b81-a78113106f53, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 8bb9f937-f25e-4bff-8b81-a78113106f53]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [8bb9f937-f25e-4bff-8b81-a78113106f53, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 8bb9f937-f25e-4bff-8b81-a78113106f53
+at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+at com.yeasin.appium_qms.utilities.QmsMain.undo_action(QmsMain.java:351)
+at com.yeasin.appium_qms.utilities.QmsMain.reject_undo(QmsMain.java:388)
+at com.yeasin.appium_qms.QmsOfflineNormal.reject_undo_test(QmsOfflineNormal.java:88)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reject_undo_test -->
+        <test-method signature="force_sync_test()[pri:11, instance:com.yeasin.appium_qms.QmsOfflineNormal@7fb95505]" started-at="2024-05-15T15:44:58 BDT" name="force_sync_test" finished-at="2024-05-15T15:45:10 BDT" duration-ms="11442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- force_sync_test -->
+        <test-method signature="log_out_test()[pri:12, instance:com.yeasin.appium_qms.QmsOfflineNormal@7fb95505]" started-at="2024-05-15T15:45:10 BDT" name="log_out_test" finished-at="2024-05-15T15:45:22 BDT" duration-ms="11998" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- log_out_test -->
+        <test-method signature="close_down_test()[pri:13, instance:com.yeasin.appium_qms.QmsOfflineNormal@7fb95505]" started-at="2024-05-15T15:45:22 BDT" name="close_down_test" finished-at="2024-05-15T15:45:27 BDT" duration-ms="5767" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close_down_test -->
+      </class> <!-- com.yeasin.appium_qms.QmsOfflineNormal -->
+    </test> <!-- QMS Offline Basic Test -->
+    <test started-at="2024-05-15T15:45:27 BDT" name="QMS Offline Repair Test" finished-at="2024-05-15T15:52:29 BDT" duration-ms="422000">
+      <class name="com.yeasin.appium_qms.QmsOfflineRepair">
+        <test-method signature="set_up_test()[pri:1, instance:com.yeasin.appium_qms.QmsOfflineRepair@2bd08376]" started-at="2024-05-15T15:45:27 BDT" name="set_up_test" finished-at="2024-05-15T15:45:31 BDT" duration-ms="3872" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- set_up_test -->
+        <test-method signature="log_in_test()[pri:2, instance:com.yeasin.appium_qms.QmsOfflineRepair@2bd08376]" started-at="2024-05-15T15:45:31 BDT" name="log_in_test" finished-at="2024-05-15T15:45:35 BDT" duration-ms="3815" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- log_in_test -->
+        <test-method signature="expand_side_menu_test()[pri:3, instance:com.yeasin.appium_qms.QmsOfflineRepair@2bd08376]" started-at="2024-05-15T15:45:35 BDT" name="expand_side_menu_test" finished-at="2024-05-15T15:45:41 BDT" duration-ms="5859" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expand_side_menu_test -->
+        <test-method signature="sync_web_test()[pri:4, instance:com.yeasin.appium_qms.QmsOfflineRepair@2bd08376]" started-at="2024-05-15T15:45:41 BDT" name="sync_web_test" finished-at="2024-05-15T15:45:43 BDT" duration-ms="1592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sync_web_test -->
+        <test-method signature="set_line_test()[pri:5, instance:com.yeasin.appium_qms.QmsOfflineRepair@2bd08376]" started-at="2024-05-15T15:45:43 BDT" name="set_line_test" finished-at="2024-05-15T15:45:54 BDT" duration-ms="11718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- set_line_test -->
+        <test-method signature="select_order_test()[pri:6, instance:com.yeasin.appium_qms.QmsOfflineRepair@2bd08376]" started-at="2024-05-15T15:45:54 BDT" name="select_order_test" finished-at="2024-05-15T15:46:00 BDT" duration-ms="5172" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- select_order_test -->
+        <test-method signature="choose_variance_test()[pri:7, instance:com.yeasin.appium_qms.QmsOfflineRepair@2bd08376]" started-at="2024-05-15T15:46:00 BDT" name="choose_variance_test" finished-at="2024-05-15T15:46:05 BDT" duration-ms="5823" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- choose_variance_test -->
+        <test-method signature="repair_mode_on_test()[pri:8, instance:com.yeasin.appium_qms.QmsOfflineRepair@2bd08376]" started-at="2024-05-15T15:46:05 BDT" name="repair_mode_on_test" finished-at="2024-05-15T15:46:08 BDT" duration-ms="2618" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- repair_mode_on_test -->
+        <test-method signature="pass_action_test()[pri:9, instance:com.yeasin.appium_qms.QmsOfflineRepair@2bd08376]" started-at="2024-05-15T15:46:08 BDT" name="pass_action_test" finished-at="2024-05-15T15:46:52 BDT" duration-ms="44534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pass_action_test -->
+        <test-method signature="pass_undo_test()[pri:9, instance:com.yeasin.appium_qms.QmsOfflineRepair@2bd08376]" started-at="2024-05-15T15:46:52 BDT" name="pass_undo_test" finished-at="2024-05-15T15:47:47 BDT" duration-ms="54811" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [8c4137aa-caab-46e7-9758-27b186bb9d35, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [8c4137aa-caab-46e7-9758-27b186bb9d35, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35
+at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+at com.yeasin.appium_qms.utilities.QmsMain.undo_action(QmsMain.java:351)
+at com.yeasin.appium_qms.utilities.QmsMain.pass_undo(QmsMain.java:368)
+at com.yeasin.appium_qms.QmsOfflineRepair.pass_undo_test(QmsOfflineRepair.java:79)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pass_undo_test -->
+        <test-method signature="alter_action_test()[pri:10, instance:com.yeasin.appium_qms.QmsOfflineRepair@2bd08376]" started-at="2024-05-15T15:47:47 BDT" name="alter_action_test" finished-at="2024-05-15T15:48:34 BDT" duration-ms="47003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- alter_action_test -->
+        <test-method signature="alter_undo_test()[pri:10, instance:com.yeasin.appium_qms.QmsOfflineRepair@2bd08376]" started-at="2024-05-15T15:48:34 BDT" name="alter_undo_test" finished-at="2024-05-15T15:49:32 BDT" duration-ms="57792" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [8c4137aa-caab-46e7-9758-27b186bb9d35, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [8c4137aa-caab-46e7-9758-27b186bb9d35, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35
+at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+at com.yeasin.appium_qms.utilities.QmsMain.undo_action(QmsMain.java:351)
+at com.yeasin.appium_qms.utilities.QmsMain.alter_undo(QmsMain.java:378)
+at com.yeasin.appium_qms.QmsOfflineRepair.alter_undo_test(QmsOfflineRepair.java:86)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- alter_undo_test -->
+        <test-method signature="reject_action_test()[pri:11, instance:com.yeasin.appium_qms.QmsOfflineRepair@2bd08376]" started-at="2024-05-15T15:49:32 BDT" name="reject_action_test" finished-at="2024-05-15T15:50:20 BDT" duration-ms="47946" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reject_action_test -->
+        <test-method signature="reject_undo_test()[pri:11, instance:com.yeasin.appium_qms.QmsOfflineRepair@2bd08376]" started-at="2024-05-15T15:50:20 BDT" name="reject_undo_test" finished-at="2024-05-15T15:51:18 BDT" duration-ms="57792" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [8c4137aa-caab-46e7-9758-27b186bb9d35, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [8c4137aa-caab-46e7-9758-27b186bb9d35, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35
+at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+at com.yeasin.appium_qms.utilities.QmsMain.undo_action(QmsMain.java:351)
+at com.yeasin.appium_qms.utilities.QmsMain.reject_undo(QmsMain.java:388)
+at com.yeasin.appium_qms.QmsOfflineRepair.reject_undo_test(QmsOfflineRepair.java:93)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reject_undo_test -->
+        <test-method signature="repair_mode_off_test()[pri:12, instance:com.yeasin.appium_qms.QmsOfflineRepair@2bd08376]" started-at="2024-05-15T15:51:18 BDT" name="repair_mode_off_test" finished-at="2024-05-15T15:52:00 BDT" duration-ms="42431" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- repair_mode_off_test -->
+        <test-method signature="force_sync_test()[pri:13, instance:com.yeasin.appium_qms.QmsOfflineRepair@2bd08376]" started-at="2024-05-15T15:52:00 BDT" name="force_sync_test" finished-at="2024-05-15T15:52:12 BDT" duration-ms="11444" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- force_sync_test -->
+        <test-method signature="log_out_test()[pri:14, instance:com.yeasin.appium_qms.QmsOfflineRepair@2bd08376]" started-at="2024-05-15T15:52:12 BDT" name="log_out_test" finished-at="2024-05-15T15:52:24 BDT" duration-ms="11929" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- log_out_test -->
+        <test-method signature="close_down_test()[pri:15, instance:com.yeasin.appium_qms.QmsOfflineRepair@2bd08376]" started-at="2024-05-15T15:52:24 BDT" name="close_down_test" finished-at="2024-05-15T15:52:29 BDT" duration-ms="5831" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close_down_test -->
+      </class> <!-- com.yeasin.appium_qms.QmsOfflineRepair -->
+    </test> <!-- QMS Offline Repair Test -->
   </suite> <!-- QMS Automation Suite -->
 </testng-results>

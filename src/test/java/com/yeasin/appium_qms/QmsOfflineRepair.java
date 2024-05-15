@@ -53,18 +53,45 @@ public class QmsOfflineRepair extends QmsMain {
 	}
 	
 	@Test(priority = 9)
-	public void pass_action_test() throws InterruptedException {
-		offRep.pass_action();
+	public static void pass_action_test() throws InterruptedException {
+		for(int i = 0; i < iteration; i++) {
+			offRep.pass_action();
+		}
 	}
 	
 	@Test(priority = 10)
 	public void alter_action_test() throws InterruptedException {
-		offRep.alter_action();
+		for(int i = 0; i < iteration; i++) {
+			offRep.alter_action();
+		}
 	}
 	
 	@Test(priority = 11)
 	public void reject_action_test() throws InterruptedException {
-		offRep.reject_action();
+		for(int i = 0; i < iteration; i++) {
+			offRep.reject_action();
+		}
+	}
+	
+	@Test(priority = 9)
+	public static void pass_undo_test() throws InterruptedException {
+		for(int i = 0; i < iteration; i++) {
+			offRep.pass_undo();
+		}
+	}
+	
+	@Test(priority = 10)
+	public static void alter_undo_test() throws InterruptedException {
+		for(int i = 0; i < iteration; i++) {
+			offRep.alter_undo();
+		}
+	}
+	
+	@Test(priority = 11)
+	public static void reject_undo_test() throws InterruptedException {
+		for(int i = 0; i < iteration; i++) {
+			offRep.reject_undo();
+		}
 	}
 	
 	@Test(priority = 12)

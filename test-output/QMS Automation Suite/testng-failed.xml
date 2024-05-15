@@ -4,42 +4,26 @@
   <listeners>
     <listener class-name="com.yeasin.appium_qms.utilities.Listeners"/>
   </listeners>
-  <test thread-count="5" name="QMS Basic Test Online(failed)">
+  <test thread-count="5" name="QMS Offline Basic Test(failed)">
     <classes>
-      <class name="com.yeasin.appium_qms.QmsOnlineNormal">
+      <class name="com.yeasin.appium_qms.QmsOfflineNormal">
         <methods>
-          <include name="set_line_test"/>
-          <include name="expand_side_menu_test"/>
-          <include name="log_out_test"/>
-          <include name="reject_action_test"/>
-          <include name="log_in_test"/>
-          <include name="pass_action_test"/>
-          <include name="sync_web_test"/>
-          <include name="alter_action_test"/>
-          <include name="select_order_test"/>
-          <include name="force_sync_test"/>
+          <include name="pass_undo_test"/>
+          <include name="alter_undo_test"/>
+          <include name="reject_undo_test"/>
         </methods>
-      </class> <!-- com.yeasin.appium_qms.QmsOnlineNormal -->
+      </class> <!-- com.yeasin.appium_qms.QmsOfflineNormal -->
     </classes>
-  </test> <!-- QMS Basic Test Online(failed) -->
-  <test thread-count="5" name="QMS Repair Test Online(failed)">
+  </test> <!-- QMS Offline Basic Test(failed) -->
+  <test thread-count="5" name="QMS Offline Repair Test(failed)">
     <classes>
-      <class name="com.yeasin.appium_qms.QmsOnlineRepair">
+      <class name="com.yeasin.appium_qms.QmsOfflineRepair">
         <methods>
-          <include name="force_sync_test"/>
-          <include name="expand_side_menu_test"/>
-          <include name="pass_action_test"/>
-          <include name="repair_mode_off_test"/>
-          <include name="alter_action_test"/>
-          <include name="select_order_test"/>
-          <include name="log_in_test"/>
-          <include name="sync_web_test"/>
-          <include name="set_line_test"/>
-          <include name="repair_mode_on_test"/>
-          <include name="log_out_test"/>
-          <include name="reject_action_test"/>
+          <include name="reject_undo_test"/>
+          <include name="pass_undo_test"/>
+          <include name="alter_undo_test"/>
         </methods>
-      </class> <!-- com.yeasin.appium_qms.QmsOnlineRepair -->
+      </class> <!-- com.yeasin.appium_qms.QmsOfflineRepair -->
     </classes>
-  </test> <!-- QMS Repair Test Online(failed) -->
+  </test> <!-- QMS Offline Repair Test(failed) -->
 </suite> <!-- Failed suite [QMS Automation Suite] -->

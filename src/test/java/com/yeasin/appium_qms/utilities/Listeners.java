@@ -13,7 +13,7 @@ public class Listeners implements ITestListener {
 	
 	@Override
 	public void onTestStart(ITestResult result) {
-		 test = extent.createTest(result.getMethod().getMethodName());
+		 test = extent.createTest(result.getInstance() + "." + result.getMethod().getMethodName());
 	}
 
 	@Override

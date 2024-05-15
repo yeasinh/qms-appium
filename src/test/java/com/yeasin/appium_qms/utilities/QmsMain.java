@@ -17,10 +17,10 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 
 public class QmsMain extends Listeners {
-	static AppiumDriverLocalService service;
+	protected static AppiumDriverLocalService service;
 	protected static AndroidDriver driver;
 	static int inputDelay = 5;
-	static int iteration = 1;
+	public static int iteration = 1;
 
 	public static void main(String[] args) throws InterruptedException, IOException, ParseException {
 		QmsMain qmsMain = new QmsMain();
@@ -32,37 +32,45 @@ public class QmsMain extends Listeners {
 		qmsMain.set_line();
 		qmsMain.select_order();
 		qmsMain.choose_variance();
-        /**/
-        // basic workflow
-        inputDelay = 5;
-        qmsMain.production_entry();
-        inputDelay = 1;
-        qmsMain.perform_undo();
         
+        // basic workflow
+        qmsMain.pass_action();
+        qmsMain.alter_action();
+        qmsMain.reject_action();
+        qmsMain.pass_undo();
+        qmsMain.alter_undo();
+        qmsMain.reject_undo();
+        /*
         // repair mode
         qmsMain.repair_mode_on();
-        inputDelay = 5;
-        qmsMain.production_entry();
-        inputDelay = 1;
-        qmsMain.perform_undo();
+        qmsMain.pass_action();
+        qmsMain.alter_action();
+        qmsMain.reject_action();
+        qmsMain.pass_undo();
+        qmsMain.alter_undo();
+        qmsMain.reject_undo();
         qmsMain.repair_mode_off();
         
         // offline mode
         driver.toggleWifi();
         Thread.sleep(5000);
-        inputDelay = 5;
-        qmsMain.production_entry();
-        inputDelay = 1;
-        qmsMain.perform_undo();
+        qmsMain.pass_action();
+        qmsMain.alter_action();
+        qmsMain.reject_action();
+        qmsMain.pass_undo();
+        qmsMain.alter_undo();
+        qmsMain.reject_undo();
         qmsMain.repair_mode_on();
-        inputDelay = 5;
-        qmsMain.production_entry();
-        inputDelay = 1;
-        qmsMain.perform_undo();
+        qmsMain.pass_action();
+        qmsMain.alter_action();
+        qmsMain.reject_action();
+        qmsMain.pass_undo();
+        qmsMain.alter_undo();
+        qmsMain.reject_undo();
         qmsMain.repair_mode_off();
         driver.toggleWifi();
         Thread.sleep(5000);
-        
+        */
         qmsMain.expand_side_menu();
         qmsMain.log_out();
         qmsMain.close_down();
@@ -351,6 +359,36 @@ public class QmsMain extends Listeners {
 		
 		test.log(Status.INFO, "Undoing latest input");
 	}
+	
+	// perform undo after pass
+	public void pass_undo() throws InterruptedException {
+		inputDelay = 2;
+		pass_action();
+		test.log(Status.INFO, "Pass");
+		undo_action();
+		test.log(Status.INFO, "Undone Pass");
+		inputDelay = 5;
+	}
+		
+	// perform undo after alter
+	public void alter_undo() throws InterruptedException {
+		inputDelay = 2;
+		alter_action();
+		test.log(Status.INFO, "Alter");
+		undo_action();
+		test.log(Status.INFO, "Undone Alter");
+		inputDelay = 5;
+	}
+			
+	// perform undo after reject
+	public void reject_undo() throws InterruptedException {
+		inputDelay = 2;
+		reject_action();
+		test.log(Status.INFO, "Reject");
+		undo_action();
+		test.log(Status.INFO, "Undone Reject");
+		inputDelay = 5;
+	}
 
 	// turn on repair mode
 	public void repair_mode_on() throws InterruptedException {
@@ -368,41 +406,6 @@ public class QmsMain extends Listeners {
 		repairOff.click();
 		Thread.sleep(2000);
 		test.log(Status.INFO, "Turned off repair mode");
-	}
-		
-	public void production_entry() throws InterruptedException {
-		test.log(Status.INFO, "Performing Production entry");
-		
-		inputDelay = 5;
-		for(int i = 1; i <= iteration; i++) {
-        	pass_action();
-        	
-        	if(i % 1 == 0) {
-        		alter_action();
-                reject_action();
-        	}
-        }
-		
-        force_sync();
-	}
-	
-	public void perform_undo() throws InterruptedException {
-		test.log(Status.INFO, "Performing Undo operation");
-		
-		inputDelay = 2;
-        for(int i = 1; i <= iteration; i++) {
-        	pass_action();
-        	undo_action();
-        	
-        	if(i % 1 == 0) {
-        		alter_action();
-        		undo_action();
-                reject_action();
-                undo_action();
-        	}
-        }
-        
-        force_sync();
 	}
 	
 	// log out of the app
