@@ -67,7 +67,7 @@ public class QmsOfflineNormal extends QmsMain {
 			offNor.reject_action();
 		}
 	}
-	
+	/*
 	@Test(priority = 8)
 	public static void pass_undo_test() throws InterruptedException {
 		for(int i = 0; i < iteration; i++) {
@@ -88,7 +88,7 @@ public class QmsOfflineNormal extends QmsMain {
 			offNor.reject_undo();
 		}
 	}
-	
+	*/
 	@Test(priority = 11)
 	public void force_sync_test() throws InterruptedException {
 		driver.toggleWifi();

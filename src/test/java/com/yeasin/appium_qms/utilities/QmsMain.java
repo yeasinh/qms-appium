@@ -1,14 +1,13 @@
 package com.yeasin.appium_qms.utilities;
 
-import java.net.URL;
-import java.time.Duration;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URL;
+import java.time.Duration;
 
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
 import com.aventstack.extentreports.Status;
 
@@ -18,9 +17,9 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 
 public class QmsMain extends Listeners {
-	protected static AppiumDriverLocalService service;
-	protected static AndroidDriver driver;
-	static int inputDelay = 5;
+	public static AppiumDriverLocalService service;
+	public static AndroidDriver driver;
+	public static int inputDelay = 5;
 	public static int iteration = 1;
 
 	public static void main(String[] args) throws InterruptedException, IOException, ParseException {
@@ -106,7 +105,7 @@ public class QmsMain extends Listeners {
 	
 	// log in to the app
 	public void log_in() throws IOException, ParseException {
-		// log in to qms app with username = Test and password = test
+		// log in to qms app with username and password
 		WebElement username = driver.findElement(By.xpath("//android.widget.EditText[@text=\"Username\"]"));
 		username.sendKeys(DataReader.getTestData("username"));
 		WebElement password = driver.findElement(By.xpath("//android.widget.EditText[@text=\"Password\"]"));
