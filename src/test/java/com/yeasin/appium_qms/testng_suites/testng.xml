@@ -5,28 +5,27 @@
 	<listener class-name="com.yeasin.appium_qms.utilities.Listeners"/>
   </listeners>
   
-  <test thread-count="5" name="QMS Online Basic Test">
+  <test thread-count="5" name="QMS Online Normal Test">
     <classes>
       <class name="com.yeasin.appium_qms.QmsOnlineNormal"/>
     </classes>
-  </test> <!-- QMS Appium Test -->
+  </test> <!-- QMS Online Basic Test -->
   
   <test thread-count="5" name="QMS Online Repair Test">
     <classes>
       <class name="com.yeasin.appium_qms.QmsOnlineRepair"/>
     </classes>
-  </test> <!-- QMS Appium Test -->
+  </test> <!-- QMS Online Repair Test -->
   
-  <test thread-count="5" name="QMS Offline Basic Test">
+  <test thread-count="5" name="QMS Offline Normal Test">
     <classes>
       <class name="com.yeasin.appium_qms.QmsOfflineNormal"/>
     </classes>
-  </test> <!-- QMS Appium Test -->
+  </test> <!-- QMS Offline Basic Test -->
   
   <test thread-count="5" name="QMS Offline Repair Test">
     <classes>
       <class name="com.yeasin.appium_qms.QmsOfflineRepair"/>
     </classes>
-  </test> <!-- QMS Appium Test -->
-  
+  </test> <!-- QMS Offline Repair Test -->
 </suite> <!-- QMS Automation Suite -->

@@ -8,6 +8,7 @@ import java.net.MalformedURLException;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import com.aventstack.extentreports.Status;
 
@@ -155,7 +156,7 @@ public class QmsMain extends Listeners {
         try {
         	// select a line
             WebElement line = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\", Root\"]/android.view.ViewGroup"));
-            line.click();
+        	line.click();
             driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Appium Line\"));"));
             WebElement selectedLine = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Appium Line\"]/android.view.ViewGroup"));
             selectedLine.click();
@@ -164,6 +165,7 @@ public class QmsMain extends Listeners {
             // select an input delay
             WebElement delay = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"5 Seconds\"]"));
             delay.click();
+            driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"5 Seconds\"));"));
             WebElement selectedDelay = driver.findElement(By.xpath("(//android.widget.TextView[@text=\"5 Seconds\"])[3]"));
             selectedDelay.click();
             Thread.sleep(1000);
