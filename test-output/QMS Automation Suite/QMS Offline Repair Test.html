@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>QMS Offline Repair Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>15/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>14/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 15 15:45:27 BDT 2024</td>
+<td>Started on:</td><td>Thu May 16 17:22:36 BDT 2024</td>
 </tr>
-<tr><td>Total time:</td><td>422 seconds (422000 ms)</td>
+<tr><td>Total time:</td><td>433 seconds (433021 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,15 +75,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.yeasin.appium_qms.QmsOfflineRepair.alter_undo_test()'><b>alter_undo_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
+<td title='com.yeasin.appium_qms.QmsOfflineRepair.reject_undo_test()'><b>reject_undo_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [8c4137aa-caab-46e7-9758-27b186bb9d35, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id=&quot;android:id/content&quot;]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Command: [0be19399-929a-4fe9-a7c3-24870b299acc, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id=&quot;android:id/content&quot;]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
 Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35
+Session ID: 0be19399-929a-4fe9-a7c3-24870b299acc
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -94,19 +94,19 @@ Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.undo_action(QmsMain.java:351)
-	at com.yeasin.appium_qms.utilities.QmsMain.alter_undo(QmsMain.java:378)
-	at com.yeasin.appium_qms.QmsOfflineRepair.alter_undo_test(QmsOfflineRepair.java:86)
+	at com.yeasin.appium_qms.utilities.QmsMain.undo_action(QmsMain.java:352)
+	at com.yeasin.appium_qms.utilities.QmsMain.reject_undo(QmsMain.java:389)
+	at com.yeasin.appium_qms.QmsOfflineRepair.reject_undo_test(QmsOfflineRepair.java:93)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace27325257", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace27325257'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2085313771", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2085313771'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [8c4137aa-caab-46e7-9758-27b186bb9d35, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id=&quot;android:id/content&quot;]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Command: [0be19399-929a-4fe9-a7c3-24870b299acc, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id=&quot;android:id/content&quot;]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
 Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35
+Session ID: 0be19399-929a-4fe9-a7c3-24870b299acc
 	at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -121,8 +121,89 @@ Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.undo_action(QmsMain.java:351)
-	at com.yeasin.appium_qms.utilities.QmsMain.alter_undo(QmsMain.java:378)
+	at com.yeasin.appium_qms.utilities.QmsMain.undo_action(QmsMain.java:352)
+	at com.yeasin.appium_qms.utilities.QmsMain.reject_undo(QmsMain.java:389)
+	at com.yeasin.appium_qms.QmsOfflineRepair.reject_undo_test(QmsOfflineRepair.java:93)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>57</td>
+<td>com.yeasin.appium_qms.QmsOfflineRepair@19e4fcac</td></tr>
+<tr>
+<td title='com.yeasin.appium_qms.QmsOfflineRepair.alter_undo_test()'><b>alter_undo_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [0be19399-929a-4fe9-a7c3-24870b299acc, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id=&quot;android:id/content&quot;]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 0be19399-929a-4fe9-a7c3-24870b299acc
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at com.yeasin.appium_qms.utilities.QmsMain.undo_action(QmsMain.java:352)
+	at com.yeasin.appium_qms.utilities.QmsMain.alter_undo(QmsMain.java:379)
+	at com.yeasin.appium_qms.QmsOfflineRepair.alter_undo_test(QmsOfflineRepair.java:86)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1797959612", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1797959612'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [0be19399-929a-4fe9-a7c3-24870b299acc, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id=&quot;android:id/content&quot;]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 0be19399-929a-4fe9-a7c3-24870b299acc
+	at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at com.yeasin.appium_qms.utilities.QmsMain.undo_action(QmsMain.java:352)
+	at com.yeasin.appium_qms.utilities.QmsMain.alter_undo(QmsMain.java:379)
 	at com.yeasin.appium_qms.QmsOfflineRepair.alter_undo_test(QmsOfflineRepair.java:86)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -154,7 +235,7 @@ Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>57</td>
-<td>com.yeasin.appium_qms.QmsOfflineRepair@2bd08376</td></tr>
+<td>com.yeasin.appium_qms.QmsOfflineRepair@19e4fcac</td></tr>
 <tr>
 <td title='com.yeasin.appium_qms.QmsOfflineRepair.pass_undo_test()'><b>pass_undo_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
@@ -162,9 +243,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [8c4137aa-caab-46e7-9758-27b186bb9d35, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id=&quot;android:id/content&quot;]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Command: [0be19399-929a-4fe9-a7c3-24870b299acc, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id=&quot;android:id/content&quot;]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
 Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35
+Session ID: 0be19399-929a-4fe9-a7c3-24870b299acc
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -175,19 +256,19 @@ Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.undo_action(QmsMain.java:351)
-	at com.yeasin.appium_qms.utilities.QmsMain.pass_undo(QmsMain.java:368)
+	at com.yeasin.appium_qms.utilities.QmsMain.undo_action(QmsMain.java:352)
+	at com.yeasin.appium_qms.utilities.QmsMain.pass_undo(QmsMain.java:369)
 	at com.yeasin.appium_qms.QmsOfflineRepair.pass_undo_test(QmsOfflineRepair.java:79)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace527797839", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace527797839'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1890881203", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1890881203'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [8c4137aa-caab-46e7-9758-27b186bb9d35, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id=&quot;android:id/content&quot;]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Command: [0be19399-929a-4fe9-a7c3-24870b299acc, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id=&quot;android:id/content&quot;]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
 Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35
+Session ID: 0be19399-929a-4fe9-a7c3-24870b299acc
 	at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -202,8 +283,8 @@ Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.undo_action(QmsMain.java:351)
-	at com.yeasin.appium_qms.utilities.QmsMain.pass_undo(QmsMain.java:368)
+	at com.yeasin.appium_qms.utilities.QmsMain.undo_action(QmsMain.java:352)
+	at com.yeasin.appium_qms.utilities.QmsMain.pass_undo(QmsMain.java:369)
 	at com.yeasin.appium_qms.QmsOfflineRepair.pass_undo_test(QmsOfflineRepair.java:79)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -235,17 +316,17 @@ Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>54</td>
-<td>com.yeasin.appium_qms.QmsOfflineRepair@2bd08376</td></tr>
+<td>com.yeasin.appium_qms.QmsOfflineRepair@19e4fcac</td></tr>
 <tr>
-<td title='com.yeasin.appium_qms.QmsOfflineRepair.reject_undo_test()'><b>reject_undo_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
+<td title='com.yeasin.appium_qms.QmsOfflineRepair.repair_mode_on_test()'><b>repair_mode_on_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [8c4137aa-caab-46e7-9758-27b186bb9d35, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id=&quot;android:id/content&quot;]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Command: [0be19399-929a-4fe9-a7c3-24870b299acc, findElement {using=xpath, value=//android.widget.Switch[@text=&quot;OFF&quot;]}]
 Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35
+Session ID: 0be19399-929a-4fe9-a7c3-24870b299acc
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -256,19 +337,18 @@ Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.undo_action(QmsMain.java:351)
-	at com.yeasin.appium_qms.utilities.QmsMain.reject_undo(QmsMain.java:388)
-	at com.yeasin.appium_qms.QmsOfflineRepair.reject_undo_test(QmsOfflineRepair.java:93)
+	at com.yeasin.appium_qms.utilities.QmsMain.repair_mode_on(QmsMain.java:397)
+	at com.yeasin.appium_qms.QmsOfflineRepair.repair_mode_on_test(QmsOfflineRepair.java:52)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1189771504", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1189771504'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1416549024", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1416549024'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [8c4137aa-caab-46e7-9758-27b186bb9d35, findElement {using=xpath, value=//android.widget.FrameLayout[@resource-id=&quot;android:id/content&quot;]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup}]
+Command: [0be19399-929a-4fe9-a7c3-24870b299acc, findElement {using=xpath, value=//android.widget.Switch[@text=&quot;OFF&quot;]}]
 Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, deviceName: intellier-tab, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 2560x1600, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 1552, left: 0, top: 48, width: 2560}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35
+Session ID: 0be19399-929a-4fe9-a7c3-24870b299acc
 	at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -283,9 +363,8 @@ Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at com.yeasin.appium_qms.utilities.QmsMain.undo_action(QmsMain.java:351)
-	at com.yeasin.appium_qms.utilities.QmsMain.reject_undo(QmsMain.java:388)
-	at com.yeasin.appium_qms.QmsOfflineRepair.reject_undo_test(QmsOfflineRepair.java:93)
+	at com.yeasin.appium_qms.utilities.QmsMain.repair_mode_on(QmsMain.java:397)
+	at com.yeasin.appium_qms.QmsOfflineRepair.repair_mode_on_test(QmsOfflineRepair.java:52)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -315,8 +394,8 @@ Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>57</td>
-<td>com.yeasin.appium_qms.QmsOfflineRepair@2bd08376</td></tr>
+<td>11</td>
+<td>com.yeasin.appium_qms.QmsOfflineRepair@19e4fcac</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -326,80 +405,75 @@ Session ID: 8c4137aa-caab-46e7-9758-27b186bb9d35
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.yeasin.appium_qms.QmsOfflineRepair.force_sync_test()'><b>force_sync_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
-<td></td>
-<td>11</td>
-<td>com.yeasin.appium_qms.QmsOfflineRepair@2bd08376</td></tr>
-<tr>
-<td title='com.yeasin.appium_qms.QmsOfflineRepair.repair_mode_on_test()'><b>repair_mode_on_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
-<td></td>
-<td>2</td>
-<td>com.yeasin.appium_qms.QmsOfflineRepair@2bd08376</td></tr>
-<tr>
-<td title='com.yeasin.appium_qms.QmsOfflineRepair.sync_web_test()'><b>sync_web_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
-<td></td>
-<td>1</td>
-<td>com.yeasin.appium_qms.QmsOfflineRepair@2bd08376</td></tr>
-<tr>
-<td title='com.yeasin.appium_qms.QmsOfflineRepair.pass_action_test()'><b>pass_action_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
-<td></td>
-<td>44</td>
-<td>com.yeasin.appium_qms.QmsOfflineRepair@2bd08376</td></tr>
-<tr>
 <td title='com.yeasin.appium_qms.QmsOfflineRepair.select_order_test()'><b>select_order_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
 <td></td>
 <td>5</td>
-<td>com.yeasin.appium_qms.QmsOfflineRepair@2bd08376</td></tr>
-<tr>
-<td title='com.yeasin.appium_qms.QmsOfflineRepair.set_line_test()'><b>set_line_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
-<td></td>
-<td>11</td>
-<td>com.yeasin.appium_qms.QmsOfflineRepair@2bd08376</td></tr>
-<tr>
-<td title='com.yeasin.appium_qms.QmsOfflineRepair.log_out_test()'><b>log_out_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
-<td></td>
-<td>11</td>
-<td>com.yeasin.appium_qms.QmsOfflineRepair@2bd08376</td></tr>
-<tr>
-<td title='com.yeasin.appium_qms.QmsOfflineRepair.set_up_test()'><b>set_up_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
-<td></td>
-<td>3</td>
-<td>com.yeasin.appium_qms.QmsOfflineRepair@2bd08376</td></tr>
-<tr>
-<td title='com.yeasin.appium_qms.QmsOfflineRepair.reject_action_test()'><b>reject_action_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
-<td></td>
-<td>47</td>
-<td>com.yeasin.appium_qms.QmsOfflineRepair@2bd08376</td></tr>
-<tr>
-<td title='com.yeasin.appium_qms.QmsOfflineRepair.alter_action_test()'><b>alter_action_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
-<td></td>
-<td>47</td>
-<td>com.yeasin.appium_qms.QmsOfflineRepair@2bd08376</td></tr>
-<tr>
-<td title='com.yeasin.appium_qms.QmsOfflineRepair.log_in_test()'><b>log_in_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
-<td></td>
-<td>3</td>
-<td>com.yeasin.appium_qms.QmsOfflineRepair@2bd08376</td></tr>
+<td>com.yeasin.appium_qms.QmsOfflineRepair@19e4fcac</td></tr>
 <tr>
 <td title='com.yeasin.appium_qms.QmsOfflineRepair.expand_side_menu_test()'><b>expand_side_menu_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
 <td></td>
-<td>5</td>
-<td>com.yeasin.appium_qms.QmsOfflineRepair@2bd08376</td></tr>
-<tr>
-<td title='com.yeasin.appium_qms.QmsOfflineRepair.repair_mode_off_test()'><b>repair_mode_off_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
-<td></td>
-<td>42</td>
-<td>com.yeasin.appium_qms.QmsOfflineRepair@2bd08376</td></tr>
+<td>6</td>
+<td>com.yeasin.appium_qms.QmsOfflineRepair@19e4fcac</td></tr>
 <tr>
 <td title='com.yeasin.appium_qms.QmsOfflineRepair.choose_variance_test()'><b>choose_variance_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
 <td></td>
 <td>5</td>
-<td>com.yeasin.appium_qms.QmsOfflineRepair@2bd08376</td></tr>
+<td>com.yeasin.appium_qms.QmsOfflineRepair@19e4fcac</td></tr>
+<tr>
+<td title='com.yeasin.appium_qms.QmsOfflineRepair.log_out_test()'><b>log_out_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
+<td></td>
+<td>11</td>
+<td>com.yeasin.appium_qms.QmsOfflineRepair@19e4fcac</td></tr>
+<tr>
+<td title='com.yeasin.appium_qms.QmsOfflineRepair.set_line_test()'><b>set_line_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
+<td></td>
+<td>11</td>
+<td>com.yeasin.appium_qms.QmsOfflineRepair@19e4fcac</td></tr>
+<tr>
+<td title='com.yeasin.appium_qms.QmsOfflineRepair.log_in_test()'><b>log_in_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
+<td></td>
+<td>4</td>
+<td>com.yeasin.appium_qms.QmsOfflineRepair@19e4fcac</td></tr>
+<tr>
+<td title='com.yeasin.appium_qms.QmsOfflineRepair.force_sync_test()'><b>force_sync_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
+<td></td>
+<td>11</td>
+<td>com.yeasin.appium_qms.QmsOfflineRepair@19e4fcac</td></tr>
+<tr>
+<td title='com.yeasin.appium_qms.QmsOfflineRepair.set_up_test()'><b>set_up_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
+<td></td>
+<td>3</td>
+<td>com.yeasin.appium_qms.QmsOfflineRepair@19e4fcac</td></tr>
+<tr>
+<td title='com.yeasin.appium_qms.QmsOfflineRepair.alter_action_test()'><b>alter_action_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
+<td></td>
+<td>46</td>
+<td>com.yeasin.appium_qms.QmsOfflineRepair@19e4fcac</td></tr>
 <tr>
 <td title='com.yeasin.appium_qms.QmsOfflineRepair.close_down_test()'><b>close_down_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
 <td></td>
 <td>5</td>
-<td>com.yeasin.appium_qms.QmsOfflineRepair@2bd08376</td></tr>
+<td>com.yeasin.appium_qms.QmsOfflineRepair@19e4fcac</td></tr>
+<tr>
+<td title='com.yeasin.appium_qms.QmsOfflineRepair.pass_action_test()'><b>pass_action_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
+<td></td>
+<td>44</td>
+<td>com.yeasin.appium_qms.QmsOfflineRepair@19e4fcac</td></tr>
+<tr>
+<td title='com.yeasin.appium_qms.QmsOfflineRepair.repair_mode_off_test()'><b>repair_mode_off_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
+<td></td>
+<td>42</td>
+<td>com.yeasin.appium_qms.QmsOfflineRepair@19e4fcac</td></tr>
+<tr>
+<td title='com.yeasin.appium_qms.QmsOfflineRepair.reject_action_test()'><b>reject_action_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
+<td></td>
+<td>47</td>
+<td>com.yeasin.appium_qms.QmsOfflineRepair@19e4fcac</td></tr>
+<tr>
+<td title='com.yeasin.appium_qms.QmsOfflineRepair.sync_web_test()'><b>sync_web_test</b><br>Test class: com.yeasin.appium_qms.QmsOfflineRepair</td>
+<td></td>
+<td>1</td>
+<td>com.yeasin.appium_qms.QmsOfflineRepair@19e4fcac</td></tr>
 </table><p>
 </body>
 </html>

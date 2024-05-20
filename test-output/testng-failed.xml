@@ -8,7 +8,9 @@
     <classes>
       <class name="com.yeasin.appium_qms.QmsOnlineNormal">
         <methods>
+          <include name="pass_undo_test"/>
           <include name="alter_undo_test"/>
+          <include name="reject_undo_test"/>
         </methods>
       </class> <!-- com.yeasin.appium_qms.QmsOnlineNormal -->
     </classes>

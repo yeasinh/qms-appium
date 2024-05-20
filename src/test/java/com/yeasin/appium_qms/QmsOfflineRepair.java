@@ -72,7 +72,7 @@ public class QmsOfflineRepair extends QmsMain {
 			offRep.reject_action();
 		}
 	}
-	/*
+	
 	@Test(priority = 9)
 	public static void pass_undo_test() throws InterruptedException {
 		for(int i = 0; i < iteration; i++) {
@@ -93,7 +93,7 @@ public class QmsOfflineRepair extends QmsMain {
 			offRep.reject_undo();
 		}
 	}
-	*/
+	
 	@Test(priority = 12)
 	public void repair_mode_off_test() throws InterruptedException {
 		offRep.repair_mode_off();

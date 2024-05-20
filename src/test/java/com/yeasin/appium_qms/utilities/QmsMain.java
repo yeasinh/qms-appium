@@ -15,6 +15,8 @@ import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
+import io.appium.java_client.service.local.flags.GeneralServerFlag;
 
 public class QmsMain extends Listeners {
 	public static AppiumDriverLocalService service;
@@ -22,66 +24,8 @@ public class QmsMain extends Listeners {
 	public static int inputDelay = 5;
 	public static int iteration = 1;
 
-	public static void main(String[] args) throws InterruptedException, IOException, ParseException {
-		QmsMain qmsMain = new QmsMain();
-		
-		qmsMain.set_up();
-		qmsMain.log_in();
-		qmsMain.expand_side_menu();
-		qmsMain.sync_web();
-		qmsMain.set_line();
-		qmsMain.select_order();
-		qmsMain.choose_variance();
-        
-        // basic workflow
-        qmsMain.pass_action();
-        qmsMain.alter_action();
-        qmsMain.reject_action();
-        qmsMain.pass_undo();
-        qmsMain.alter_undo();
-        qmsMain.reject_undo();
-        /*
-        // repair mode
-        qmsMain.repair_mode_on();
-        qmsMain.pass_action();
-        qmsMain.alter_action();
-        qmsMain.reject_action();
-        qmsMain.pass_undo();
-        qmsMain.alter_undo();
-        qmsMain.reject_undo();
-        qmsMain.repair_mode_off();
-        
-        // offline mode
-        driver.toggleWifi();
-        Thread.sleep(5000);
-        qmsMain.pass_action();
-        qmsMain.alter_action();
-        qmsMain.reject_action();
-        qmsMain.pass_undo();
-        qmsMain.alter_undo();
-        qmsMain.reject_undo();
-        qmsMain.repair_mode_on();
-        qmsMain.pass_action();
-        qmsMain.alter_action();
-        qmsMain.reject_action();
-        qmsMain.pass_undo();
-        qmsMain.alter_undo();
-        qmsMain.reject_undo();
-        qmsMain.repair_mode_off();
-        driver.toggleWifi();
-        Thread.sleep(5000);
-        */
-        qmsMain.expand_side_menu();
-        qmsMain.log_out();
-        qmsMain.close_down();
-	}
-	
-	// set up the server, driver, and app
+	// set up the server, device, driver, and app
 	public void set_up() throws MalformedURLException {
-		// build and start the server
-		// service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\1600000205\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js")).withIPAddress("172.17.8.14").usingPort(4723).build();
-		// service.start();
-		
 		// set the device
 		UiAutomator2Options options = new UiAutomator2Options();
 		options.setDeviceName("intellier-tab");
@@ -299,42 +243,42 @@ public class QmsMain extends Listeners {
 	}
 	
 	// select positon, operation, and defect for alter/reject
-	public void enter_defect() throws InterruptedException {
-		try {
-			// select a position on the sketch
-			WebElement sketch = driver.findElement(By.xpath("//com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView[3]"));
-			sketch.click();
-			Thread.sleep(5000);
-					
-			// select an operation
-			WebElement operation = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup"));
-			operation.click();
-			Thread.sleep(2000);
-			WebElement selectedOperation = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"APPIUM OPERATION\"]/android.view.ViewGroup"));
-			selectedOperation.click();
-			Thread.sleep(2000);
-			
-			test.log(Status.INFO, "Selected Position and Operation");
-			
-		} catch(Exception e) {
-			// select an operation and continue
-			WebElement selectedOperation = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"APPIUM OPERATION\"]/android.view.ViewGroup"));
-			selectedOperation.click();
-			Thread.sleep(2000);
-			test.log(Status.INFO, "Selected Operation without Position");
-		}
-		
-		// select a defect
-		WebElement defect = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Number Mark\"]"));
-		defect.click();
-		Thread.sleep(2000);
+		public void enter_defect() throws InterruptedException {
+			try {
+				// select a position on the sketch
+				WebElement sketch = driver.findElement(By.xpath("//com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView[3]"));
+				sketch.click();
+				Thread.sleep(5000);
+						
+				// select an operation
+				WebElement operation = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup"));
+				operation.click();
+				Thread.sleep(2000);
+				WebElement selectedOperation = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"APPIUM OPERATION\"]/android.view.ViewGroup"));
+				selectedOperation.click();
+				Thread.sleep(2000);
 				
-		// continue with the selected position and defect
-		WebElement okay = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup"));
-		okay.click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		test.log(Status.INFO, "Selected Defect");
-	}
+				test.log(Status.INFO, "Selected Position and Operation");
+				
+			} catch(Exception e) {
+				// select an operation and continue
+				WebElement selectedOperation = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"APPIUM OPERATION\"]/android.view.ViewGroup"));
+				selectedOperation.click();
+				Thread.sleep(2000);
+				test.log(Status.INFO, "Selected Operation without Position");
+			}
+			
+			// select a defect
+			WebElement defect = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Number Mark\"]"));
+			defect.click();
+			Thread.sleep(2000);
+					
+			// continue with the selected position and defect
+			WebElement okay = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup"));
+			okay.click();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+			test.log(Status.INFO, "Selected Defect");
+		}
 	
 	// sync pass/alter/reject entries to the web
 	public void force_sync() throws InterruptedException {
@@ -426,9 +370,6 @@ public class QmsMain extends Listeners {
 		
 		// close the driver
         driver.quit();
-        
-        // stop the server
-        // service.stop();
         
         Thread.sleep(5000);
         test.log(Status.INFO, "Closed app");
