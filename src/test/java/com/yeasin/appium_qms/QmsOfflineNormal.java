@@ -1,7 +1,6 @@
 package com.yeasin.appium_qms;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 
 import org.json.simple.parser.ParseException;
 import org.testng.annotations.Test;
@@ -12,7 +11,7 @@ public class QmsOfflineNormal extends QmsMain {
 	static QmsMain offNor = new QmsMain();
 	
 	@Test(priority = 1)
-	public void set_up_test() throws MalformedURLException {
+	public void set_up_test() throws IOException {
 		offNor.set_up();
 	}
 	

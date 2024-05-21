@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">QMS Automation Results</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">May 20, 2024 12:26:27 PM</span></a>
+<a href="#"><span class="badge badge-primary">May 21, 2024 05:59:45 PM</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,11 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -66,7 +71,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -74,25 +79,25 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.set_up_test</p>
             <p class="text-sm">
-              <span>12:26:28 PM</span> / <span>00:00:06:622</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>17:59:46 PM</span> / <span>00:00:54:655</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.set_up_test</h5>
-<span class='badge badge-success'>05.20.2024 12:26:28</span>
-<span class='badge badge-danger'>05.20.2024 12:26:34</span>
-<span class='badge badge-default'>00:00:06:622</span>
+<h5 class="test-status text-fail">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.set_up_test</h5>
+<span class='badge badge-success'>05.21.2024 17:59:46</span>
+<span class='badge badge-danger'>05.21.2024 18:00:40</span>
+<span class='badge badge-default'>00:00:54:655</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 </div>
@@ -101,832 +106,99 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:26:34 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:00:40 PM</td>
         <td>
-          Opening already installed app
+          <textarea readonly class="code-block">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20000ms 
+Host info: host: 'INT-DSK-0004', ip: '172.17.8.14'
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:deviceName=intellier-tab, platformName=ANDROID, appium:automationName=UIAutomator2}], desiredCapabilities=Capabilities {appium:automationName: UIAutomator2, appium:deviceName: intellier-tab, platformName: ANDROID}}]
+Capabilities {appium:automationName: UIAutomator2, appium:deviceName: intellier-tab, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:177)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:268)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
+	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:90)
+	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:102)
+	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:109)
+	at com.yeasin.appium_qms.utilities.QmsMain.set_up(QmsMain.java:44)
+	at com.yeasin.appium_qms.QmsOnlineNormal.set_up_test(QmsOnlineNormal.java:15)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+          
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:26:34 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:00:40 PM</td>
         <td>
-          set_up_test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="2"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.log_in_test</p>
-            <p class="text-sm">
-              <span>12:26:34 PM</span> / <span>00:00:05:197</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.log_in_test</h5>
-<span class='badge badge-success'>05.20.2024 12:26:34</span>
-<span class='badge badge-danger'>05.20.2024 12:26:39</span>
-<span class='badge badge-default'>00:00:05:197</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:26:39 PM</td>
-        <td>
-          Logging in to app with username and password
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:26:39 PM</td>
-        <td>
-          log_in_test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="3"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.expand_side_menu_test</p>
-            <p class="text-sm">
-              <span>12:26:40 PM</span> / <span>00:00:06:523</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.expand_side_menu_test</h5>
-<span class='badge badge-success'>05.20.2024 12:26:40</span>
-<span class='badge badge-danger'>05.20.2024 12:26:46</span>
-<span class='badge badge-default'>00:00:06:523</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:26:46 PM</td>
-        <td>
-          Expanding side menu
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:26:46 PM</td>
-        <td>
-          expand_side_menu_test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="4"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.sync_web_test</p>
-            <p class="text-sm">
-              <span>12:26:46 PM</span> / <span>00:00:01:612</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.sync_web_test</h5>
-<span class='badge badge-success'>05.20.2024 12:26:46</span>
-<span class='badge badge-danger'>05.20.2024 12:26:48</span>
-<span class='badge badge-default'>00:00:01:612</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:26:48 PM</td>
-        <td>
-          Syncing web data
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:26:48 PM</td>
-        <td>
-          sync_web_test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="5"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.set_line_test</p>
-            <p class="text-sm">
-              <span>12:26:48 PM</span> / <span>00:00:14:554</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.set_line_test</h5>
-<span class='badge badge-success'>05.20.2024 12:26:48</span>
-<span class='badge badge-danger'>05.20.2024 12:27:02</span>
-<span class='badge badge-default'>00:00:14:554</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:26:48 PM</td>
-        <td>
-          Entering Setting module
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:27:02 PM</td>
-        <td>
-          Continuing with selected Line and Input Delay
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:27:02 PM</td>
-        <td>
-          set_line_test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="6"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.select_order_test</p>
-            <p class="text-sm">
-              <span>12:27:02 PM</span> / <span>00:00:05:153</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.select_order_test</h5>
-<span class='badge badge-success'>05.20.2024 12:27:02</span>
-<span class='badge badge-danger'>05.20.2024 12:27:07</span>
-<span class='badge badge-default'>00:00:05:153</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:27:07 PM</td>
-        <td>
-          Entered Home module before
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:27:07 PM</td>
-        <td>
-          Continuing with selected Buyer, Style, and Order
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:27:07 PM</td>
-        <td>
-          select_order_test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="7"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.choose_variance_test</p>
-            <p class="text-sm">
-              <span>12:27:07 PM</span> / <span>00:00:05:104</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.choose_variance_test</h5>
-<span class='badge badge-success'>05.20.2024 12:27:07</span>
-<span class='badge badge-danger'>05.20.2024 12:27:12</span>
-<span class='badge badge-default'>00:00:05:104</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:27:12 PM</td>
-        <td>
-          Continuing with selected Color and Size
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:27:12 PM</td>
-        <td>
-          choose_variance_test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="8"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.pass_action_test</p>
-            <p class="text-sm">
-              <span>12:27:12 PM</span> / <span>00:00:07:756</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.pass_action_test</h5>
-<span class='badge badge-success'>05.20.2024 12:27:12</span>
-<span class='badge badge-danger'>05.20.2024 12:27:20</span>
-<span class='badge badge-default'>00:00:07:756</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:27:20 PM</td>
-        <td>
-          Pass
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:27:20 PM</td>
-        <td>
-          pass_action_test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="9"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.pass_undo_test</p>
-            <p class="text-sm">
-              <span>12:27:20 PM</span> / <span>00:00:07:637</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.pass_undo_test</h5>
-<span class='badge badge-success'>05.20.2024 12:27:20</span>
-<span class='badge badge-danger'>05.20.2024 12:27:28</span>
-<span class='badge badge-default'>00:00:07:637</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:27:25 PM</td>
-        <td>
-          Pass
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:27:25 PM</td>
-        <td>
-          Pass
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:27:28 PM</td>
-        <td>
-          Undoing latest input
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:27:28 PM</td>
-        <td>
-          Undone Pass
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:27:28 PM</td>
-        <td>
-          pass_undo_test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="10"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.alter_action_test</p>
-            <p class="text-sm">
-              <span>12:27:28 PM</span> / <span>00:00:20:405</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.alter_action_test</h5>
-<span class='badge badge-success'>05.20.2024 12:27:28</span>
-<span class='badge badge-danger'>05.20.2024 12:27:48</span>
-<span class='badge badge-default'>00:00:20:405</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:27:37 PM</td>
-        <td>
-          Selected Operation without Position
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:27:41 PM</td>
-        <td>
-          Selected Defect
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:27:48 PM</td>
-        <td>
-          Alter
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:27:48 PM</td>
-        <td>
-          alter_action_test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="11"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.alter_undo_test</p>
-            <p class="text-sm">
-              <span>12:27:48 PM</span> / <span>00:00:20:324</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.alter_undo_test</h5>
-<span class='badge badge-success'>05.20.2024 12:27:48</span>
-<span class='badge badge-danger'>05.20.2024 12:28:09</span>
-<span class='badge badge-default'>00:00:20:324</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:27:58 PM</td>
-        <td>
-          Selected Operation without Position
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:28:02 PM</td>
-        <td>
-          Selected Defect
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:28:06 PM</td>
-        <td>
-          Alter
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:28:06 PM</td>
-        <td>
-          Alter
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:28:09 PM</td>
-        <td>
-          Undoing latest input
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:28:09 PM</td>
-        <td>
-          Undone Alter
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:28:09 PM</td>
-        <td>
-          alter_undo_test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="12"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.reject_action_test</p>
-            <p class="text-sm">
-              <span>12:28:09 PM</span> / <span>00:00:19:744</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.reject_action_test</h5>
-<span class='badge badge-success'>05.20.2024 12:28:09</span>
-<span class='badge badge-danger'>05.20.2024 12:28:28</span>
-<span class='badge badge-default'>00:00:19:744</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:28:18 PM</td>
-        <td>
-          Selected Operation without Position
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:28:21 PM</td>
-        <td>
-          Selected Defect
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:28:28 PM</td>
-        <td>
-          Reject
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:28:28 PM</td>
-        <td>
-          reject_action_test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="13"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.reject_undo_test</p>
-            <p class="text-sm">
-              <span>12:28:28 PM</span> / <span>00:00:20:285</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.reject_undo_test</h5>
-<span class='badge badge-success'>05.20.2024 12:28:28</span>
-<span class='badge badge-danger'>05.20.2024 12:28:49</span>
-<span class='badge badge-default'>00:00:20:285</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:28:38 PM</td>
-        <td>
-          Selected Operation without Position
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:28:42 PM</td>
-        <td>
-          Selected Defect
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:28:46 PM</td>
-        <td>
-          Reject
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:28:46 PM</td>
-        <td>
-          Reject
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:28:49 PM</td>
-        <td>
-          Undoing latest input
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:28:49 PM</td>
-        <td>
-          Undone Reject
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:28:49 PM</td>
-        <td>
-          reject_undo_test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="14"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.force_sync_test</p>
-            <p class="text-sm">
-              <span>12:28:49 PM</span> / <span>00:00:05:646</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.force_sync_test</h5>
-<span class='badge badge-success'>05.20.2024 12:28:49</span>
-<span class='badge badge-danger'>05.20.2024 12:28:54</span>
-<span class='badge badge-default'>00:00:05:646</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:28:54 PM</td>
-        <td>
-          Syncing data to web
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:28:54 PM</td>
-        <td>
-          force_sync_test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="15"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.log_out_test</p>
-            <p class="text-sm">
-              <span>12:28:54 PM</span> / <span>00:00:11:823</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.log_out_test</h5>
-<span class='badge badge-success'>05.20.2024 12:28:54</span>
-<span class='badge badge-danger'>05.20.2024 12:29:06</span>
-<span class='badge badge-default'>00:00:11:823</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:29:01 PM</td>
-        <td>
-          Expanding side menu
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:29:06 PM</td>
-        <td>
-          Logging out of app
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:29:06 PM</td>
-        <td>
-          log_out_test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="16"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.close_down_test</p>
-            <p class="text-sm">
-              <span>12:29:06 PM</span> / <span>00:00:05:818</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">com.yeasin.appium_qms.QmsOnlineNormal@1046d517.close_down_test</h5>
-<span class='badge badge-success'>05.20.2024 12:29:06</span>
-<span class='badge badge-danger'>05.20.2024 12:29:12</span>
-<span class='badge badge-default'>00:00:05:818</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:29:12 PM</td>
-        <td>
-          Closed app
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:29:12 PM</td>
-        <td>
-          close_down_test Passed
+          <textarea readonly class="code-block">java.lang.NullPointerException: Cannot invoke "io.appium.java_client.AppiumDriver.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+	at com.yeasin.appium_qms.utilities.AppiumUtils.getScreenshotPath(AppiumUtils.java:16)
+	at com.yeasin.appium_qms.utilities.Listeners.onTestFailure(Listeners.java:41)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -943,30 +215,112 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="container-fluid p-4 view dashboard-view">
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.NullPointerException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.NullPointerException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:59:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>com.yeasin.appium_qms.QmsOnlineNormal@1046d517.set_up_test</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.SessionNotCreatedException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.SessionNotCreatedException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:59:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>com.yeasin.appium_qms.QmsOnlineNormal@1046d517.set_up_test</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>May 20, 2024 12:26:27 PM</h3>
+<h3>May 21, 2024 05:59:45 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>May 20, 2024 12:29:12 PM</h3>
+<h3>May 21, 2024 06:00:40 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>16</h3>
+<h3>0</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -982,12 +336,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>16</b> tests passed
+<div><small data-tooltip='0%'>
+<b>0</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
+<small data-tooltip='100%'><b>1</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -1005,10 +359,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='30%'><b>16</b> events passed</small></div>
+<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>36</b> others
+<small data-tooltip='100%'><b>2</b> events failed,
+<b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -1024,7 +378,7 @@
 </div></div>
 <script>
 var timeline = {
-"com.yeasin.appium_qms.QmsOnlineNormal@1046d517.set_up_test":6.622,"com.yeasin.appium_qms.QmsOnlineNormal@1046d517.log_in_test":5.197,"com.yeasin.appium_qms.QmsOnlineNormal@1046d517.expand_side_menu_test":6.523,"com.yeasin.appium_qms.QmsOnlineNormal@1046d517.sync_web_test":1.612,"com.yeasin.appium_qms.QmsOnlineNormal@1046d517.set_line_test":14.554,"com.yeasin.appium_qms.QmsOnlineNormal@1046d517.select_order_test":5.153,"com.yeasin.appium_qms.QmsOnlineNormal@1046d517.choose_variance_test":5.104,"com.yeasin.appium_qms.QmsOnlineNormal@1046d517.pass_action_test":7.756,"com.yeasin.appium_qms.QmsOnlineNormal@1046d517.pass_undo_test":7.637,"com.yeasin.appium_qms.QmsOnlineNormal@1046d517.alter_action_test":20.405,"com.yeasin.appium_qms.QmsOnlineNormal@1046d517.alter_undo_test":20.324,"com.yeasin.appium_qms.QmsOnlineNormal@1046d517.reject_action_test":19.744,"com.yeasin.appium_qms.QmsOnlineNormal@1046d517.reject_undo_test":20.285,"com.yeasin.appium_qms.QmsOnlineNormal@1046d517.force_sync_test":5.646,"com.yeasin.appium_qms.QmsOnlineNormal@1046d517.log_out_test":11.823,"com.yeasin.appium_qms.QmsOnlineNormal@1046d517.close_down_test":5.818
+"com.yeasin.appium_qms.QmsOnlineNormal@1046d517.set_up_test":54.655
 };
 </script>
 <div class="row">
@@ -1047,8 +401,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 16,
-failParent: 0,
+passParent: 0,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -1064,11 +418,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 16,
-failEvents: 0,
+passEvents: 0,
+failEvents: 2,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 36
+infoEvents: 0
 };
 </script>        </div>
       </div>

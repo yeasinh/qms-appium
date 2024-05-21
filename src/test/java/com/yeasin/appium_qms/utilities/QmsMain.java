@@ -1,7 +1,9 @@
 package com.yeasin.appium_qms.utilities;
 
+import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.time.Duration;
 
@@ -16,7 +18,6 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
-import io.appium.java_client.service.local.flags.GeneralServerFlag;
 
 public class QmsMain extends Listeners {
 	public static AppiumDriverLocalService service;
@@ -25,13 +26,34 @@ public class QmsMain extends Listeners {
 	public static int iteration = 1;
 
 	// set up the server, device, driver, and app
-	public void set_up() throws MalformedURLException {
+	public void set_up() throws IOException {
+		// start the appium server
+		service = new AppiumServiceBuilder()
+				.withAppiumJS(new File("C:\\Users\\1600000205\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+				.withIPAddress("127.0.0.1").usingPort(4723)
+				.withTimeout(Duration.ofSeconds(300)).build();
+				 
+		service.start();
+		test.log(Status.INFO, "Started Appium server");
+		
+		// start the saved emulator
+		Runtime.getRuntime().exec(System.getProperty("user.dir") + "\\src\\test\\java\\com\\yeasin\\appium_qms\\utilities\\start_emulator.bat");
+		
+		String bootCompleted;
+		do {
+			Process process = Runtime.getRuntime().exec("adb shell getprop sys.boot_completed");
+		    BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+		    bootCompleted = reader.readLine();
+		} while (bootCompleted == null || !bootCompleted.equals("1"));
+		
+		test.log(Status.INFO, "Launched Android emulator");
+		 
 		// set the device
 		UiAutomator2Options options = new UiAutomator2Options();
 		options.setDeviceName("intellier-tab");
 					
 		// set the driver
-		driver = new AndroidDriver(new URL("http://172.17.8.14:4723"), options);
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
 				    
 		try {
 			// if the app is already installed, just open it without reinstalling
@@ -63,13 +85,14 @@ public class QmsMain extends Listeners {
 	
 	// expand the side menu
 	public void expand_side_menu() {
-		// click on the side menu icon
 		try {
+			// click on the side menu icon on home page
 			WebElement menu = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"\"]"));
 			menu.click();
 			test.log(Status.INFO, "Expanding side menu");
 			
 		} catch(Exception e) {
+			// click on the side menu icon on production entry page
 			WebElement menu = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup"));
 	        menu.click();
 	        test.log(Status.INFO, "Expanding side menu");
@@ -370,6 +393,9 @@ public class QmsMain extends Listeners {
 		
 		// close the driver
         driver.quit();
+        
+        // stop the server
+        service.stop();
         
         Thread.sleep(5000);
         test.log(Status.INFO, "Closed app");
