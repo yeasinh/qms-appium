@@ -3,19 +3,14 @@ package com.yeasin.appium_qms;
 import java.io.IOException;
 
 import org.json.simple.parser.ParseException;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.yeasin.appium_qms.utilities.QmsMain;
-
-public class QmsOfflineNormal extends QmsMain {
-	static QmsMain offNor = new QmsMain();
+public class QmsOfflineNormal extends QmsBaseTest {
+	static QmsBaseTest offNor = new QmsBaseTest();
 	
-	@Test(priority = 1)
-	public void set_up_test() throws IOException {
-		offNor.set_up();
-	}
-	
-	@Test(priority = 2)
+	@BeforeTest
 	public void log_in_test() throws IOException, ParseException {
 		offNor.log_in();
 	}
@@ -31,13 +26,13 @@ public class QmsOfflineNormal extends QmsMain {
 	}
 	
 	@Test(priority = 5)
-	public void set_line_test() throws InterruptedException {
-		offNor.set_line();
+	public void set_lid_test() throws InterruptedException {
+		offNor.set_lid();
 	}
 	
 	@Test(priority = 6)
-	public void select_order_test() {
-		offNor.select_order();
+	public void set_bso_test() {
+		offNor.set_bso();
 	}
 	
 	@Test(priority = 7)
@@ -94,14 +89,9 @@ public class QmsOfflineNormal extends QmsMain {
 		offNor.force_sync();
 	}
 	
-	@Test(priority = 12)
+	@AfterTest
 	public void log_out_test() throws InterruptedException {
 		offNor.expand_side_menu();
 		offNor.log_out();
-	}
-	
-	@Test(priority = 13)
-	public void close_down_test() throws InterruptedException {
-		offNor.close_down();
 	}
 }

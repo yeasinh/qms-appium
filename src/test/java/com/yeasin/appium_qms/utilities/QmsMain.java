@@ -24,214 +24,295 @@ public class QmsMain extends Listeners {
 	public static AndroidDriver driver;
 	public static int inputDelay = 5;
 	public static int iteration = 1;
-
-	// set up the server, device, driver, and app
-	public void set_up() throws IOException {
-		// start the appium server
+	
+	// Start the Appium server
+	public void start_server() {
+		// Configure the server on the localhost at the default port
 		service = new AppiumServiceBuilder()
 				.withAppiumJS(new File("C:\\Users\\1600000205\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
 				.withIPAddress("127.0.0.1").usingPort(4723)
 				.withTimeout(Duration.ofSeconds(300)).build();
-				 
+		
+		// Start the server
 		service.start();
-		test.log(Status.INFO, "Started Appium server");
+	}
+	
+	// Launch the saved emulator
+	public void launch_emulator() throws IOException {
+		// Execute the batch file responsible to launch the emulator
+		Runtime.getRuntime().exec(System.getProperty("user.dir") + "\\src\\test\\java\\com\\yeasin\\appium_qms\\config_props\\launch_emulator.bat");
 		
-		// start the saved emulator
-		Runtime.getRuntime().exec(System.getProperty("user.dir") + "\\src\\test\\java\\com\\yeasin\\appium_qms\\utilities\\start_emulator.bat");
-		
+		// Wait for the device to boot
 		String bootCompleted;
 		do {
 			Process process = Runtime.getRuntime().exec("adb shell getprop sys.boot_completed");
 		    BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
 		    bootCompleted = reader.readLine();
 		} while (bootCompleted == null || !bootCompleted.equals("1"));
-		
-		test.log(Status.INFO, "Launched Android emulator");
-		 
-		// set the device
+	}
+
+	// Set up the server, the device, the driver, and the app
+	public void set_up() throws IOException {
+		// Set the device
 		UiAutomator2Options options = new UiAutomator2Options();
 		options.setDeviceName("intellier-tab");
 					
-		// set the driver
+		// Set the driver
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
 				    
 		try {
-			// if the app is already installed, just open it without reinstalling
+			// If the app is already installed, just open it without reinstalling
 			driver.activateApp("com.nidleqms");
-			test.log(Status.INFO, "Opening already installed app");
 
 		} catch(Exception e) {
-			// set the app
+			// Install the app using the apk from the specified location
 			options.setApp(System.getProperty("user.dir") + "\\src\\test\\java\\com\\yeasin\\appium_qms\\resources\\qms-24.04.30.apk");
-			test.log(Status.INFO, "Installing app");
 		}
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
-	// log in to the app
+	// Log in to the app
 	public void log_in() throws IOException, ParseException {
-		// log in to qms app with username and password
+		// Log in to QMS app using the username and the password
 		WebElement username = driver.findElement(By.xpath("//android.widget.EditText[@text=\"Username\"]"));
 		username.sendKeys(DataReader.getTestData("username"));
 		WebElement password = driver.findElement(By.xpath("//android.widget.EditText[@text=\"Password\"]"));
 		password.sendKeys(DataReader.getTestData("password"));
 		WebElement login = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Login\"]"));
 		login.click();
-		test.log(Status.INFO, "Logging in to app with username and password");
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(5));
 	}
 	
-	// expand the side menu
+	// Expand the side menu
 	public void expand_side_menu() {
 		try {
-			// click on the side menu icon on home page
+			// Click on the side menu icon on the Home page
 			WebElement menu = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"\"]"));
 			menu.click();
-			test.log(Status.INFO, "Expanding side menu");
+			test.log(Status.INFO, "Expanding the side menu");
 			
 		} catch(Exception e) {
-			// click on the side menu icon on production entry page
+			// Click on the side menu icon on the Production entry page
 			WebElement menu = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup"));
 	        menu.click();
-	        test.log(Status.INFO, "Expanding side menu");
+	        test.log(Status.INFO, "Expanding the side menu");
 		}
 		
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
-	// sync web data for the latest master data and settings
+	// Sync web data for the latest Master Data and Settings
 	public void sync_web() {
-		// click on the sync button
+		// Click on the Sync button
         WebElement sync = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Sync\"]"));
         sync.click();
-        test.log(Status.INFO, "Syncing web data");
         
+        test.log(Status.INFO, "Syncing web data");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	}
 	
-	// set the line and input delay
-	public void set_line() throws InterruptedException {
-		// access settings module
+	// Access the Settings module
+	public void access_settings() {
         WebElement settings = driver.findElement(By.xpath("//android.widget.Button[@content-desc=', Settings']"));
         settings.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        test.log(Status.INFO, "Entering Setting module");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        test.log(Status.INFO, "Entering the Setting module");
+	}
+	
+	// Select a Line
+	public void select_line() throws InterruptedException {
+    	// Expand the Line drop-down
+        WebElement line = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\", Root\"]/android.view.ViewGroup"));
+    	line.click();
+    	// Scroll to the desired Line
+        driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Appium Line\"));"));
+        // Select the desired Line
+        WebElement selectedLine = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Appium Line\"]/android.view.ViewGroup"));
+        selectedLine.click();
+        
+        Thread.sleep(1000);
+        test.log(Status.INFO, "Selected a Line");
+	}
+	
+	// Select an Input Delay
+	public void select_input_delay() throws InterruptedException {
+		// Expand the Input Delay drop-down
+        WebElement delay = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"5 Seconds\"]"));
+        delay.click();
+        // Scroll to the desired Input Delay
+        driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"5 Seconds\"));"));
+        // Select the desired Input Delay
+        WebElement selectedDelay = driver.findElement(By.xpath("(//android.widget.TextView[@text=\"5 Seconds\"])[3]"));
+        selectedDelay.click();
+        
+        Thread.sleep(1000);
+        test.log(Status.INFO, "Selected an Input Delay");
+	}
+	
+	// Set the Line and the Input delay
+	public void set_lid() throws InterruptedException {
+		// Access the Settings module
+		access_settings();
     	
         try {
-        	// select a line
-            WebElement line = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\", Root\"]/android.view.ViewGroup"));
-        	line.click();
-            driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Appium Line\"));"));
-            WebElement selectedLine = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Appium Line\"]/android.view.ViewGroup"));
-            selectedLine.click();
-            Thread.sleep(1000);
-            
-            // select an input delay
-            WebElement delay = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"5 Seconds\"]"));
-            delay.click();
-            driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"5 Seconds\"));"));
-            WebElement selectedDelay = driver.findElement(By.xpath("(//android.widget.TextView[@text=\"5 Seconds\"])[3]"));
-            selectedDelay.click();
-            Thread.sleep(1000);
-            
-            // continue with selected line and input delay
-            WebElement next = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Next\"]"));
-            next.click();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-            
-            test.log(Status.INFO, "Selected Line and Input Delay");
+        	// Select a Line
+        	select_line();
+        	
+            // Select an Input Delay
+        	select_input_delay();
             
         } catch (Exception e) {
-        	// continue with previously selected line and input delay
-        	WebElement next = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Next\"]"));
-            next.click();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-            
-            test.log(Status.INFO, "Continuing with selected Line and Input Delay");
+        	// Continue with previously selected Line and Input Delay
+            test.log(Status.INFO, "Continuing with the previously selected Line and Input Delay");
         }
+        
+        // Click on the Next button to continue with the selected Line and Input Delay
+        WebElement next = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Next\"]"));
+        next.click();
+        
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        test.log(Status.INFO, "Continuing with a Line and an Input Delay");
 	}
 	
-	// select the buyer, style, and order
+	// Access the Home module
+	public void access_home() {
+        WebElement home = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\", Home\"]"));
+        home.click();
+        
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        test.log(Status.INFO, "Entering the Home module");
+	}
+	
+	// Access the QC Lunch Pad
+	public void access_pad() {
+        WebElement endTable = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"End table check, (Sewing), \"]"));
+        endTable.click();
+        
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        test.log(Status.INFO, "Entered the QC Lunch pad");
+	}
+	
+	// Continue with the selected Buyer, Style, and Order
+	public void prev_order_confirm() {
+		WebElement prevOrderComfirm = driver.findElement(By.xpath("//android.widget.Button[@resource-id=\"android:id/button1\"]"));
+		prevOrderComfirm.click();
+		test.log(Status.INFO, "Continuing with the previously selected Buyer, Style, and Order");
+	}
+	
+	// Select Buyer, Style, and Order again
+	public void prev_order_deny() {
+		WebElement prevOrderComfirm = driver.findElement(By.xpath("//android.widget.Button[@resource-id=\"android:id/button2\"]"));
+		prevOrderComfirm.click();
+		test.log(Status.INFO, "Continuing with the previously selected Buyer, Style, and Order");
+	}
+	
+	// Select a Buyer
+	public void select_buyer() {
+        driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Appium Buyer\"));"));
+        WebElement selectedBuyer = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Appium Buyer\"]/android.view.ViewGroup"));
+        selectedBuyer.click();
+        
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        test.log(Status.INFO, "Selected a Buyer");
+	}
+	
+	// Select a Style
+	public void select_style() {
+        WebElement selectedStyle = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"Appium Style\"]"));
+        selectedStyle.click();
+        
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        test.log(Status.INFO, "Selected a Style");
+	}
+	
+	// Select an Order
 	public void select_order() {
+        WebElement selectedOrder = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"Appium Order\"]"));
+        selectedOrder.click();
+        
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        test.log(Status.INFO, "Selected an Order");
+	}
+	
+	// Set the Buyer, the Style, and the Order
+	public void set_bso() {
 		try {
-			// access home module
-            WebElement home = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\", Home\"]"));
-            home.click();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-            test.log(Status.INFO, "Entering Home module");
+			// Access the Home module
+			access_home();
             
 		} catch(Exception e) {
-			// home module already entered
-			test.log(Status.INFO, "Entered Home module before");
+			// Continue when Home module is already entered
+			test.log(Status.INFO, "Entered the Home module before");
 		}
 		
         try {
-        	// continue with previously selected buyer, style, and order
-        	WebElement prevOrderComfirm = driver.findElement(By.xpath("//android.widget.Button[@resource-id=\"android:id/button1\"]"));
-        	prevOrderComfirm.click();
-        	test.log(Status.INFO, "Continuing with selected Buyer, Style, and Order");
+        	// Click on the pop-up to continue with the previously selected Buyer, Style, and Order
+        	prev_order_confirm();
         	
         } catch(Exception e) {
-            // access qc lunch pad
-            WebElement endTable = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"End table check, (Sewing), \"]"));
-            endTable.click();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+            // Access the QC Lunch Pad
+        	access_pad();
             
-            // select a buyer
-            driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Appium Buyer\"));"));
-            WebElement selectedBuyer = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Appium Buyer\"]/android.view.ViewGroup"));
-            selectedBuyer.click();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+            // Select a Buyer
+        	select_buyer();
             
-            // select a style
-            WebElement selectedStyle = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"Appium Style\"]"));
-            selectedStyle.click();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+            // Select a Style
+        	select_style();
             
-            // select an order
-            WebElement selectedOrder = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"Appium Order\"]"));
-            selectedOrder.click();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+            // Select an Order
+        	select_order();
             
-            // continue with selected buyer, style, and order
-            WebElement orderOkay = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"\"]"));
-            orderOkay.click();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+            // Click on the Okay button to continue with the selected Buyer, Style, and Order
+            WebElement okay = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"\"]"));
+            okay.click();
             
-            test.log(Status.INFO, "Selected Buyer, Style, and Order");
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+            test.log(Status.INFO, "Continuing with a Buyer, a Style, and an Order");
         }
 	}
 	
-	// choose color and size
+	// Choose the Color and the Size
 	public void choose_variance() throws InterruptedException {
 		try {
-			// select a color
-			WebElement color = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Choose a Color\"]"));
-			color.click();
-			WebElement selectedColor = driver.findElement(By.xpath("//android.widget.TextView[@text=\"BLACK\"]"));
-			selectedColor.click();
-			Thread.sleep(2000);
+			// Choose a Color
+			choose_color();
 			
-			// select a size
-			WebElement size = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Choose a Size\"]"));
-			size.click();
-			WebElement selectedSize = driver.findElement(By.xpath("//android.widget.TextView[@text=\"L\"]"));
-			selectedSize.click();
-			Thread.sleep(2000);
-			
-			test.log(Status.INFO, "Chose Color and Size");
+			// Choose a Size
+			choose_size();
 		
 		} catch (Exception e) {
-			// continue with already selected color and size
-			test.log(Status.INFO, "Continuing with selected Color and Size");
+			// Continue with the previously selected Color and Size
+			test.log(Status.INFO, "Continuing with the previously selected Color and Size");
 		}
 	}
 	
-	// provide pass entries
+	// Choose a Color
+	public void choose_color() throws InterruptedException {
+		WebElement color = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Choose a Color\"]"));
+		color.click();
+		WebElement selectedColor = driver.findElement(By.xpath("//android.widget.TextView[@text=\"BLACK\"]"));
+		selectedColor.click();
+		
+		Thread.sleep(2000);
+		test.log(Status.INFO, "Chose a Color");
+	}
+	
+	// Choose a Size
+	public void choose_size() throws InterruptedException {
+		WebElement size = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Choose a Size\"]"));
+		size.click();
+		WebElement selectedSize = driver.findElement(By.xpath("//android.widget.TextView[@text=\"L\"]"));
+		selectedSize.click();
+		
+		Thread.sleep(2000);
+		test.log(Status.INFO, "Chose a Size");
+	}
+	
+	// Provide a Pass entry
 	public void pass_action() throws InterruptedException {
-		// input pass data from production entry page
+		// Input Pass data from the Production entry page
 		WebElement pass = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Pass\"]"));
 		pass.click();
 		
@@ -239,73 +320,101 @@ public class QmsMain extends Listeners {
 		test.log(Status.INFO, "Pass");
 	}
 	
-	// provide alter entries
+	// Provide an Alter entry
 	public void alter_action() throws InterruptedException {
-		// input alter data from production entry page
+		// Input Alter data from the Production entry page
 		WebElement alter = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Alter\"]"));
 		alter.click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		test.log(Status.INFO, "Entering the Defect entry page");
+		
+		// Select a Position, an Operation, and a Defect from the Defect entry page
 		enter_defect();
 		
 		Thread.sleep((inputDelay+2)*1000);
 		test.log(Status.INFO, "Alter");
 	}
 	
-	// provide reject entries
+	// Provide a Reject entry
 	public void reject_action() throws InterruptedException {
-		// input reject data from production entry page
+		// Input Reject data from the Production entry page
 		WebElement reject = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Reject\"]"));
 		reject.click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		test.log(Status.INFO, "Entering the Defect entry page");
+		
+		// Select a Position, an Operation, and a Defect from the Defect entry page
 		enter_defect();
 		
 		Thread.sleep((inputDelay+2)*1000);
 		test.log(Status.INFO, "Reject");
 	}
 	
-	// select positon, operation, and defect for alter/reject
-		public void enter_defect() throws InterruptedException {
-			try {
-				// select a position on the sketch
-				WebElement sketch = driver.findElement(By.xpath("//com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView[3]"));
-				sketch.click();
-				Thread.sleep(5000);
-						
-				// select an operation
-				WebElement operation = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup"));
-				operation.click();
-				Thread.sleep(2000);
-				WebElement selectedOperation = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"APPIUM OPERATION\"]/android.view.ViewGroup"));
-				selectedOperation.click();
-				Thread.sleep(2000);
+	// Select a Position, an Operation, and a Defect for an Alter/Reject
+	public void enter_defect() throws InterruptedException {
+		try {
+			// Select a Position on the Sketch
+			select_position();
 				
-				test.log(Status.INFO, "Selected Position and Operation");
-				
-			} catch(Exception e) {
-				// select an operation and continue
-				WebElement selectedOperation = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"APPIUM OPERATION\"]/android.view.ViewGroup"));
-				selectedOperation.click();
-				Thread.sleep(2000);
-				test.log(Status.INFO, "Selected Operation without Position");
-			}
-			
-			// select a defect
-			WebElement defect = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Number Mark\"]"));
-			defect.click();
-			Thread.sleep(2000);
-					
-			// continue with the selected position and defect
-			WebElement okay = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup"));
-			okay.click();
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-			test.log(Status.INFO, "Selected Defect");
+			// Select an Operation
+			select_operation();
+		
+		} catch(Exception e) {
+			// Without selecting a Position, select an Operation
+			select_operation();
 		}
 	
-	// sync pass/alter/reject entries to the web
+		// Select a Defect
+		select_defect();
+				
+		// Click on the Okay button to continue with the selected Position, Operation, and Defect
+		WebElement okay = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup"));
+		okay.click();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		test.log(Status.INFO, "Continuing with the selected Position, Operation, and Defect");
+	}
+	
+	// Select a Position on the Sketch
+	public void select_position() throws InterruptedException {
+		WebElement sketch = driver.findElement(By.xpath("//com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView[3]"));
+		sketch.click();
+	
+		Thread.sleep(5000);
+		test.log(Status.INFO, "Selected a Position on the Sketch");
+	}
+	
+	// Select an Operation
+	public void select_operation() throws InterruptedException {
+		try {
+			WebElement operation = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup"));
+			operation.click();
+			Thread.sleep(2000);
+			
+		} catch (Exception e) {
+			// No sketch available
+			test.log(Status.INFO, "Selecting an Operation without selecting a Position");
+		}
+		
+		WebElement selectedOperation = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"APPIUM OPERATION\"]/android.view.ViewGroup"));
+		selectedOperation.click();
+		Thread.sleep(2000);
+		test.log(Status.INFO, "Selected an Operation");
+	}
+	
+	// Select a Defect
+	public void select_defect() throws InterruptedException {
+		WebElement defect = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Number Mark\"]"));
+		defect.click();
+		Thread.sleep(2000);
+		test.log(Status.INFO, "Selected an Defect");
+	}
+	
+	// Sync the Pass/Alter/Reject entries to the web
 	public void force_sync() throws InterruptedException {
-		// press force sync button
+		// Press the Force Sync button
 		WebElement fsButton = driver.findElement(By.xpath("//android.widget.TextView[@text=\"\"]"));
 		fsButton.click();
 		
@@ -313,91 +422,93 @@ public class QmsMain extends Listeners {
 		test.log(Status.INFO, "Syncing data to web");
 	}
 	
-	// perform undo after pass/alter/reject
+	// Perform an Undo after a Pass/Alter/Reject
 	public void undo_action() throws InterruptedException {
-		// press undo button
+		// Press the Undo button
 		WebElement undoButton = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup"));
 		undoButton.click();
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		test.log(Status.INFO, "Clicked on the Undo button");
 			
-		// confirm undo from pop-up message
+		// Click on the pop-up message to confirm the Undo 
 		WebElement undoConfirm = driver.findElement(By.xpath("//android.widget.Button[@resource-id=\"android:id/button1\"]"));
 		undoConfirm.click();
-		Thread.sleep(2000);
 		
-		test.log(Status.INFO, "Undoing latest input");
+		Thread.sleep(2000);
+		test.log(Status.INFO, "Confirmed the Undo from the pop-up");
 	}
 	
-	// perform undo after pass
+	// Perform an undo after a Pass
 	public void pass_undo() throws InterruptedException {
 		inputDelay = 2;
 		pass_action();
 		test.log(Status.INFO, "Pass");
+		
 		undo_action();
 		test.log(Status.INFO, "Undone Pass");
 		inputDelay = 5;
 	}
 		
-	// perform undo after alter
+	// Perform an Undo after an Alter
 	public void alter_undo() throws InterruptedException {
 		inputDelay = 2;
 		alter_action();
 		test.log(Status.INFO, "Alter");
+		
 		undo_action();
 		test.log(Status.INFO, "Undone Alter");
 		inputDelay = 5;
 	}
 			
-	// perform undo after reject
+	// Perform an Undo after a Reject
 	public void reject_undo() throws InterruptedException {
 		inputDelay = 2;
 		reject_action();
 		test.log(Status.INFO, "Reject");
+		
 		undo_action();
 		test.log(Status.INFO, "Undone Reject");
 		inputDelay = 5;
 	}
 
-	// turn on repair mode
+	// Turn on the Repair mode
 	public void repair_mode_on() throws InterruptedException {
-		// toggle the repair button to turn on repair mode
+		// Toggle the Repair button to turn on the Repair mode
 		WebElement repairOn = driver.findElement(By.xpath("//android.widget.Switch[@text=\"OFF\"]"));
 		repairOn.click();
+		
 		Thread.sleep(2000);
-		test.log(Status.INFO, "Turned on repair mode");
+		test.log(Status.INFO, "Turned on the Repair mode");
 	}
 		
-	// turn off repair mode
+	// Turn off the Repair mode
 	public void repair_mode_off() throws InterruptedException {
-		// toggle the repair button to turn off repair
+		// Toggle the Repair button to turn off the Repair mode
 		WebElement repairOff = driver.findElement(By.xpath("//android.widget.Switch[@text=\"ON\"]"));
 		repairOff.click();
+		
 		Thread.sleep(2000);
-		test.log(Status.INFO, "Turned off repair mode");
+		test.log(Status.INFO, "Turned off the Repair mode");
 	}
 	
-	// log out of the app
+	// Log out of the app
 	public void log_out() throws InterruptedException {
-		// click on logout menu
+		// Click on Logout from the menu
 		WebElement logout = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\", logout\"]"));
 		logout.click();
 		
 		Thread.sleep(5000);
-		test.log(Status.INFO, "Logging out of app");
 	}
 	
-	// close the driver and stop the server
+	// Close the app, the driver, and the server
 	public void close_down() throws InterruptedException {
-		// close the app and remove it from app history
+		// Close the app and remove it from app history
 		driver.terminateApp("com.nidleqms");
 		
-		// close the driver
+		// Close the driver
         driver.quit();
         
-        // stop the server
-        service.stop();
-        
         Thread.sleep(5000);
-        test.log(Status.INFO, "Closed app");
 	}
 }

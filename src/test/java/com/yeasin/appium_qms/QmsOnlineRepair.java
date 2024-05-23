@@ -3,19 +3,14 @@ package com.yeasin.appium_qms;
 import java.io.IOException;
 
 import org.json.simple.parser.ParseException;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.yeasin.appium_qms.utilities.QmsMain;
-
-public class QmsOnlineRepair extends QmsMain {
-	static QmsMain onRep = new QmsMain();
+public class QmsOnlineRepair extends QmsBaseTest {
+	static QmsBaseTest onRep = new QmsBaseTest();
 	
-	@Test(priority = 1)
-	public void set_up_test() throws IOException {
-		onRep.set_up();
-	}
-	
-	@Test(priority = 2)
+	@BeforeTest
 	public void log_in_test() throws IOException, ParseException {
 		onRep.log_in();
 	}
@@ -31,13 +26,13 @@ public class QmsOnlineRepair extends QmsMain {
 	}
 	
 	@Test(priority = 5)
-	public void set_line_test() throws InterruptedException {
-		onRep.set_line();
+	public void set_lid_test() throws InterruptedException {
+		onRep.set_lid();
 	}
 	
 	@Test(priority = 6)
-	public void select_order_test() {
-		onRep.select_order();
+	public void set_bso_test() {
+		onRep.set_bso();
 	}
 	
 	@Test(priority = 7)
@@ -102,14 +97,9 @@ public class QmsOnlineRepair extends QmsMain {
 		onRep.force_sync();
 	}
 	
-	@Test(priority = 14)
+	@AfterTest
 	public void log_out_test() throws InterruptedException {
 		onRep.expand_side_menu();
 		onRep.log_out();
-	}
-	
-	@Test(priority = 15)
-	public void close_down_test() throws InterruptedException {
-		onRep.close_down();
 	}
 }

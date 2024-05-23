@@ -30,7 +30,8 @@ public class Listeners extends AppiumUtils implements ITestListener {
 	public void onTestFailure(ITestResult result) {
 		test.fail(result.getThrowable());
 		
-		try {
+		// Take a screenshot
+		/*try {
 			driver = (AppiumDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
 			
 		} catch (Exception e1) {
@@ -42,7 +43,7 @@ public class Listeners extends AppiumUtils implements ITestListener {
 			
 		} catch (IOException e2) {
 			e2.printStackTrace();
-		}
+		}*/
 	}
 
 	@Override

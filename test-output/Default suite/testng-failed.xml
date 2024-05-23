@@ -7,18 +7,18 @@
         <methods>
           <include name="set_line_test"/>
           <include name="expand_side_menu_test"/>
-          <include name="close_down_test"/>
+          <include name="set_up_test"/>
           <include name="pass_action_test"/>
           <include name="alter_action_test"/>
           <include name="select_order_test"/>
+          <include name="close_down_test"/>
           <include name="pass_undo_test"/>
-          <include name="set_up_test"/>
           <include name="log_out_test"/>
           <include name="alter_undo_test"/>
           <include name="choose_variance_test"/>
           <include name="reject_action_test"/>
-          <include name="log_in_test"/>
           <include name="sync_web_test"/>
+          <include name="log_in_test"/>
           <include name="force_sync_test"/>
           <include name="reject_undo_test"/>
         </methods>
