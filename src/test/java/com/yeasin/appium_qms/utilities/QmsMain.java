@@ -55,21 +55,51 @@ public class QmsMain extends Listeners {
 	public void set_up() throws IOException {
 		// Set the device
 		UiAutomator2Options options = new UiAutomator2Options();
-		options.setDeviceName("intellier-tab");
+		String deviceName;
+		
+		// Check for connected device
+	    if (isConnectedDevice()) {
+	    	// Use the real device
+	        deviceName = "HA1DRQQE";
+	    } else {
+	    	// Use the emulator
+	        deviceName = "intellier-tab";
+	        launch_emulator();
+	    }
+	    
+	    // Set the device
+	    options.setDeviceName(deviceName);
 					
 		// Set the driver
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
 				    
-		try {
-			// If the app is already installed, just open it without reinstalling
+		if (driver.isAppInstalled("com.nidleqms")) {
+			// Open the app
+			System.out.println("App is already installed");
 			driver.activateApp("com.nidleqms");
-
-		} catch(Exception e) {
-			// Install the app using the apk from the specified location
-			options.setApp(System.getProperty("user.dir") + "\\src\\test\\java\\com\\yeasin\\appium_qms\\resources\\qms-24.04.30.apk");
+		} else {
+			// Install the app
+			System.out.println("App is installing");
+			driver.installApp(System.getProperty("user.dir") + "\\src\\test\\java\\com\\yeasin\\appium_qms\\resources\\qms-24.06.04.apk");
+			driver.activateApp("com.nidleqms");
 		}
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+	}
+	
+	private boolean isConnectedDevice() throws IOException {
+	    Process process = Runtime.getRuntime().exec("adb devices");
+	    BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+	    
+	    String line;
+	    while ((line = reader.readLine()) != null) {
+	        if (line.contains("HA1DRQQE") && line.contains("device") ) {
+	            return true;
+	        }
+	    }
+	    
+	    reader.close();
+	    return false;
 	}
 	
 	// Log in to the app
@@ -82,7 +112,7 @@ public class QmsMain extends Listeners {
 		WebElement login = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Login\"]"));
 		login.click();
 		
-		driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(5));
+		driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(10));
 	}
 	
 	// Expand the side menu
@@ -441,7 +471,7 @@ public class QmsMain extends Listeners {
 	
 	// Perform an undo after a Pass
 	public void pass_undo() throws InterruptedException {
-		inputDelay = 2;
+		inputDelay = 1;
 		pass_action();
 		test.log(Status.INFO, "Pass");
 		
@@ -452,7 +482,7 @@ public class QmsMain extends Listeners {
 		
 	// Perform an Undo after an Alter
 	public void alter_undo() throws InterruptedException {
-		inputDelay = 2;
+		inputDelay = 1;
 		alter_action();
 		test.log(Status.INFO, "Alter");
 		
@@ -463,7 +493,7 @@ public class QmsMain extends Listeners {
 			
 	// Perform an Undo after a Reject
 	public void reject_undo() throws InterruptedException {
-		inputDelay = 2;
+		inputDelay = 1;
 		reject_action();
 		test.log(Status.INFO, "Reject");
 		

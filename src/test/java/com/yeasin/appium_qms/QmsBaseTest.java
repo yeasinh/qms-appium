@@ -12,7 +12,6 @@ public class QmsBaseTest extends QmsMain {
 	@BeforeSuite
 	public void set_up_test() throws IOException {
 		qmsBase.start_server();
-		qmsBase.launch_emulator();
 		qmsBase.set_up();
 	}
 	

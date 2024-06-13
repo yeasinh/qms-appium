@@ -4,34 +4,19 @@
   <listeners>
     <listener class-name="com.yeasin.appium_qms.utilities.Listeners"/>
   </listeners>
-  <test thread-count="5" name="QMS Offline Normal Test(failed)">
+  <test thread-count="5" name="QMS Online Normal Test(failed)">
     <classes>
-      <class name="com.yeasin.appium_qms.QmsOfflineNormal">
+      <class name="com.yeasin.appium_qms.QmsOnlineNormal">
         <methods>
-          <include name="pass_undo_test"/>
-          <include name="log_in_test"/>
           <include name="set_up_test"/>
-          <include name="alter_undo_test"/>
           <include name="log_out_test"/>
+          <include name="reject_action_test"/>
+          <include name="log_in_test"/>
+          <include name="force_sync_test"/>
           <include name="reject_undo_test"/>
           <include name="close_down_test"/>
         </methods>
-      </class> <!-- com.yeasin.appium_qms.QmsOfflineNormal -->
+      </class> <!-- com.yeasin.appium_qms.QmsOnlineNormal -->
     </classes>
-  </test> <!-- QMS Offline Normal Test(failed) -->
-  <test thread-count="5" name="QMS Offline Repair Test(failed)">
-    <classes>
-      <class name="com.yeasin.appium_qms.QmsOfflineRepair">
-        <methods>
-          <include name="log_in_test"/>
-          <include name="set_up_test"/>
-          <include name="reject_undo_test"/>
-          <include name="pass_undo_test"/>
-          <include name="log_out_test"/>
-          <include name="alter_undo_test"/>
-          <include name="close_down_test"/>
-        </methods>
-      </class> <!-- com.yeasin.appium_qms.QmsOfflineRepair -->
-    </classes>
-  </test> <!-- QMS Offline Repair Test(failed) -->
+  </test> <!-- QMS Online Normal Test(failed) -->
 </suite> <!-- Failed suite [QMS Automation Suite] -->
