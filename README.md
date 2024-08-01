@@ -7,8 +7,10 @@ QMS is a mobile application under the [Nidle](https://www.intellier.com/nidle/) 
 The automation framework is written with the ``Appium`` automation tool in ``Java`` programming language and managed as a ``Maven`` project.<br/>
 The test suites are executed via the ``TestNG`` framework and the test reports are generated utilizing the ``ExtentReports`` library.<br/>
 
-How to run tests:
-Right click on any of the the .xml files in the utilities folder, select "Run As" and choose "TestNG suite".
+How to run tests:<br/>
+1. Right click on any of the the .xml files in the utilities folder.
+2. Select "Run As".
+3. Choose "TestNG suite".
 
 The framework to test the QMS app is developed by <br/>
 *Muhammad Yeasin Hossain*<br/>
