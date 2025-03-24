@@ -31,7 +31,7 @@ public class QmsOfflineNormal extends QmsBaseTest {
 	}
 	
 	@Test(priority = 6)
-	public void set_bso_test() {
+	public void set_bso_test() throws IOException, ParseException{
 		offNor.set_bso();
 	}
 	
@@ -42,46 +42,85 @@ public class QmsOfflineNormal extends QmsBaseTest {
 	}
 	
 	@Test(priority = 8)
-	public static void pass_action_test() throws InterruptedException {
+	public static void pass_action_test() throws InterruptedException, IOException, ParseException {
 		for(int i = 0; i < iteration; i++) {
 			offNor.pass_action();
 		}
 	}
+	@Test(priority = 8)
+	public static void pass_and_undo_test() throws InterruptedException{
+
+		try{
+			for(int i = 0; i < iteration; i++) {
+				offNor.pass_undo();
+
+			}
+			//for(int i = 0; i < iteration; i++) onNor.pass_undo();
+//			for (int i = 0; i <iteration;i++) onNor.undo_action();
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+
+
+	}
 	
 	@Test(priority = 9)
-	public void alter_action_test() throws InterruptedException {
+	public void alter_action_test() throws InterruptedException, IOException, ParseException {
 		for(int i = 0; i < iteration; i++) {
 			offNor.alter_action();
 		}
 	}
+
+	@Test(priority = 9, invocationCount = 2)
+	public void alter_and_undo_test() throws InterruptedException, IOException, ParseException{
+		try{
+			for (int i = 0; i < iteration; i++){
+				offNor.alter_undo();
+			}
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+
 	
 	@Test(priority = 10)
-	public void reject_action_test() throws InterruptedException {
+	public void reject_action_test() throws InterruptedException, IOException, ParseException {
 		for(int i = 0; i < iteration; i++) {
 			offNor.reject_action();
 		}
 	}
+
+	@Test(priority = 10, invocationCount = 2)
+	public void reject_and_undo() throws InterruptedException, IOException, ParseException {
+		try{
+			for (int i = 0;i < iteration; i++) {
+				offNor.reject_undo();
+			}
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
 	
-	@Test(priority = 8)
+	/*@Test(priority = 8)
 	public static void pass_undo_test() throws InterruptedException {
 		for(int i = 0; i < iteration; i++) {
 			offNor.pass_undo();
 		}
-	}
+	}*/
 	
-	@Test(priority = 9)
-	public static void alter_undo_test() throws InterruptedException {
+	/*@Test(priority = 9)
+	public static void alter_undo_test() throws InterruptedException, IOException, ParseException {
 		for(int i = 0; i < iteration; i++) {
 			offNor.alter_undo();
 		}
-	}
+	}*/
 	
-	@Test(priority = 10)
-	public static void reject_undo_test() throws InterruptedException {
+	/*@Test(priority = 10)
+	public static void reject_undo_test() throws InterruptedException, IOException, ParseException {
 		for(int i = 0; i < iteration; i++) {
 			offNor.reject_undo();
 		}
-	}
+	}*/
 	
 	@Test(priority = 11)
 	public void force_sync_test() throws InterruptedException {
@@ -91,7 +130,7 @@ public class QmsOfflineNormal extends QmsBaseTest {
 	
 	@AfterTest
 	public void log_out_test() throws InterruptedException {
-		offNor.expand_side_menu();
+		//offNor.expand_side_menu();
 		offNor.log_out();
 	}
 }

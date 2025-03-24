@@ -2,6 +2,7 @@ package com.yeasin.appium_qms;
 
 import java.io.IOException;
 
+import org.json.simple.parser.ParseException;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import com.yeasin.appium_qms.utilities.QmsMain;
@@ -10,7 +11,7 @@ public class QmsBaseTest extends QmsMain {
 	static QmsMain qmsBase = new QmsMain();
 	
 	@BeforeSuite
-	public void set_up_test() throws IOException {
+	public void set_up_test() throws IOException, ParseException {
 		qmsBase.start_server();
 		qmsBase.set_up();
 	}

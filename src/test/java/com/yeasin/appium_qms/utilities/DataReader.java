@@ -22,9 +22,28 @@ public class DataReader {
 		return jsonObject;
 	}
 	
-	public static String getTestData(String key) throws IOException, ParseException {
+	public static CharSequence getTestData(String key) throws IOException, ParseException {
 		// get the value from the key
 		String val = (String) getJsonData().get(key);
 		return val;
+	}
+
+	public static int getIntTestData(String key) throws IOException, ParseException {
+		int val = (int) getJsonData().get(key);
+		return val;
+	}
+	/*public static long getLongTestData(String key) throws IOException, ParseException {
+		long val = (long) getJsonData().get(key);
+		return val;
+	}*/
+
+	public static long getLongTestData(String key) throws IOException, ParseException {
+		Object value = getJsonData().get(key); // Get the value from JSON
+
+		if (value instanceof Number) {
+			return ((Number) value).longValue(); // Convert directly if it's a Number
+		} else {
+			return Long.parseLong(value.toString()); // Convert from String if needed
+		}
 	}
 }

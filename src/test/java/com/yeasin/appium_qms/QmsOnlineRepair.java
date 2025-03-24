@@ -31,7 +31,7 @@ public class QmsOnlineRepair extends QmsBaseTest {
 	}
 	
 	@Test(priority = 6)
-	public void set_bso_test() {
+	public void set_bso_test() throws IOException, ParseException {
 		onRep.set_bso();
 	}
 	
@@ -43,45 +43,47 @@ public class QmsOnlineRepair extends QmsBaseTest {
 	@Test(priority = 8)
 	public void repair_mode_on_test() throws InterruptedException {
 		onRep.repair_mode_on();
+
 	}
+
 	
 	@Test(priority = 9)
-	public static void pass_action_test() throws InterruptedException {
+	public static void pass_action_test() throws InterruptedException, IOException, ParseException {
 		for(int i = 0; i < iteration; i++) {
 			onRep.pass_action();
 		}
 	}
 	
 	@Test(priority = 10)
-	public void alter_action_test() throws InterruptedException {
+	public void alter_action_test() throws InterruptedException, IOException, ParseException {
 		for(int i = 0; i < iteration; i++) {
 			onRep.alter_action();
 		}
 	}
 	
 	@Test(priority = 11)
-	public void reject_action_test() throws InterruptedException {
+	public void reject_action_test() throws InterruptedException, IOException, ParseException {
 		for(int i = 0; i < iteration; i++) {
 			onRep.reject_action();
 		}
 	}
 	
 	@Test(priority = 9)
-	public static void pass_undo_test() throws InterruptedException {
+	public static void pass_undo_test() throws InterruptedException, IOException, ParseException {
 		for(int i = 0; i < iteration; i++) {
 			onRep.pass_undo();
 		}
 	}
 	
 	@Test(priority = 10)
-	public static void alter_undo_test() throws InterruptedException {
+	public static void alter_undo_test() throws InterruptedException, IOException, ParseException {
 		for(int i = 0; i < iteration; i++) {
 			onRep.alter_undo();
 		}
 	}
 	
 	@Test(priority = 11)
-	public static void reject_undo_test() throws InterruptedException {
+	public static void reject_undo_test() throws InterruptedException, IOException, ParseException {
 		for(int i = 0; i < iteration; i++) {
 			onRep.reject_undo();
 		}
@@ -99,7 +101,7 @@ public class QmsOnlineRepair extends QmsBaseTest {
 	
 	@AfterTest
 	public void log_out_test() throws InterruptedException {
-		onRep.expand_side_menu();
+		//onRep.expand_side_menu();
 		onRep.log_out();
 	}
 }
